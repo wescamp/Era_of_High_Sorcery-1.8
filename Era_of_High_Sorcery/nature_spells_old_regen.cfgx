@@ -1,0 +1,1149 @@
+#textdomain wesnoth-Era_of_High_Sorcery
+
+#define mud_touch_INFO_INIT
+{BASE_SPELL_STATS mud_touch attacks/mud-glob.png   nature_magic 2   6   0}
+{IS_ENCHANTMENT mud_touch}
+#enddef
+#define mud_touch_OPT_STRING
+_"Mud Touch ($mud_touch_cost| gold)"#enddef
+#define mud_touch_DESCRIPTION
+_"Enchants you so that the next time you hit a living unit in melee, that unit
+is immediately turned into a ghastly mudcrawler, ending the fight immediately.
+The mudcrawler retains the hitpoints, max hitpoints, and experience of the
+original unit, but otherwise is a completely new unit. Level 0 units are changed
+into level 0 Mudcrawlers; everything else becomes a level 1 Giant Mudcrawler.
+(Has no effect on enemy leaders or units that are already mudcrawlers.)"#enddef
+#define mud_touch_POSSIBLE_TARGETS
+#enddef
+#define mud_touch_END_ENCHANTMENT VAR
+{VARIABLE {VAR}.variables.mud_touch false}
+[unstore_unit]
+  variable={VAR}
+[/unstore_unit]
+[remove_unit_overlay]
+  x=${VAR}.x
+  y=${VAR}.y
+  image=projectiles/mud-glob.png
+[/remove_unit_overlay]
+[store_unit]
+  [filter]
+    x=${VAR}.x
+    y=${VAR}.y
+  [/filter]
+  variable={VAR}
+[/store_unit]
+#enddef
+#define mud_touch_EFFECTS
+[sound]
+  name=squishy-hit.wav
+[/sound]
+[store_unit]
+  [filter]
+    x=$x1
+    y=$y1
+  [/filter]
+  variable=mudtouched
+[/store_unit]
+{VARIABLE mudtouched.variables.mud_touch true}
+[unstore_unit]
+  variable=mudtouched
+[/unstore_unit]
+[unit_overlay]
+  x=$x1
+  y=$y1
+  image=projectiles/mud-glob.png
+[/unit_overlay]
+#enddef
+#define MUDTOUCH_EFFECTS_AUX XER YER XFILTER AFILTER YFILTER XNUM YNUM
+[event]
+name={XER} hits
+first_time_only=no
+[{XFILTER}]
+  [filter_wml]
+    [variables]
+      mud_touch=true
+    [/variables]
+  [/filter_wml]
+[/{XFILTER}]
+[{AFILTER}]
+  range=melee
+[/{AFILTER}]
+[{YFILTER}]
+  [not]
+    {IS_WIZARD_LEADER}
+  [/not]
+  [filter_location]
+    {NOT_IN_ANY_CIRCLE}
+  [/filter_location]
+  [not]
+    type=Mudcrawler,Giant Mudcrawler
+  [/not]
+  [not]
+    [filter_wml]
+      [status]
+        not_living="yes"
+      [/status]
+    [/filter_wml]
+  [/not]
+[/{YFILTER}]
+  [sound]
+    name=squishy-hit.wav
+  [/sound]
+
+  [store_unit]
+    [filter]
+      x=$x{XNUM}
+      y=$y{XNUM}
+    [/filter]
+    variable=mudtouch_user
+  [/store_unit]
+  {mud_touch_END_ENCHANTMENT mudtouch_user}
+
+  [store_unit]
+    [filter]
+      x=$x{YNUM}
+      y=$y{YNUM}
+    [/filter]
+    variable=mudtouch_victim
+  [/store_unit]
+{IF_VAR mudtouch_victim.hitpoints greater_than 0 ([then]
+  {IF_VAR mudtouch_victim.level equals 0 ([then]
+    {VARIABLE mudtouch_victim_type (Mudcrawler)}
+    {VARIABLE xp_wasted_by_mudtouch 0}
+  [/then]
+  [else]
+    {VARIABLE mudtouch_victim_type (Giant Mudcrawler)}
+    {VARIABLE xp_wasted_by_mudtouch $mudtouch_victim.level}
+    {VARIABLE_OP xp_wasted_by_mudtouch add -1}
+    # only multiply by 7, since kills are typically worth 7 XP when you factor in the fight XP
+    {VARIABLE_OP xp_wasted_by_mudtouch multiply 7}
+  [/else])}
+  {EOHS_FULL_KILL mudtouch_user (x=$mudtouch_victim.x
+y=$mudtouch_victim.y) false false}
+  [unit]
+    to_variable=mudtouch_result
+    side=$mudtouch_victim.side
+    type=$mudtouch_victim_type
+    x=$mudtouch_victim.x
+    y=$mudtouch_victim.y
+    experience=$mudtouch_victim.experience
+    hitpoints=$mudtouch_victim.hitpoints
+    max_hitpoints=$mudtouch_victim.max_hitpoints
+    moves=0
+    attacks_left=0
+  [/unit]
+  [unstore_unit]
+    variable=mudtouch_result
+    text=_"Transmogrified!"
+    red,green,blue=128,80,40
+  [/unstore_unit]
+  {CHASM_FALL_IF_NEEDED $mudtouch_victim.x $mudtouch_victim.y $mudtouch_user.side}
+  # gain the wasted XP back, along with the fight experience
+  {VARIABLE_OP mudtouch_user.experience add $xp_wasted_by_mudtouch}
+  [unstore_unit]
+    variable=mudtouch_user
+  [/unstore_unit]
+[/then])}
+[/event]
+#enddef
+#define mud_touch_AUXILIARY_EVENTS
+{MUDTOUCH_EFFECTS_AUX attacker defender filter filter_attack filter_second 1 2}
+{MUDTOUCH_EFFECTS_AUX defender attacker filter_second filter_second_attack filter 2 1}
+#enddef
+
+#define grow_trees_INFO_INIT
+{BASE_SPELL_STATS grow_trees attacks/entangle.png   nature_magic 3   11   6}
+#enddef
+#define grow_trees_OPT_STRING
+_"Grow Trees ($grow_trees_cost| gold)"#enddef
+#define grow_trees_DESCRIPTION
+_"Grows trees on all hexes within a (your Nature Magic skill / 4)-radius area of
+any target within $grow_trees_base_range| hexes. Some terrains are unaffected.
+The radius isn't rounded down - rather, hexes on the edge of the radius have a
+random chance of being affected."#enddef
+#define grow_trees_POSSIBLE_TARGETS
+#enddef
+#define grow_trees_AUXILIARY_EVENTS
+#enddef
+#define GROWTREES_RULE TERR
+[rule]
+  old={TERR}
+  new=Gs
+  terrain={TERR}^Fp
+[/rule]
+[rule]
+  old={TERR}^Gvs
+  new=Gs
+  terrain={TERR}^Fp
+[/rule]
+#enddef
+#define grow_trees_EFFECTS
+[sound]
+name=entangle.wav
+[/sound]
+[sound]
+name=entangle.wav
+[/sound]
+[sound]
+name=entangle.wav
+[/sound]
+{VARIABLE max_tree_rad $nature_magic_skill_$side_number}
+{VARIABLE_OP max_tree_rad add 3}
+{VARIABLE_OP max_tree_rad divide 4}
+{VARIABLE edge_skill $max_tree_rad}
+{VARIABLE_OP edge_skill multiply -4}
+{VARIABLE_OP edge_skill add $nature_magic_skill_$side_number}
+{VARIABLE_OP edge_skill add 3}
+{VARIABLE radius_iterator 0}
+{VARIABLE radius_iterator_old -1}
+[while]
+  [variable]
+    name=radius_iterator
+    less_than_equal_to=$max_tree_rad
+  [/variable]
+  [do]
+    {IF_VAR radius_iterator_old less_than 0 ([then]
+      [store_locations]
+        x=0
+        y=0
+        variable=tree_location_pile
+      [/store_locations]
+    [/then]
+    [else]
+      [store_locations]
+        x=$x1
+        y=$y1
+        radius=$radius_iterator_old
+	[filter_radius]
+          [not]
+            terrain={OBSTRUCTING_TERRAINS}
+          [/not]
+        [/filter_radius]
+        variable=tree_location_pile
+      [/store_locations]
+    [/else])}
+    [store_locations]
+      [not]
+        find_in=tree_location_pile
+      [/not]
+      [and]
+        x=$x1
+        y=$y1
+        radius=$radius_iterator
+	[filter_radius]
+          [not]
+            terrain={OBSTRUCTING_TERRAINS}
+          [/not]
+        [/filter_radius]
+      [/and]
+      variable=tree_location_pile
+    [/store_locations]
+
+    {FOREACH tree_location_pile gte_i}
+      {RANDOM 0..3}
+      {IF_VAR radius_iterator less_than $max_tree_rad ([or]
+        [variable]
+	  name=edge_skill
+	  greater_than_equal_to=$random
+	[/variable]
+      [/or]
+      [then]
+{VARIABLE mask_x $tree_location_pile[$gte_i].x}
+{VARIABLE mask_y $tree_location_pile[$gte_i].y}
+
+      [if]
+      [have_location]
+        x=$mask_x
+        y=$mask_y
+        {NOT_IN_ANY_CIRCLE}
+      [/have_location]
+      [then]
+
+ [terrain_mask]
+x=$mask_x
+y=$mask_y
+mask="usage=mask
+border_size=0
+
+Gs
+"
+{GROWTREES_RULE Gg}
+{GROWTREES_RULE Ggf}
+{GROWTREES_RULE Gs}
+{GROWTREES_RULE Rd}
+{GROWTREES_RULE Re}
+{GROWTREES_RULE Rr}
+{GROWTREES_RULE Rp}
+{GROWTREES_RULE Hh}
+{GROWTREES_RULE Ha}
+#GROWTREES_RULE Ss}
+#GROWTREES_RULE Wwf}
+[rule]
+  old=Uu
+  new=Gs
+  terrain=Uu^Uf
+[/rule]
+[rule]
+  old=Aa
+  new=Gs
+  terrain=Aa^Fpa
+[/rule]
+[rule]
+  use_old=yes
+[/rule]
+[/terrain_mask]
+      [/then]
+      [/if]
+      [/then])}
+    {NEXT gte_i}
+    {VARIABLE_OP radius_iterator add 1}
+    {VARIABLE_OP radius_iterator_old add 1}
+  [/do]
+[/while]
+[redraw]
+[/redraw]
+#enddef
+
+#define regeneration_INFO_INIT
+{BASE_SPELL_STATS regeneration attacks/fangs-spider.png   nature_magic 5   10   1}
+{IS_ENCHANTMENT regeneration}
+#enddef
+#define regeneration_OPT_STRING
+_"Regeneration ($regeneration_cost| gold)"#enddef
+#define regeneration_DESCRIPTION
+_"Immediately heals an adjacent unit for 2 to 4 hitpoints plus your
+Nature Magic skill, and grants it the ability to regenerate by
+(Nature Magic skill * 2) hitpoints per turn for six turns."#enddef
+#define regeneration_POSSIBLE_TARGETS
+[and]
+  [filter]
+    [filter_wml]
+      [variables]
+        regenerable=true
+      [/variables]
+    [/filter_wml]
+  [/filter]
+[/and]
+#enddef
+#define regeneration_AUXILIARY_EVENTS
+[event]
+name=ability_setup_extras
+first_time_only=no
+  {IF_VAR regeneration_known boolean_equals true ([then]
+    {VARIABLE regeneration_amount $nature_magic_skill_$side_number}
+    {VARIABLE_OP regeneration_amount multiply 2}
+    [store_unit]
+      [filter]
+        [filter_location]
+	  [filter]
+	    side=$side_number
+	    {IS_WIZARD_LEADER}
+	  [/filter]
+	  radius=$regeneration_range
+	[/filter_location]
+      [/filter]
+      variable=rae_checkees
+    [/store_unit]
+    {FOREACH rae_checkees rae_i}
+      {IF_VAR rae_checkees[$rae_i].variables.nature_regeneration_strength less_than $regeneration_amount ([or]
+        [variable]
+	  name=rae_checkees[$rae_i].hitpoints
+	  less_than=$rae_checkees[$rae_i].max_hitpoints
+	[/variable]
+      [/or]
+      [then]
+        {VARIABLE rae_checkees[$rae_i].variables.regenerable true}
+      [/then]
+      [else]
+        {VARIABLE rae_checkees[$rae_i].variables.regenerable false}
+      [/else])}
+      [unstore_unit]
+        variable=rae_checkees[$rae_i]
+      [/unstore_unit]
+    {NEXT rae_i}
+  [/then])}
+[/event]
+#enddef
+#define regeneration_END_ENCHANTMENT VAR
+{VARIABLE {VAR}.variables.regeneration false}
+{VARIABLE old_regeneration_amount ${VAR}.variables.nature_regeneration_strength}
+{VARIABLE {VAR}.variables.nature_regeneration_strength 0}
+[unstore_unit]
+  variable={VAR}
+[/unstore_unit]
+[object]
+  silent=yes
+  [filter]
+    x=${VAR}.x
+    y=${VAR}.y
+  [/filter]
+  [effect]
+    apply_to=remove_ability
+    [abilities]
+      [regenerate]
+        id=nature_magic_regenerates_$old_regeneration_amount
+      [/regenerate]
+    [/abilities]
+  [/effect]
+[/object]
+[remove_unit_overlay]
+  x=${VAR}.x
+  y=${VAR}.y
+  image=halo/elven/nature-halo6.png
+[/remove_unit_overlay]
+[store_unit]
+  [filter]
+    x=${VAR}.x
+    y=${VAR}.y
+  [/filter]
+  variable={VAR}
+[/store_unit]
+#enddef
+#define regeneration_EFFECTS
+{RANDOM 2..4}
+{VARIABLE regeneration_healing $random}
+{VARIABLE_OP regeneration_healing add $nature_magic_skill_$side_number||}
+[store_unit]
+  [filter]
+    x=$x1
+    y=$y1
+  [/filter]
+  variable=regeneratee
+[/store_unit]
+{VARIABLE new_hitpoints $regeneratee.hitpoints}
+{VARIABLE_OP new_hitpoints add $regeneration_healing}
+{IF_VAR new_hitpoints greater_than $regeneratee.max_hitpoints ([then]
+  {VARIABLE new_hitpoints $regeneratee.max_hitpoints}
+  {VARIABLE regeneration_healing $new_hitpoints}
+  {VARIABLE_OP regeneration_healing add -$regeneratee.hitpoints}
+[/then])}
+{IF_VAR regeneration_healing greater_than 0 ([then]
+  [sound]
+    name=heal.wav
+  [/sound]
+  {VARIABLE regeneratee.hitpoints $new_hitpoints}
+  [unstore_unit]
+    variable=regeneratee
+    text=$regeneration_healing
+    {COLOR_HEAL}
+  [/unstore_unit]
+  #EHS_SHORT_DELAY}
+[/then])}
+
+{VARIABLE regeneration_amount $nature_magic_skill_$side_number}
+{VARIABLE_OP regeneration_amount multiply 2}
+
+{VARIABLE need_to_add_halo false}
+{VARIABLE need_to_add_regeneration true}
+{IF_VAR regeneratee.variables.regeneration boolean_equals true ([then]
+  {IF_VAR regeneratee.variables.nature_regeneration_strength greater_than_equal_to $regeneration_amount ([then]
+    {VARIABLE need_to_add_regeneration false}
+  [/then])}
+[/then]
+[else]
+  {VARIABLE need_to_add_halo true}
+[/else])}
+
+{IF_VAR need_to_add_regeneration boolean_equals true ([then]
+  [sound]
+    name=heal.wav
+  [/sound]
+  {VARIABLE old_regeneration_amount $regeneratee.variables.nature_regeneration_strength}
+  {VARIABLE regeneratee.variables.nature_regeneration_strength $regeneration_amount}
+  {VARIABLE regeneratee.variables.regeneration true}
+  [unstore_unit]
+    variable=regeneratee
+    text=_"regenerates +$regeneration_amount"
+    {COLOR_HEAL}
+  [/unstore_unit]
+
+  {IF_VAR need_to_add_halo boolean_equals true ([then]
+    [unit_overlay]
+      x=$x1
+      y=$y1
+      image=halo/elven/nature-halo6.png
+    [/unit_overlay]
+  [/then])}
+
+  [object]
+    silent=yes
+    [filter]
+      x=$x1
+      y=$y1
+    [/filter]
+    [effect]
+      apply_to=remove_ability
+      [abilities]
+        [regenerate]
+          id=nature_magic_regenerates_$old_regeneration_amount
+        [/regenerate]
+      [/abilities]
+    [/effect]
+    [effect]
+      apply_to=new_ability
+      [abilities]
+        [regenerate]
+          value=$regeneration_amount
+          id=nature_magic_regenerates_$regeneration_amount
+          name= _ "regenerates +$regeneration_amount"
+          female_name= _ "female^regenerates +$regeneration_amount"
+          description= _ "Regenerates +$regeneration_amount:
+The unit will heal itself $regeneration_amount HP per turn. If it is poisoned, it will remove the poison instead of healing."
+          affect_self=yes
+          poison=cured
+        [/regenerate]
+      [/abilities]
+    [/effect]
+  [/object]
+[/then])}
+{CLEAR_VARIABLE regeneratee}
+{CLEAR_VARIABLE regeneration_healing}
+{CLEAR_VARIABLE regeneration_amount}
+{CLEAR_VARIABLE new_hitpoints}
+#enddef
+
+#define lightning_bolt_INFO_INIT
+{BASE_SPELL_STATS lightning_bolt attacks/lightning.png   nature_magic 7   14   8}
+#enddef
+#define lightning_bolt_OPT_STRING
+_"Lightning Bolt ($lightning_bolt_cost| gold)"#enddef
+#define lightning_bolt_DESCRIPTION
+_"Inflicts 12 to 18 damage plus your Nature Magic level upon one target within $lightning_bolt_base_range| hexes,
+and, if it's still alive, paralyzes it so that it can't move on its next turn,
+and can't attack unless it's a leader."#enddef
+#define lightning_bolt_POSSIBLE_TARGETS
+#enddef
+#define lightning_bolt_AUXILIARY_EVENTS
+[event]
+  name=turn refresh
+  first_time_only=no
+  [store_unit]
+    [filter]
+      side=$side_number
+      [filter_wml]
+        [variables]
+	  lightning_paralysis=true
+	[/variables]
+      [/filter_wml]
+    [/filter]
+    variable=lparalyzed
+  [/store_unit]
+  {FOREACH lparalyzed lbae_i}
+    {VARIABLE lparalyzed[$lbae_i].moves 0}
+    {VARIABLE lparalyzed[$lbae_i].variables.lightning_paralysis false}
+    [if]
+      [have_unit]
+        x=$lparalyzed.x
+        y=$lparalyzed.y
+        {IS_WIZARD_LEADER}
+      [/have_unit]
+      [else] # else
+        {VARIABLE lparalyzed[$lbae_i].attacks_left 0}
+      [/else]
+    [/if]
+    {VARIABLE lparalyzed[$lbae_i].resting false}
+    [unstore_unit]
+      variable=lparalyzed[$lbae_i]
+    [/unstore_unit]
+  {NEXT lbae_i}
+[/event]
+#enddef
+#define lightning_bolt_EFFECTS
+[sound]
+name=lightning.ogg
+[/sound]
+{RANDOM 12..18}
+{VARIABLE lightning_bolt_damage $random}
+{VARIABLE_OP lightning_bolt_damage add $nature_magic_skill_$side_number||}
+{DAMAGE_HEX $x1 $y1 $lightning_bolt_damage $side_number}
+{CLEAR_VARIABLE lightning_bolt_damage}
+[store_unit]
+  [filter]
+    x=$x1
+    y=$y1
+  [/filter]
+  variable=lightning_victim
+[/store_unit]
+{IF_VAR lightning_victim.length equals 1 ([then]
+  {EHS_SHORT_DELAY}
+  {VARIABLE lightning_victim.variables.lightning_paralysis true}
+  {VARIABLE lightning_victim.status.slowed true}
+  [unstore_unit]
+    variable=lightning_victim
+    text=_ "paralyzed"
+    {COLOR_HARM}
+  [/unstore_unit]
+[/then])}
+#enddef
+
+#define fissure_INFO_INIT
+{BASE_SPELL_STATS fissure attacks/fangs.png   nature_magic 8   21   2}
+#enddef
+#define fissure_OPT_STRING
+_"Fissure ($fissure_cost| gold)"#enddef
+#define fissure_DESCRIPTION
+_"Irrevocably opens up a chasm hex up to $fissure_base_range| hexes away.
+Any unit in the hex that is unable to fly will be instantly killed.
+Unlike other spells, you do not gain experience for a unit killed this way."#enddef
+#define fissure_POSSIBLE_TARGETS
+[insert_tag]
+  name=and
+  variable=EoHS_fissurable_filter
+[/insert_tag]
+#enddef
+#define fissure_AUXILIARY_EVENTS
+#enddef
+#define fissure_EFFECTS
+[sound]
+name=cave-in.ogg
+[/sound]
+[sound]
+name=rumble.ogg
+[/sound]
+[terrain]
+  x=$x1
+  y=$y1
+  terrain=Qxu
+[/terrain]
+{CHASM_FALL_IF_NEEDED $x1 $y1 $side_number}
+#enddef
+
+#define rampage_INFO_INIT
+{BASE_SPELL_STATS rampage attacks/frenzy.png   nature_magic 9   28   0}
+#enddef
+#define rampage_OPT_STRING
+_"Rampage ($rampage_cost| gold)"#enddef
+#define rampage_DESCRIPTION
+_"Until the end of your turn, empowers you and all adjacent units on your team
+with primal energy, granting +3 damage and +1 swings on on their melee attacks
+and making them take 50% less damage in combat. You can personally attack after
+casting this spell, but you cannot cast additional spells."#enddef
+#define rampage_POSSIBLE_TARGETS
+#[and]
+#  radius=1
+#  [filter]
+#    side=$side_number
+#    [not]
+#      {IS_WIZARD_LEADER}
+#    [/not]
+#  [/filter]
+#[/and]
+#enddef
+#define rampage_END_ENCHANTMENT VAR
+{VARIABLE {VAR}.variables.rampage false}
+[unstore_unit]
+  variable={VAR}
+[/unstore_unit]
+[remove_unit_overlay]
+  x=${VAR}.x
+  y=${VAR}.y
+  image=misc/new-battle.png
+[/remove_unit_overlay]
+[object]
+  silent=yes
+  [filter]
+    x=${VAR}.x
+    y=${VAR}.y
+  [/filter]
+  [effect]
+    apply_to=attack
+    range=melee
+    increase_damage=-3
+    increase_attacks=-1
+  [/effect]
+  [effect]
+    apply_to=attack
+    remove_specials=rampage_damage_reduce
+  [/effect]
+[/object]
+[store_unit]
+  [filter]
+    x=${VAR}.x
+    y=${VAR}.y
+  [/filter]
+  variable={VAR}
+[/store_unit]
+#enddef
+#define rampage_AUXILIARY_EVENTS
+[event]
+name=side turn
+first_time_only=no
+  [store_unit]
+    [filter]
+      [filter_wml]
+        [variables]
+	  rampage=true
+	[/variables]
+      [/filter_wml]
+    [/filter]
+    variable=rampage_losers
+  [/store_unit]
+  {FOREACH rampage_losers rae_i}
+    {rampage_END_ENCHANTMENT rampage_losers[$rae_i]}
+  {NEXT rae_i}
+[/event]
+#enddef
+#define rampage_EFFECTS
+[sound]
+name=drake-hit-2.ogg
+[/sound]
+[store_unit]
+  [filter]
+    side=$side_number
+    [filter_location]
+      radius=1
+      [filter]
+        side=$side_number
+        {IS_WIZARD_LEADER}
+      [/filter]
+    [/filter_location]
+  [/filter]
+  variable=rampagers
+[/store_unit]
+{FOREACH rampagers reff_i}
+  {VARIABLE rampagers[$reff_i].variables.rampage true}
+  [if]
+    [have_unit]
+      x=$rampagers[$reff_i].x
+      y=$rampagers[$reff_i].y
+      {IS_WIZARD_LEADER}
+    [/have_unit]
+    [then]
+      {VARIABLE_OP rampagers[$reff_i].attacks_left add 1}
+    [/then]
+  [/if]
+  [unstore_unit]
+    variable=rampagers[$reff_i]
+    text=_"rampage!"
+    red,green,blue=255,128,0
+  [/unstore_unit]
+  [unit_overlay]
+    x=$rampagers[$reff_i].x
+    y=$rampagers[$reff_i].y
+    image=misc/new-battle.png
+  [/unit_overlay]
+  [object]
+    silent=yes
+    [filter]
+      x=$rampagers[$reff_i].x
+      y=$rampagers[$reff_i].y
+    [/filter]
+    [effect]
+      apply_to=attack
+      range=melee
+      increase_damage=3
+      increase_attacks=1
+    [/effect]
+    [effect]
+      apply_to=attack
+      [set_specials]
+        mode=append
+	[damage]
+	  name=_"rampage"
+	  id=rampage_damage_reduce
+	  apply_to=opponent
+	  multiply=0.5
+	  cumulative=yes
+	[/damage]
+      [/set_specials]
+    [/effect]
+  [/object]
+{NEXT reff_i}
+#enddef
+
+#define blizzard_INFO_INIT
+{BASE_SPELL_STATS blizzard attacks/faerie-fire.png   nature_magic 10   19   12}
+#enddef
+#define blizzard_OPT_STRING
+_"Blizzard ($blizzard_cost| gold)"#enddef
+#define blizzard_DESCRIPTION
+_"Snows on a large area, centered up to $blizzard_base_range| hexes away.
+Snow created this way melts after 4 to 8 turns; ice melts after 1 to 3 turns."#enddef
+#define blizzard_POSSIBLE_TARGETS
+#enddef
+#define blizzard_AUXILIARY_EVENTS
+[event]
+  name=prestart
+  {VARIABLE blizzarded_hexes_x_list 0}
+  {VARIABLE blizzarded_hexes_y_list 0}
+[/event]
+[event]
+name=side turn
+  first_time_only=no
+  [store_locations]
+    x=$blizzarded_hexes_x_list
+    y=$blizzarded_hexes_y_list
+    variable=blizzarded_hexes
+  [/store_locations]
+
+  {VARIABLE no_longer_blizzarded_hexes_x_list 0}
+  {VARIABLE no_longer_blizzarded_hexes_y_list 0}
+
+  {FOREACH blizzarded_hexes bae_i}
+    {VARIABLE bae_x $blizzarded_hexes[$bae_i].x}
+    {VARIABLE bae_y $blizzarded_hexes[$bae_i].y}
+    {IF_VAR blizzarded_hexes_$bae_x|_$bae_y|_timeout_turn equals $turn_number ([then]
+      {IF_VAR blizzarded_hexes_$bae_x|_$bae_y|_timeout_side equals $side_number ([then]
+        {IF_VAR blizzarded_hexes_$bae_x|_$bae_y|_both_blizzarded boolean_equals true ([then]
+          [terrain]
+	    x=$bae_x
+	    y=$bae_y
+	    terrain=$blizzarded_hexes_$bae_x|_$bae_y|_old_terrain
+	    layer=both
+	  [/terrain]
+	[/then]
+	[else]
+          {IF_VAR blizzarded_hexes_$bae_x|_$bae_y|_base_blizzarded boolean_equals true ([then]
+	    {IF_VAR blizzarded_hexes_$bae_x|_$bae_y|_overlay_blizzarded boolean_equals true ([then]
+              [terrain]
+	         x=$bae_x
+	         y=$bae_y
+	        terrain=$blizzarded_hexes_$bae_x|_$bae_y|_old_terrain
+	        layer=both
+	      [/terrain]
+	    [/then]
+            [else]
+              [terrain]
+	        x=$bae_x
+	        y=$bae_y
+	        terrain=$blizzarded_hexes_$bae_x|_$bae_y|_old_terrain
+	        layer=base
+	      [/terrain]
+	    [/else])}
+	  [/then]
+	  [else]
+            {IF_VAR blizzarded_hexes_$bae_x|_$bae_y|_overlay_blizzarded boolean_equals true ([then]
+              [terrain]
+	        x=$bae_x
+	        y=$bae_y
+	        terrain=$blizzarded_hexes_$bae_x|_$bae_y|_old_terrain
+	        layer=overlay
+	      [/terrain]
+	    [/then])}
+	  [/else])}
+	[/else])}
+	{VARIABLE no_longer_blizzarded_hexes_x_list $no_longer_blizzarded_hexes_x_list|,$bae_x}
+	{VARIABLE no_longer_blizzarded_hexes_y_list $no_longer_blizzarded_hexes_y_list|,$bae_y}
+	{VARIABLE blizzarded_hexes_$bae_x|_$bae_y|_is_blizzarded false}
+      [/then])}
+    [/then])}
+  {NEXT bae_i}
+
+  [store_locations]
+    x=$blizzarded_hexes_x_list
+    y=$blizzarded_hexes_y_list
+    [not]
+      x=$no_longer_blizzarded_hexes_x_list
+      y=$no_longer_blizzarded_hexes_y_list
+    [/not]
+    variable=blizzarded_hexes
+  [/store_locations]
+  [set_variable]
+    name=blizzarded_hexes_x_list
+    [join]
+      variable=blizzarded_hexes
+      key=x
+      separator=,
+    [/join]
+  [/set_variable]
+  {VARIABLE blizzarded_hexes_x_list $blizzarded_hexes_x_list|,0}
+  [set_variable]
+    name=blizzarded_hexes_y_list
+    [join]
+      variable=blizzarded_hexes
+      key=y
+      separator=,
+    [/join]
+  [/set_variable]
+  {VARIABLE blizzarded_hexes_y_list $blizzarded_hexes_y_list|,0}
+[/event]
+#enddef
+#define BLIZZARD_RULE A B LAYER
+[if]
+  [have_location]
+    x=$x
+    y=$y
+    terrain={A}
+  [/have_location]
+  [then]
+    [terrain]
+      x=$x
+      y=$y
+      layer={LAYER}
+      terrain={B}
+    [/terrain]
+    {VARIABLE blizzarded_hexes_$x|_$y|_{LAYER}_blizzarded true}
+  [/then]
+[/if]
+#enddef
+#define blizzard_EFFECTS
+[sound]
+name=magic-faeriefire-miss.ogg
+[/sound]
+{VARIABLE radius_iterator 0}
+{VARIABLE radius_iterator_old -1}
+[while]
+  [variable]
+    name=radius_iterator
+    less_than_equal_to=7
+  [/variable]
+  [do]
+    {IF_VAR radius_iterator_old less_than 0 ([then]
+      [store_locations]
+        x=0
+        y=0
+        variable=storm_location_pile
+      [/store_locations]
+    [/then]
+    [else]
+      [store_locations]
+        x=$x1
+        y=$y1
+        radius=$radius_iterator_old
+	[filter_radius]
+          [not]
+            terrain={OBSTRUCTING_TERRAINS}
+          [/not]
+        [/filter_radius]
+        variable=storm_location_pile
+      [/store_locations]
+    [/else])}
+    [store_locations]
+      [not]
+        find_in=storm_location_pile
+      [/not]
+      [and]
+        x=$x1
+        y=$y1
+        radius=$radius_iterator
+	[filter_radius]
+          [not]
+            terrain={OBSTRUCTING_TERRAINS}
+          [/not]
+        [/filter_radius]
+      [/and]
+      variable=storm_location_pile
+    [/store_locations]
+
+    {FOREACH storm_location_pile be_i}
+      {VARIABLE radsq $radius_iterator}
+      {VARIABLE_OP radsq multiply $radsq}
+      {RANDOM 0..64}
+      {IF_VAR radsq less_than $random ([then]
+
+        {VARIABLE x $storm_location_pile[$be_i].x}
+        {VARIABLE y $storm_location_pile[$be_i].y}
+
+      [if]
+      [have_location]
+        x=$x
+        y=$y
+        {NOT_IN_ANY_CIRCLE}
+      [/have_location]
+      [then]
+
+	{VARIABLE blizzard_recover_turn $turn_number}
+	[if]
+	  [have_location]
+	    x=$x
+	    y=$y
+	    terrain=Ww^*,Wo^*,Ss^*,Wwf^*,Wwr^*
+	  [/have_location]
+	  [then]
+	    {RANDOM 1..3}
+	  [/then]
+	  [else]
+	    {RANDOM 4..8}
+	  [/else]
+	[/if]
+	{VARIABLE_OP blizzard_recover_turn add $random}
+	{VARIABLE blizzarded_hexes_$x|_$y|_timeout_turn $blizzard_recover_turn}
+	{VARIABLE blizzarded_hexes_$x|_$y|_timeout_side $side_number}
+
+        {IF_VAR blizzarded_hexes_$x|_$y|_is_blizzarded boolean_equals true ([then]
+	  # nothing to do but update the timeout time
+	[/then]
+	[else]
+	  {VARIABLE blizzarded_hexes_$x|_$y|_is_blizzarded true}
+	  {VARIABLE blizzarded_hexes_$x|_$y|_old_terrain $storm_location_pile[$be_i].terrain}
+	  {VARIABLE blizzarded_hexes_x_list $blizzarded_hexes_x_list|,$x}
+	  {VARIABLE blizzarded_hexes_y_list $blizzarded_hexes_y_list|,$y}
+
+          {BLIZZARD_RULE Gg^*,Ggf^*,Gs^*,Rd^*,Re^*,Rr^*,Rp^*,Dd^*,Ds^* Aa base}
+          {BLIZZARD_RULE Hh^*,Hd^* Ha base}
+          {BLIZZARD_RULE Mm^*,Md^* Ms base}
+          {BLIZZARD_RULE Ww^*,Wo^*,Ss^*,Wwf^*,Wwr^* Ai base}
+
+          {BLIZZARD_RULE *^Fp ^Fpa overlay}
+          {BLIZZARD_RULE *^Fd* ^Fda overlay}
+          {BLIZZARD_RULE *^Fm* ^Fma overlay}
+          {BLIZZARD_RULE Gg^Ve Gg^Vea both}
+          {BLIZZARD_RULE Gg^Vh Gg^Vha both}
+          {BLIZZARD_RULE Hh^Vhh Ha^Vhha both}
+          {BLIZZARD_RULE Mm^Vhm Ms^Vhha both}
+          {BLIZZARD_RULE Gg^Vc Aa^Vca both}
+          {BLIZZARD_RULE Hh^Vc Ha^Vcha both}
+	[/else])}
+      [/then]
+      [/if]
+      [/then])}
+    {NEXT be_i}
+    {VARIABLE_OP radius_iterator add 1}
+    {VARIABLE_OP radius_iterator_old add 1}
+  [/do]
+[/while]
+[redraw]
+[/redraw]
+#enddef
+
+
+#define vines_spell_INFO_INIT
+{BASE_SPELL_STATS vines_spell attacks/druidstaff.png   nature_magic 10   29   5}
+#enddef
+#define vines_spell_OPT_STRING
+_"Vines ($vines_spell_cost| gold)"#enddef
+#define vines_spell_DESCRIPTION
+_"Immediately fills all empty hexes within a radius-3 area, up to $vines_spell_range| hexes away,
+with obstructing vines. The vines are units on your team that cannot move.
+The vines have no attacks, but they have 15 HP, they exert Zone of Control,
+and they give a 50% attack damage penalty to all adjacent units.
+They have the same defenses and resistances as a Wose."#enddef
+#define vines_spell_POSSIBLE_TARGETS
+#enddef
+#define vines_spell_AUXILIARY_EVENTS
+#enddef
+#define vines_spell_EFFECTS
+[store_locations]
+  [not]
+    [filter]
+    [/filter]
+  [/not]
+  [and]
+    x=$x1
+    y=$y1
+    radius=3
+    [filter_radius]
+      [not]
+        terrain={OBSTRUCTING_TERRAINS}
+      [/not]
+    [/filter_radius]
+  [/and]
+  variable=vined_hexes
+[/store_locations]
+
+{FOREACH vined_hexes vse_i}
+  [unit]
+    to_variable=new_vine
+    type=Galleon
+    side=$side_number
+    x=$vined_hexes[$vse_i].x
+    y=$vined_hexes[$vse_i].y
+
+[modifications]
+[object]
+[effect]
+apply_to=new_animation
+    [standing_anim]
+      start_time=0
+      [frame]
+        duration=2000
+        image="projectiles/entangle.png"
+      [/frame]
+    [/standing_anim]
+    [defend]
+      start_time=0
+      [frame]
+        duration=0
+	image="projectiles/entangle.png"
+      [/frame]
+    [/defend]
+    [/effect]
+    [/object]
+    [/modifications]
+    languagename=_"Vines"
+
+    [variables]
+      summoned=true
+    [/variables]
+
+    alignment=neutral
+    race=wose
+    description=_"Vines have no attacks, but are useful for obstructing the enemy's progress."
+
+    hitpoints=15
+    max_hitpoints=15
+    zoc=on
+    level=0
+    [abilities]
+      [leadership]
+        id=vines_attack_penalty
+        value=-50
+        cumulative=no
+        affect_allies=yes
+	affect_enemies=yes
+	name= _ "slows adjacent"
+        description= _ "Slows adjacent:
+This unit gives all adjacent units, friendly or enemy, a non-cumulative 50% attack penalty in combat."
+        [affect_adjacent]
+          adjacent=n,ne,se,s,sw,nw
+        [/affect_adjacent]
+      [/leadership]
+    [/abilities]
+
+    moves=1
+    max_moves=1
+    [movement_costs]
+      castle="100"
+      cave="100"
+      deep_water="100"
+      flat="100"
+      forest="100"
+      frozen="100"
+      fungus="100"
+      hills="100"
+      impassable="100"
+      mountains="100"
+      reef="100"
+      sand="100"
+      shallow_water="100"
+      swamp_water="100"
+      unwalkable="100"
+      village="100"
+    [/movement_costs]
+    [defense]
+      deep_water=90
+      shallow_water=80
+      reef=80
+      swamp_water=70
+      flat=80
+      sand=80
+      forest=60
+      hills=70
+      mountains=70
+      village=80
+      castle=80
+      cave=80
+      frozen=80
+      unwalkable=80
+      impassable=80
+      fungus=70
+    [/defense]
+    [resistance]
+      blade=100
+      pierce=40
+      impact=60
+      fire=150
+      cold=90
+      arcane=130
+    [/resistance]
+  [/unit]
+
+  #{CLEAR_VARIABLE new_vine.modifications}
+
+  [unstore_unit]
+    variable=new_vine
+  [/unstore_unit]
+  {CLEAR_VARIABLE new_vine}
+{NEXT vse_i}
+#enddef
+
