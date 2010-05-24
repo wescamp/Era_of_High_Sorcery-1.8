@@ -1,0 +1,1053 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: wescamp-i 18n\n"
+"Report-Msgid-Bugs-To: http://bugs.wesnoth.org/\n"
+"POT-Creation-Date: 2010-05-24 22:03+0200\n"
+"PO-Revision-Date: 2010-05-24 22:03+0200\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. [era]: id=era_of_high_sorcery
+#: Era_of_High_Sorcery/_main.cfg:26
+msgid "Era of High Sorcery"
+msgstr ""
+
+#. [multiplayer_side]: id=EoHS_Faction, type=Red Mage
+#: Era_of_High_Sorcery/_main.cfg:32 Era_of_High_Sorcery/_main.cfg:51
+msgid "You"
+msgstr ""
+
+#. [era]: id=era_of_high_sorcery_rpg
+#: Era_of_High_Sorcery/_main.cfg:45
+msgid "EoHS RPG era"
+msgstr ""
+
+#. [unstore_unit]
+#: Era_of_High_Sorcery/general_utils.cfg:78
+#: Era_of_High_Sorcery/spell_system_old.cfg:67
+msgid "$damage_to_hex (blocked)"
+msgstr ""
+
+#. [option]
+#. [literal]
+#: Era_of_High_Sorcery/spell_system_old.cfg:305
+#: Era_of_High_Sorcery/magic_system.cfg:93
+msgid "&"
+msgstr ""
+
+#: Era_of_High_Sorcery/magic_system.cfg:164
+msgid "View game rules, spell list"
+msgstr ""
+
+#. [message]: speaker=narrator
+#: Era_of_High_Sorcery/magic_system.cfg:170
+msgid ""
+"The game rules, and descriptions of all spells, are listed below.\n"
+"(This is an info screen; picking an option does nothing.)"
+msgstr ""
+
+#. [option]: speaker=narrator
+#: Era_of_High_Sorcery/magic_system.cfg:188
+msgid ""
+"<span color='#00FF00'>Game rules:</span>\n"
+"Pick the 'Train your magical skills' option above to choose your powers.\n"
+"(Don't forget to move and/or recruit on the first turn as well.)\n"
+"You begin the game with 10 picks, and you can gain 2 each time you or your\n"
+"forces kill an enemy Wizard, and 4 each time you level up (including AMLA.)\n"
+"\n"
+"Pick the 'View spell descriptions' option below to see details of the\n"
+"non-summoning spells.\n"
+"\n"
+"To cast a spell, right-click in the hex you want to TARGET with the spell,\n"
+"and select the spell from the list. (Your leader is the only unit that can\n"
+"cast spells, so you don't have to choose the caster.) When you summon a\n"
+"creature, the target MUST always be an empty hex ADJACENT TO the caster;\n"
+"other spells have different targets. Read the spell info for specifics.\n"
+"\n"
+"Casting a spell, including summoning, uses up your leader's attack unless "
+"the\n"
+"spell is marked "
+msgstr ""
+
+#. [set_menu_item]: id=view_spell_info
+#: Era_of_High_Sorcery/magic_system.cfg:215
+msgid "Output skill descriptions"
+msgstr ""
+
+#. [set_menu_item]: id=view_spell_infofgfg
+#: Era_of_High_Sorcery/magic_system.cfg:225
+msgid "Output spell descriptions"
+msgstr ""
+
+#. [set_menu_item]: id=eohs_single_menu_item
+#: Era_of_High_Sorcery/magic_system.cfg:296
+msgid "Era of High Sorcery options"
+msgstr ""
+
+#. [message]: speaker=narrator
+#: Era_of_High_Sorcery/magic_system.cfg:307
+msgid "What do you wish to do?"
+msgstr ""
+
+#. [option]: speaker=narrator
+#: Era_of_High_Sorcery/magic_system.cfg:309
+#: Era_of_High_Sorcery/spell_system.cfg:336
+msgid "Never mind."
+msgstr ""
+
+#. [message]: speaker=narrator
+#: Era_of_High_Sorcery/magic_system.cfg:374
+msgid ""
+"You are currently using the Era of High Sorcery, an era with a fancy spell "
+"system.\n"
+"\n"
+"<span size='large'>When your turn comes, right-click in any hex and pick "
+"'View game rules' to begin.</span>"
+msgstr ""
+
+#. [option]
+#: Era_of_High_Sorcery/magic_system_old.cfg:19
+msgid "{NAME} (1 point each, currently ${TYPE}_$current_picker||)\n"
+msgstr ""
+
+#. [option]
+#: Era_of_High_Sorcery/magic_system_old.cfg:45
+msgid ""
+"{NAME} ({COST} points)\n"
+"{DESC}"
+msgstr ""
+
+#. [unstore_unit]
+#: Era_of_High_Sorcery/picks_system.cfg:246
+#: Era_of_High_Sorcery/magic_system_old.cfg:163
+msgid "+$picks_added_var picks"
+msgstr ""
+
+#. [message]: speaker=narrator
+#: Era_of_High_Sorcery/magic_system_old.cfg:207
+msgid ""
+"Choose abilities for your wizard. You have $picks_left_$current_picker|| "
+"point(s) left to spend."
+msgstr ""
+
+#. [option]: speaker=narrator
+#: Era_of_High_Sorcery/picks_system.cfg:362
+#: Era_of_High_Sorcery/magic_system_old.cfg:210
+msgid "Done training."
+msgstr ""
+
+#. [message]: speaker=narrator
+#: Era_of_High_Sorcery/magic_system_old.cfg:226
+msgid ""
+"The power to call forth the most powerful and straightforward of magics.\n"
+"Most Evocation spells are improved by additional Evocation skill.\n"
+"Level 1: Allows you to cast Energy Bolt.\n"
+"Level 2: Allows you to cast Wizard Sword. Allows you to purchase the "
+"Dwarvish Alliance option.\n"
+"Level 3: Allows you to cast Mage Shield.\n"
+"Level 4: Allows you to cast Fireball. Allows you to purchase the Archmage "
+"option.\n"
+"Level 5: Allows you to cast Dispelling Touch. Allows you to summon Drake "
+"Fighters.\n"
+"Level 6: Allows you to cast Corridor of Frost.\n"
+"Level 7: Allows you to cast Aberrant Growth.\n"
+"Level 8: Allows you to cast Gate.\n"
+"Level 10: Allows you to summon Fire Dragons."
+msgstr ""
+
+#. [message]: speaker=narrator
+#: Era_of_High_Sorcery/magic_system_old.cfg:237
+msgid ""
+"The power to shape the earth and sky to do your bidding.\n"
+"Level 1: Lets you move easily in forest. Allows you to summon Wolves.\n"
+"Level 2: Allows you to cast Mud Touch. Allows you to purchase the Elvish "
+"Alliance option.\n"
+"Level 3: Allows you to cast Grow Trees.\n"
+"Level 4: Allows you to summon Woses. Allows you to purchase the Archmage "
+"option.\n"
+"Level 5: Allows you to cast Regeneration.\n"
+"Level 6: Allows you to summon Gryphons.\n"
+"Level 7: Allows you to cast Lightning Bolt.\n"
+"Level 8: Allows you to cast Rampage.\n"
+"Level 9: Allows you to cast Fissure.\n"
+"Level 10: Allows you to cast Blizzard."
+msgstr ""
+
+#. [message]: speaker=narrator
+#: Era_of_High_Sorcery/magic_system_old.cfg:249
+msgid ""
+"The power to summon and bind the spirits of the dead.\n"
+"If you have any skill in necromancy, you may not select Dwarvish Alliance, "
+"Elvish Alliance, or Leader of Men.\n"
+"Level 1: Allows you to recruit Walking Corpses and Vampire Bats.\n"
+"Level 2: Allows you to recruit Skeletons and Skeleton Archers.\n"
+"Level 3: Allows you to recruit Ghouls and Ghosts.\n"
+"Level 4: Allows you to freely summon Walking Corpses. Lets you choose Lich "
+"if you level up. Allows you to purchase the Archmage option.\n"
+"Level 5: Allows you to cast Poison Ground. Allows you to freely summon and "
+"absorb Vampire Bats.\n"
+"Level 6: Allows you to cast Dark Pact.\n"
+"Level 7: Allows you to summon Chocobones.\n"
+"Level 8: Allows you to cast Wraithform. Lets you choose Ancient Lich if you "
+"level up as a Lich.\n"
+"Level 9: Allows you to cast Devour Soul.\n"
+"Level 10: Allows you to summon Skeletal Dragons."
+msgstr ""
+
+#. [set_menu_item]: id=train_magic_skills
+#: Era_of_High_Sorcery/picks_system.cfg:589
+#: Era_of_High_Sorcery/magic_system_old.cfg:416
+msgid "Train your magical skills"
+msgstr ""
+
+#. [set_menu_item]: id=view_rules
+#: Era_of_High_Sorcery/magic_system_old.cfg:438
+msgid "View game rules"
+msgstr ""
+
+#. [message]: speaker=narrator
+#: Era_of_High_Sorcery/magic_system_old.cfg:467
+msgid ""
+"Pick the 'Train your magical skills' option above to choose your powers.\n"
+"(Don't forget to move and/or recruit on the first turn as well.)\n"
+"You begin the game with 10 picks, and you can gain 2 more each time\n"
+"your forces kill an enemy leader, and 4 more each time you level up.\n"
+"\n"
+"Pick the 'View spell descriptions' option below to see details of the\n"
+"non-summoning spells.\n"
+"\n"
+"To cast a spell, right-click in the hex you want to TARGET with the spell,\n"
+"and select the spell from the list. (Your leader is the only unit that can\n"
+"cast spells, so you don't have to choose the caster.) When you summon a\n"
+"creature, the target MUST always be an empty hex ADJACENT TO the caster;\n"
+"other spells have different targets. Read the spell info for specifics.\n"
+"\n"
+"Casting a spell, including summoning, uses up your leader's attack.\n"
+"You can't attack and cast a spell in the same turn, but you CAN cast a\n"
+"spell and then move afterwards.\n"
+"\n"
+"All leaders are capable of rudimentary flight, and are skilled enough in\n"
+"magic to block any direct damage from enemy spells. You have to be a LITTLE\n"
+"more creative than just lobbing damage at each other's heads. Also, the\n"
+"berserk attack special doesn't work on offense against leaders.\n"
+"\n"
+"Note that summoning and recruiting are completely separate, and you\n"
+"usually can't summon the units you can recruit, or vice versa."
+msgstr ""
+
+#. [set_menu_item]: id=view_spell_info
+#: Era_of_High_Sorcery/magic_system_old.cfg:475
+msgid "View spell descriptions"
+msgstr ""
+
+#: Era_of_High_Sorcery/picks.cfg:26
+msgid "Evocation skill"
+msgstr ""
+
+#: Era_of_High_Sorcery/picks.cfg:40
+msgid ""
+"The power to call forth the most powerful and straightforward of magics.\n"
+"Most Evocation spells are improved by additional Evocation skill.\n"
+"Level 1: Allows you to cast Energy Bolt.\n"
+"Level 2: Allows you to cast Wizard Sword. Allows you to purchase the "
+"Dwarvish Alliance option.\n"
+"Level 3: Allows you to cast Mage Shield.\n"
+"Level 4: Allows you to cast Corridor of Frost. Allows you to purchase the "
+"Archmage option.\n"
+"Level 5: Allows you to cast Dispelling Touch. Allows you to summon Drake "
+"Fighters.\n"
+"Level 6: Allows you to cast Fireball.\n"
+"Level 7: Allows you to cast Gate.\n"
+"Level 8: Allows you to cast Aberrant Growth.\n"
+"Level 9: Allows you to cast Circle of Protection.\n"
+"Level 10: Allows you to summon Fire Dragons.\n"
+"Level 13: Allows you to cast Meteor Storm."
+msgstr ""
+
+#: Era_of_High_Sorcery/picks.cfg:52
+msgid "Nature Magic skill"
+msgstr ""
+
+#: Era_of_High_Sorcery/picks.cfg:64
+msgid ""
+"The power to shape the earth and sky to do your bidding.\n"
+"Level 1: Lets you move easily in forest. Allows you to summon Wolves.\n"
+"Level 2: Allows you to cast Mud Touch. Allows you to purchase the Elvish "
+"Alliance option.\n"
+"Level 3: Allows you to cast Grow Trees.\n"
+"Level 4: Allows you to summon Woses. Allows you to purchase the Archmage "
+"option.\n"
+"Level 5: Allows you to summon pairs of Wolves. Allows you to cast "
+"Regeneration.\n"
+"Level 6: Allows you to summon Gryphons.\n"
+"Level 7: Allows you to cast Lightning Bolt.\n"
+"Level 8: Allows you to cast Fissure.\n"
+"Level 9: Allows you to cast Rampage.\n"
+"Level 10: Allows you to cast Blizzard."
+msgstr ""
+
+#: Era_of_High_Sorcery/picks.cfg:79
+msgid "Necromancy skill"
+msgstr ""
+
+#: Era_of_High_Sorcery/picks.cfg:94
+msgid ""
+"The power to summon and bind the spirits of the dead.\n"
+"If you have any skill in necromancy, you may not select Dwarvish Alliance, "
+"Elvish Alliance, or Leader of Men.\n"
+"Level 1: Allows you to recruit Walking Corpses and Vampire Bats.\n"
+"Level 2: Allows you to recruit Skeletons and Skeleton Archers.\n"
+"Level 3: Allows you to recruit Ghouls and Ghosts.\n"
+"Level 4: Instead of recruiting Walking Corpses, allows you to freely summon "
+"them.\n"
+"   Lets you choose Lich if you level up as a Red Mage. Allows you to "
+"purchase the Archmage option.\n"
+"Level 5: Allows you to cast Poison Ground. Allows you to freely summon and "
+"absorb Vampire Bats.\n"
+"Level 6: Allows you to cast Dark Pact.\n"
+"Level 7: Allows you to summon Chocobones.\n"
+"Level 8: Instead of recruiting Skeletons and Skeleton Archers, allows you to "
+"freely summon them.\n"
+"   Allows you to cast Wraithform. Lets you choose Ancient Lich if you level "
+"up as a Lich.\n"
+"Level 9: Allows you to cast Devour Soul.\n"
+"Level 10: Allows you to summon Skeletal Dragons."
+msgstr ""
+
+#: Era_of_High_Sorcery/picks.cfg:124
+msgid "Archmage (2 points)"
+msgstr ""
+
+#: Era_of_High_Sorcery/picks.cfg:128
+msgid ""
+"You are a master in your magical craft.\n"
+"Your non-summoning spells cost 4/5 the normal amount, you have +40% "
+"resistance to magical damage, and you can recruit Mages and/or Dark Adepts.\n"
+"You must learn 4 skill in any realm to be an Archmage. The realm(s) that you "
+"have 4 skill in determine(s) what you can recruit."
+msgstr ""
+
+#: Era_of_High_Sorcery/picks.cfg:149
+msgid "Superb Summoner (2 points)"
+msgstr ""
+
+#: Era_of_High_Sorcery/picks.cfg:154
+msgid ""
+"You are very proficient in calling monsters from the ether.\n"
+"Your summoning spells cost 4/5 the normal amount, and you may cast two "
+"summoning spells per turn,\n"
+"though you still may not summon and attack or summon and cast a non-"
+"summoning spell in the same turn.\n"
+"There is no prerequiste for Superb Summoner, but it is not useful unless you "
+"can cast a summoning spell."
+msgstr ""
+
+#: Era_of_High_Sorcery/picks.cfg:166
+msgid "Enchanter (1 point)"
+msgstr ""
+
+#: Era_of_High_Sorcery/picks.cfg:170
+msgid ""
+"You are practiced in the art of placing enchantments.\n"
+"You may cast one additional enchantment spell each turn regardless of what "
+"else you do in the turn.\n"
+"There is no prerequiste for Enchanter, but it is not useful unless you can "
+"cast an enchantment spell."
+msgstr ""
+
+#: Era_of_High_Sorcery/picks.cfg:182
+msgid "Farseer (1 point)"
+msgstr ""
+
+#: Era_of_High_Sorcery/picks.cfg:186
+msgid ""
+"You have a keen eye and a steady mind.\n"
+"The range of your spells is increased by 50%, rounded up. Even spells that "
+"target adjacent units can be cast two hexes away,\n"
+"although summoning spells can still only be cast adjacent to you."
+msgstr ""
+
+#: Era_of_High_Sorcery/picks.cfg:201
+msgid "Leader of Men (2 points)"
+msgstr ""
+
+#: Era_of_High_Sorcery/picks.cfg:205
+msgid ""
+"You are able to raise up and lead a human military.\n"
+"You can recruit loyalist units, except for mages, and lead adjacent units in "
+"combat.\n"
+"No one who has skill in Necromancy or hires Orcish Mercenaries may be a "
+"Leader of Men."
+msgstr ""
+
+#: Era_of_High_Sorcery/picks.cfg:228
+msgid "Prince of Thieves (2 points)"
+msgstr ""
+
+#: Era_of_High_Sorcery/picks.cfg:231
+msgid ""
+"You control a secret organization of outlaws.\n"
+"You can recruit outlaw units, and you gain the Skirmisher ability."
+msgstr ""
+
+#: Era_of_High_Sorcery/picks.cfg:258
+msgid "Elvish Alliance (1 point)"
+msgstr ""
+
+#: Era_of_High_Sorcery/picks.cfg:262
+msgid ""
+"You forge an alliance with the Elves.\n"
+"You can recruit elvish units and Merman Hunters.\n"
+"You must have 2 skill in Nature Magic, no skill in Necromancy, and no Orcish "
+"Mercenaries or Dwarvish allies if the Elves are to accept you."
+msgstr ""
+
+#: Era_of_High_Sorcery/picks.cfg:283
+msgid "Dwarvish Alliance (1 point)"
+msgstr ""
+
+#: Era_of_High_Sorcery/picks.cfg:287
+msgid ""
+"You forge an alliance with the Dwarves.\n"
+"You can recruit dwarvish units.\n"
+"You must have 2 skill in Evocation, no skill in Necromancy, and no Orcish "
+"Mercenaries or Elvish allies if the Dwarves are to accept you."
+msgstr ""
+
+#: Era_of_High_Sorcery/picks.cfg:307
+msgid "Orcish Mercenaries (1 point)"
+msgstr ""
+
+#: Era_of_High_Sorcery/picks.cfg:311
+msgid ""
+"You hire orcs to do your dirty work for you.\n"
+"You can recruit orcish units, trolls, and nagas.\n"
+"If you take this option, you may not select Dwarvish Alliance, Elvish "
+"Alliance, or Leader of Men."
+msgstr ""
+
+#: Era_of_High_Sorcery/picks_system.cfg:70
+msgid " (1 point per level)"
+msgstr ""
+
+#. [option]
+#: Era_of_High_Sorcery/picks_system.cfg:122
+msgid " (2 points)"
+msgstr ""
+
+#. [option]
+#: Era_of_High_Sorcery/picks_system.cfg:136
+msgid " (4 points)"
+msgstr ""
+
+#: Era_of_High_Sorcery/picks_system.cfg:175
+msgid "You already have that ability!"
+msgstr ""
+
+#: Era_of_High_Sorcery/picks_system.cfg:176
+msgid ""
+"You cannot take that option with your current other picks. Read the "
+"prerequisites."
+msgstr ""
+
+#: Era_of_High_Sorcery/picks_system.cfg:180
+msgid "You do not have enough picks left to take that option."
+msgstr ""
+
+#: Era_of_High_Sorcery/picks_system.cfg:325
+msgid "leadership"
+msgstr ""
+
+#: Era_of_High_Sorcery/picks_system.cfg:326
+msgid "female^leadership"
+msgstr ""
+
+#: Era_of_High_Sorcery/picks_system.cfg:330
+msgid ""
+"Leadership:\n"
+"This unit can lead our own units that are next to it, making them fight "
+"better.\n"
+"\n"
+"Adjacent own units of lower level will do more damage in battle. When a unit "
+"adjacent to, of a lower level than, and on the same side as a unit with "
+"Leadership engages in combat, its attacks do 25% more damage times the "
+"difference in their levels."
+msgstr ""
+
+#: Era_of_High_Sorcery/picks_system.cfg:359
+msgid ""
+"Choose abilities for your wizard.\n"
+"\n"
+"If you're a beginner, you should probably take one ability that gives you "
+"recruits, and put most of the rest of your picks into one of the three "
+"realms of magic.\n"
+"\n"
+"You currently have:"
+msgstr ""
+
+#: Era_of_High_Sorcery/picks_system.cfg:368
+msgid "Show disallowed picks."
+msgstr ""
+
+#: Era_of_High_Sorcery/picks_system.cfg:382
+msgid "Hide disallowed picks."
+msgstr ""
+
+#: Era_of_High_Sorcery/picks_system.cfg:561
+msgid "$picks_left_$make_picks_desc_side|| picks remaining"
+msgstr ""
+
+#: Era_of_High_Sorcery/picks_system.cfg:579
+msgid "$ally_wizard_leaders[{ALLY_INDEX}].name|'s picks:</span>"
+msgstr ""
+
+#: Era_of_High_Sorcery/picks_system.cfg:611
+msgid "View skills"
+msgstr ""
+
+#: Era_of_High_Sorcery/picks_system.cfg:641
+msgid "<span color='#00FF00' size='large'>Your picks:</span>"
+msgstr ""
+
+#: Era_of_High_Sorcery/picks_system.cfg:667
+msgid "Descriptions of all skill picks are listed below."
+msgstr ""
+
+#. [message]: speaker=narrator
+#: Era_of_High_Sorcery/spell_system.cfg:149
+msgid "You do not have enough mana to cast that spell!"
+msgstr ""
+
+#. [message]: speaker=narrator
+#: Era_of_High_Sorcery/spell_system_old.cfg:215
+#: Era_of_High_Sorcery/spell_system.cfg:157
+msgid "You do not have enough gold to cast that spell!"
+msgstr ""
+
+#: Era_of_High_Sorcery/spell_system.cfg:266
+msgid "Cast a spell"
+msgstr ""
+
+#. [then]
+#: Era_of_High_Sorcery/spell_system.cfg:325
+msgid "You have $eohs_mana_$side_number|| mana."
+msgstr ""
+
+#. [else]
+#: Era_of_High_Sorcery/spell_system.cfg:328
+msgid "You have $current_side_info.gold gold."
+msgstr ""
+
+#. [message]: speaker=narrator
+#: Era_of_High_Sorcery/spell_system_old.cfg:314
+#: Era_of_High_Sorcery/spell_system.cfg:366
+msgid ""
+"Descriptions of all spells, with their base costs, are listed below.\n"
+"(Picking the options does nothing; this is merely an info screen)"
+msgstr ""
+
+#: Era_of_High_Sorcery/spell_system.cfg:382
+msgid "Descriptions of all spells, with their base costs, are listed below."
+msgstr ""
+
+#. [set_menu_item]: id={SPELL}_menu_item
+#. [set_menu_item]: id={SUMMON}_menu_item
+#: Era_of_High_Sorcery/spell_system_old.cfg:182
+#: Era_of_High_Sorcery/summon_system_old.cfg:32
+msgid "<255,0,0>"
+msgstr ""
+
+#: Era_of_High_Sorcery/spells-evocation.cfg:7
+msgid "Energy Bolt ($energy_bolt_cost| gold)"
+msgstr ""
+
+#: Era_of_High_Sorcery/spells-evocation.cfg:10
+msgid ""
+"Inflicts 5 to 9 damage plus your Evocation level\n"
+"upon one target within $energy_bolt_base_range| hexes."
+msgstr ""
+
+#: Era_of_High_Sorcery/spells-evocation.cfg:31
+msgid "Wizard Sword ($wizard_sword_cost| gold)"
+msgstr ""
+
+#: Era_of_High_Sorcery/spells-evocation.cfg:34
+msgid ""
+"Grants a 7-3 magical sword to you or an adjacent unit.\n"
+"The sword vanishes at the beginning of your third turn hence."
+msgstr ""
+
+#. [effect]: type=blade
+#: Era_of_High_Sorcery/spells-evocation.cfg:55
+msgid "wizard sword"
+msgstr ""
+
+#. [damage]: id=disappears_dummy
+#: Era_of_High_Sorcery/spells-evocation.cfg:66
+msgid "vanishes turn $will_disappear_on"
+msgstr ""
+
+#: Era_of_High_Sorcery/spells-evocation.cfg:114
+msgid "Mage Shield ($mage_shield_cost| gold)"
+msgstr ""
+
+#: Era_of_High_Sorcery/spells-evocation.cfg:117
+msgid ""
+"Surrounds yourself or an adjacent unit with a shield that\n"
+"will block the first blow that hits it, then disappear."
+msgstr ""
+
+#. [unstore_unit]
+#: Era_of_High_Sorcery/spells-evocation.cfg:180
+msgid "$amount_blocked blocked!"
+msgstr ""
+
+#: Era_of_High_Sorcery/spells-evocation.cfg:194
+msgid "Fire Ball ($fire_ball_cost| gold)"
+msgstr ""
+
+#: Era_of_High_Sorcery/spells-evocation.cfg:198
+msgid ""
+"Inflicts 8 to 14 damage plus 1.5 times your\n"
+"Evocation level upon every unit in a radius-1 area\n"
+"around one target within $fire_ball_base_range| hexes."
+msgstr ""
+
+#: Era_of_High_Sorcery/spells-evocation.cfg:262
+msgid "Dispelling Touch ($dispelling_touch_cost| gold)"
+msgstr ""
+
+#: Era_of_High_Sorcery/spells-evocation.cfg:271
+msgid ""
+"Places an enchantment on you that will dispel the first enemy magic\n"
+"that it comes into contact with. This uses up the enchantment.\n"
+"The following types of enemy magic are affected when you hit a unit in "
+"melee\n"
+"(if you hit a unit with more than one of these, all are affected):\n"
+"Mud Touch, Regeneration, Dispelling Touch, Wraithform: dispelled\n"
+"Mage Shield, Dark Pact: dispelled and ignored (i.e. the shield does not "
+"block anything)\n"
+"Summoned creatures and undead: inflicts (skill*4) to (skill*6) damage\n"
+"Also, if you end a turn on a poisoned hex, the poison is dispelled and "
+"ignored, without using up the dispelling touch."
+msgstr ""
+
+#: Era_of_High_Sorcery/spells-evocation.cfg:405
+msgid "Corridor of Frost ($corridor_of_frost_cost| gold)"
+msgstr ""
+
+#: Era_of_High_Sorcery/spells-evocation.cfg:408
+msgid ""
+"Continues in the given direction for (your Evocation level) hexes,\n"
+"slowing and inflicting 6 to 10 damage upon each unit in its path."
+msgstr ""
+
+#: Era_of_High_Sorcery/spells-evocation.cfg:474
+msgid "slowed"
+msgstr ""
+
+#: Era_of_High_Sorcery/spells-evocation.cfg:514
+msgid "Gate ($mass_teleport_cost| gold)"
+msgstr ""
+
+#: Era_of_High_Sorcery/spells-evocation.cfg:520
+msgid ""
+"Teleports you and all adjacent units, friendly or enemy, to a target "
+"location within $mass_teleport_base_range| hexes.\n"
+"Teleported units you control can move immediately, but can't attack.\n"
+"You can't Gate to any location that would leave any of the units overlapping "
+"another unit,\n"
+"nor inside a wall or void hex, nor - for non-flying units - over a chasm or "
+"lava.\n"
+"Gate also cannot take you to locations that are completely inaccessible by "
+"non-magical means."
+msgstr ""
+
+#: Era_of_High_Sorcery/spells-evocation.cfg:641
+msgid "teleported"
+msgstr ""
+
+#: Era_of_High_Sorcery/spells-evocation.cfg:676
+msgid "teleport"
+msgstr ""
+
+#: Era_of_High_Sorcery/spells-evocation.cfg:700
+msgid "Aberrant Growth ($ogrify_cost| gold)"
+msgstr ""
+
+#: Era_of_High_Sorcery/spells-evocation.cfg:709
+msgid ""
+"Transforms one adjacent non-leader elf, dwarf, human, goblin,\n"
+"or orc into a huge Ogre. The ogre retains its experience and\n"
+"will have the same fraction of its hitpoints remaining as did\n"
+"the original unit, but is otherwise a completely new unit.\n"
+"If a level 0 unit is hit with this spell, it will merely become\n"
+"a Young Ogre.\n"
+"Note that in you can replace an enemy unit with an ogre just\n"
+"as well as your own units, but it will remain your enemy."
+msgstr ""
+
+#: Era_of_High_Sorcery/spells-evocation.cfg:769
+#: Era_of_High_Sorcery/spells-nature_magic.cfg:137
+msgid "Transmogrified!"
+msgstr ""
+
+#: Era_of_High_Sorcery/spells-evocation.cfg:780
+msgid "Circle of Protection ($circle_of_protection_cost| gold)"
+msgstr ""
+
+#: Era_of_High_Sorcery/spells-evocation.cfg:786
+msgid ""
+"Places a circle of protection at your location or at an adjacent target "
+"hex.\n"
+"Units in circles of protection cannot be targetted - or affected in any way "
+"- by enemy spells,\n"
+"and the circles protect against the potentially harmful affects of friendly "
+"spells as well.\n"
+"If a unit is attacked while in a circle of protection, both sides will do "
+"1/3 the normal damage.\n"
+"There is no limit to how long a circle of protection lasts, but it "
+"disappears if an enemy enters it."
+msgstr ""
+
+#: Era_of_High_Sorcery/spells-evocation.cfg:957
+msgid "Meteor Storm ($meteor_storm_cost| gold)"
+msgstr ""
+
+#: Era_of_High_Sorcery/spells-evocation.cfg:960
+msgid ""
+"Drops 10 to 13 flaming boulders near one target within "
+"$meteor_storm_base_range| hexes.\n"
+"Units and terrain in the area will be severly damaged, including destruction "
+"of villages and keeps."
+msgstr ""
+
+#: Era_of_High_Sorcery/spells-nature_magic.cfg:8
+msgid "Mud Touch ($mud_touch_cost| gold)"
+msgstr ""
+
+#: Era_of_High_Sorcery/spells-nature_magic.cfg:15
+msgid ""
+"Enchants you so that the next time you hit a living unit in melee, that "
+"unit\n"
+"is immediately turned into a ghastly mudcrawler, ending the fight "
+"immediately.\n"
+"The mudcrawler retains the hitpoints, max hitpoints, and experience of the\n"
+"original unit, but otherwise is a completely new unit. Level 0 units are "
+"changed\n"
+"into level 0 Mudcrawlers; everything else becomes a level 1 Giant "
+"Mudcrawler.\n"
+"(Has no effect on enemy leaders or units that are already mudcrawlers.)"
+msgstr ""
+
+#: Era_of_High_Sorcery/spells-nature_magic.cfg:158
+msgid "Grow Trees ($grow_trees_cost| gold)"
+msgstr ""
+
+#: Era_of_High_Sorcery/spells-nature_magic.cfg:163
+msgid ""
+"Grows trees on all hexes within a (your Nature Magic skill / 4)-radius area "
+"of\n"
+"any target within $grow_trees_base_range| hexes. Some terrains are "
+"unaffected.\n"
+"The radius isn't rounded down - rather, hexes on the edge of the radius have "
+"a\n"
+"random chance of being affected."
+msgstr ""
+
+#: Era_of_High_Sorcery/spells-nature_magic.cfg:312
+msgid "Regeneration ($regeneration_cost| gold)"
+msgstr ""
+
+#: Era_of_High_Sorcery/spells-nature_magic.cfg:316
+msgid ""
+"Immediately heals an adjacent unit for 2 to 4 hitpoints plus your\n"
+"Nature Magic skill, and grants it the ability to regenerate by\n"
+"(Nature Magic skill * 2) hitpoints per turn for six turns."
+msgstr ""
+
+#: Era_of_High_Sorcery/spells-nature_magic.cfg:425
+#: Era_of_High_Sorcery/spells-nature_magic.cfg:457
+msgid "regenerates +$regeneration_amount"
+msgstr ""
+
+#: Era_of_High_Sorcery/spells-nature_magic.cfg:458
+msgid "female^regenerates +$regeneration_amount"
+msgstr ""
+
+#: Era_of_High_Sorcery/spells-nature_magic.cfg:460
+msgid ""
+"Regenerates +$regeneration_amount:\n"
+"The unit will heal itself $regeneration_amount HP per turn. If it is "
+"poisoned, it will remove the poison instead of healing."
+msgstr ""
+
+#: Era_of_High_Sorcery/spells-nature_magic.cfg:477
+msgid "Lightning Bolt ($lightning_bolt_cost| gold)"
+msgstr ""
+
+#: Era_of_High_Sorcery/spells-nature_magic.cfg:481
+msgid ""
+"Inflicts 12 to 18 damage plus your Nature Magic level upon one target within "
+"$lightning_bolt_base_range| hexes,\n"
+"and, if it's still alive, paralyzes it so that it can't move on its next "
+"turn,\n"
+"and can't attack unless it's a leader."
+msgstr ""
+
+#: Era_of_High_Sorcery/spells-nature_magic.cfg:541
+msgid "paralyzed"
+msgstr ""
+
+#: Era_of_High_Sorcery/spells-nature_magic.cfg:551
+msgid "Fissure ($fissure_cost| gold)"
+msgstr ""
+
+#: Era_of_High_Sorcery/spells-nature_magic.cfg:555
+msgid ""
+"Irrevocably opens up a chasm hex up to $fissure_base_range| hexes away.\n"
+"Any unit in the hex that is unable to fly will be instantly killed.\n"
+"Unlike other spells, you do not gain experience for a unit killed this way."
+msgstr ""
+
+#: Era_of_High_Sorcery/spells-nature_magic.cfg:583
+msgid "Rampage ($rampage_cost| gold)"
+msgstr ""
+
+#: Era_of_High_Sorcery/spells-nature_magic.cfg:588
+msgid ""
+"Until the end of your turn, empowers you and all adjacent units on your "
+"team\n"
+"with primal energy, granting +3 damage and +1 swings on on their melee "
+"attacks\n"
+"and making them take 50% less damage in combat. You can personally attack "
+"after\n"
+"casting this spell, but you cannot cast additional spells."
+msgstr ""
+
+#: Era_of_High_Sorcery/spells-nature_magic.cfg:685
+msgid "rampage!"
+msgstr ""
+
+#: Era_of_High_Sorcery/spells-nature_magic.cfg:710
+msgid "rampage"
+msgstr ""
+
+#: Era_of_High_Sorcery/spells-nature_magic.cfg:726
+msgid "Blizzard ($blizzard_cost| gold)"
+msgstr ""
+
+#: Era_of_High_Sorcery/spells-nature_magic.cfg:729
+msgid ""
+"Snows on a large area, centered up to $blizzard_base_range| hexes away.\n"
+"Snow created this way melts after 4 to 8 turns; ice melts after 1 to 3 turns."
+msgstr ""
+
+#: Era_of_High_Sorcery/spells-nature_magic.cfg:972
+msgid "Vines ($vines_spell_cost| gold)"
+msgstr ""
+
+#: Era_of_High_Sorcery/spells-nature_magic.cfg:978
+msgid ""
+"Immediately fills all empty hexes within a radius-3 area, up to "
+"$vines_spell_range| hexes away,\n"
+"with obstructing vines. The vines are units on your team that cannot move.\n"
+"The vines have no attacks, but they have 15 HP, they exert Zone of Control,\n"
+"and they give a 50% attack damage penalty to all adjacent units.\n"
+"They have the same defenses and resistances as a Wose."
+msgstr ""
+
+#: Era_of_High_Sorcery/spells-nature_magic.cfg:1031
+msgid "Vines"
+msgstr ""
+
+#: Era_of_High_Sorcery/spells-nature_magic.cfg:1039
+msgid ""
+"Vines have no attacks, but are useful for obstructing the enemy's progress."
+msgstr ""
+
+#: Era_of_High_Sorcery/spells-nature_magic.cfg:1052
+msgid "slows adjacent"
+msgstr ""
+
+#: Era_of_High_Sorcery/spells-nature_magic.cfg:1054
+msgid ""
+"Slows adjacent:\n"
+"This unit gives all adjacent units, friendly or enemy, a non-cumulative 50% "
+"attack penalty in combat."
+msgstr ""
+
+#: Era_of_High_Sorcery/spells-necromancy.cfg:9
+msgid "Absorb bat (No cost, Instant)"
+msgstr ""
+
+#: Era_of_High_Sorcery/spells-necromancy.cfg:13
+msgid ""
+"Absorbs one of your bats that is adjacent to you. You regain the gold you "
+"spent to create it.\n"
+"You may not absorb a bat that was just summoned, or one that has already "
+"attacked this turn.\n"
+"This does not use up your spell or attack for the turn."
+msgstr ""
+
+#. [unstore_unit]
+#: Era_of_High_Sorcery/spells-necromancy.cfg:68
+msgid "+$gold_regained gold"
+msgstr ""
+
+#. [unstore_unit]
+#: Era_of_High_Sorcery/spells-necromancy.cfg:76
+msgid "+$gold_regained mana"
+msgstr ""
+
+#: Era_of_High_Sorcery/spells-necromancy.cfg:94
+msgid "Poison Ground ($poison_ground_cost| gold)"
+msgstr ""
+
+#: Era_of_High_Sorcery/spells-necromancy.cfg:100
+msgid ""
+"Permanently corrupts most of a radius-2 area around\n"
+"one target up to $poison_ground_base_range| hexes away.\n"
+"Any living unit on the corrupted area when the spell is cast is poisoned.\n"
+"Any living unit standing on the corrupted area and the end of a turn is "
+"poisoned.\n"
+"Greater necromancy skill increases the likelihood of poisoning each hex."
+msgstr ""
+
+#: Era_of_High_Sorcery/spells-necromancy.cfg:241
+msgid "Dark Pact ($dark_pact_cost| gold)"
+msgstr ""
+
+#: Era_of_High_Sorcery/spells-necromancy.cfg:247
+msgid ""
+"You or an adjacent target unit on your side forms a permanent dark pact.\n"
+"Whenever that unit is damaged, half the damage will be restored at the "
+"expense\n"
+"of leeching an equal number of hitpoints from any other units on your side\n"
+"that are within 5 hexes. If there are no such units, the protection is "
+"void.\n"
+"Additional Necromancy skill improves the amount of damage deflected."
+msgstr ""
+
+#: Era_of_High_Sorcery/spells-necromancy.cfg:394
+msgid "Wraithform ($wraithform_cost| gold)"
+msgstr ""
+
+#: Era_of_High_Sorcery/spells-necromancy.cfg:402
+msgid ""
+"You transform into a Wraith (or Spectre, depending on your level.)\n"
+"The effect lasts as long as you wish, and you can end it at any time via a "
+"drop-down menu option.\n"
+"However, you can't cast spells or train in magic when you are a Wraith, and "
+"if you die as a Wraith, you're dead.\n"
+"The wraith form begins with full HP. It replaces your current form - when "
+"you end the effect, you\n"
+"return to the same state you were in when you cast the spell, including "
+"damage, but with no attacks left.\n"
+"Transforming - in either direction - approximately preserves the fraction of "
+"your moves that you have left.\n"
+"The Wraith itself cannot level up, but you keep all experience gained while "
+"in wraithform."
+msgstr ""
+
+#: Era_of_High_Sorcery/spells-necromancy.cfg:420
+msgid "End Wraithform"
+msgstr ""
+
+#. [unstore_unit]
+#: Era_of_High_Sorcery/spells-necromancy.cfg:493
+msgid "wraithform"
+msgstr ""
+
+#: Era_of_High_Sorcery/spells-necromancy.cfg:502
+msgid "Devour Soul ($devour_soul_cost| gold)"
+msgstr ""
+
+#: Era_of_High_Sorcery/spells-necromancy.cfg:509
+msgid ""
+"You instantly kill an adjacent unit - either one of your units,\n"
+"or an enemy unit with hitpoints lower than your Necromancy skill.\n"
+"You are permanently gain half its max hitpoints (and you're healed\n"
+"for that amount), all its unit abilities, and any attack that is\n"
+"innate (i.e. not just a weapon the unit holds - admittedly, which\n"
+"attacks are counted is subjective..)"
+msgstr ""
+
+#. [message]: speaker=narrator
+#: Era_of_High_Sorcery/summon_system.cfg:220
+msgid "You cannot have that many summoned creatures at once!"
+msgstr ""
+
+#. [message]: speaker=narrator
+#: Era_of_High_Sorcery/summon_system.cfg:234
+msgid "You do not have enough mana to summon that creature!"
+msgstr ""
+
+#. [message]: speaker=narrator
+#: Era_of_High_Sorcery/summon_system.cfg:242
+#: Era_of_High_Sorcery/summon_system_old.cfg:70
+msgid "You do not have enough gold to summon that creature!"
+msgstr ""
+
+#. [set_menu_item]: id=eohs_unsummon
+#: Era_of_High_Sorcery/summon_system.cfg:480
+msgid "Unsummon this creature"
+msgstr ""
+
+#. [effect]
+#. [effect]: type=pierce
+#: Era_of_High_Sorcery/summon_system.cfg:678
+#: Era_of_High_Sorcery/summon_system.cfg:685
+msgid "halberd"
+msgstr ""
+
+#: Era_of_High_Sorcery/summons.cfg:25
+msgid "Summon Drake Fighter ($drake_fighter_cost| gold)"
+msgstr ""
+
+#: Era_of_High_Sorcery/summons.cfg:32
+msgid "Summon Fire Dragon ($fire_dragon_cost| gold)"
+msgstr ""
+
+#: Era_of_High_Sorcery/summons.cfg:38
+msgid "Summon Wolf ($wolf_cost| gold)"
+msgstr ""
+
+#: Era_of_High_Sorcery/summons.cfg:45
+msgid "Summon two Wolves ($wolves_cost| gold)"
+msgstr ""
+
+#: Era_of_High_Sorcery/summons.cfg:51
+msgid "Summon Wose ($wose_cost| gold)"
+msgstr ""
+
+#: Era_of_High_Sorcery/summons.cfg:58
+msgid "Summon Gryphon ($gryphon_cost| gold)"
+msgstr ""
+
+#: Era_of_High_Sorcery/summons.cfg:65
+msgid "Summon Walking Corpse ($walking_corpse_cost| gold, Instant)"
+msgstr ""
+
+#: Era_of_High_Sorcery/summons.cfg:73
+msgid "Summon Vampire Bat ($vampire_bat_cost| gold, Instant)"
+msgstr ""
+
+#: Era_of_High_Sorcery/summons.cfg:79
+msgid "Summon Chocobone ($chocobone_cost| gold)"
+msgstr ""
+
+#: Era_of_High_Sorcery/summons.cfg:86
+msgid "Summon Skeleton ($skeleton_cost| gold, Instant)"
+msgstr ""
+
+#: Era_of_High_Sorcery/summons.cfg:93
+msgid "Summon Skeleton Archer ($skeleton_archer_cost| gold, Instant)"
+msgstr ""
+
+#: Era_of_High_Sorcery/summons.cfg:99
+msgid "Summon Skeletal Dragon ($skeletal_dragon_cost| gold)"
+msgstr ""
