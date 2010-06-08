@@ -10,7 +10,6 @@
 {VARIABLE {SPELL}_base_range {RANGE}}
 {VARIABLE {SPELL}_freely_castable false}
 {VARIABLE {SPELL}_fixed_price false}
-{VARIABLE {SPELL}_fixed_range false}
 {VARIABLE {SPELL}_is_enchantment false}
 #enddef
 
@@ -20,10 +19,6 @@
 #define FIXED_PRICE SPELL_OR_SUMMON
 {VARIABLE {SPELL_OR_SUMMON}_fixed_price true}
 #enddef
-
-#define FIXED_RANGE SPELL
-{VARIABLE {SPELL}_fixed_range true}
-#enddef
 #define IS_ENCHANTMENT SPELL
 {VARIABLE {SPELL}_is_enchantment true}
 #enddef
@@ -31,70 +26,6 @@
 
 #define SPELL_INFO_INIT SPELL
 {{SPELL}_INFO_INIT}
-#enddef
-
-#define CANT_CAST_WITH_MESSAGE MESSAGE
-{VARIABLE can_cast false}
-[set_variables]
-  name=cant_cast_messages
-  mode=append
-  [value]
-    message={MESSAGE}
-  [/value]
-[/set_variables]
-#enddef
-
-#define CANT_CAST_IF_ALREADY_ENCHANTED_WITH ENCHANTMENT_NAME MESSAGE
-[if]
-  [have_unit]
-    x=$x1
-    y=$y1
-    [filter_wml]
-      [variables]
-        {ENCHANTMENT_NAME}=true
-      [/variables]
-    [/filter_wml]
-  [/have_unit]
-  [then]
-    {CANT_CAST_WITH_MESSAGE {MESSAGE}}
-  [/then]
-[/if]
-#enddef
-
-#define GIVE_DUMMY_ABILITY_FOR_ENCHANTMENT FILTER ENCHANTMENT_NAME ABILITY_MALE_NAME ABILITY_FEMALE_NAME DESCRIPTION
-[object]
-  silent=yes
-  [filter]
-    {FILTER}
-  [/filter]
-  [effect]
-    apply_to=new_ability
-    [abilities]
-      [dummy]
-        id={ENCHANTMENT_NAME}_dummy_ability
-        name={ABILITY_MALE_NAME}
-        female_name={ABILITY_FEMALE_NAME}
-        description={DESCRIPTION}
-      [/dummy]
-    [/abilities]
-  [/effect]
-[/object]
-#enddef
-#define REMOVE_DUMMY_ABILITY_FOR_ENCHANTMENT FILTER ENCHANTMENT_NAME
-[object]
-  silent=yes
-  [filter]
-    {FILTER}
-  [/filter]
-  [effect]
-    apply_to=remove_ability
-    [abilities]
-      [dummy]
-        id={ENCHANTMENT_NAME}_dummy_ability
-      [/dummy]
-    [/abilities]
-  [/effect]
-[/object]
 #enddef
 
 #define SETUP_SPELL_INFO SPELL
@@ -123,100 +54,14 @@
 {VARIABLE_OP {SPELL}_cost divide $spell_cost_divisor}
 
 {VARIABLE {SPELL}_range ${SPELL}_base_range}
-{IF_VAR farseer_$side_number boolean_equals true ([and]
-  [variable]
-    name={SPELL}_fixed_range
-    boolean_equals=false
-  [/variable]
-[/and]
-[then]
+{IF_VAR farseer_$side_number boolean_equals true ([then]
   {VARIABLE_OP {SPELL}_range multiply 3}
   {VARIABLE_OP {SPELL}_range      add 1}
   {VARIABLE_OP {SPELL}_range   divide 2}
 [/then])}
 
-{VARIABLE current_player_knows_{SPELL} false}
+{VARIABLE {SPELL}_known false}
 {IF_VAR ${SPELL}_realm|_skill_$side_number greater_than_equal_to ${SPELL}_level ([then]
-  {VARIABLE current_player_knows_{SPELL} true}
-  {VARIABLE can_cast true}
-  {CLEAR_VARIABLE cant_cast_messages}
-
-#ifdef NOT
-  [if]
-    [have_location]
-      x=$x1
-      y=$y1
-      [insert_tag]
-        name=and
-        variable=EoHS_possible_targets_for_{SPELL}
-      [/insert_tag]
-    [/have_location]
-
-    [else] # else
-      {CANT_CAST_WITH_MESSAGE _"This scenario specifically forbids casting that spell at that location."}
-    [/else]
-  [/if]
-#endif
-
-  [if]
-    [variable]
-      name={SPELL}_range
-      greater_than=0
-    [/variable]
-    [not]
-      [have_location]
-        x=$x1
-        y=$y1
-        [and]
-          [filter]
-            side=$side_number
-            {IS_WIZARD_LEADER}
-          [/filter]
-          radius=${SPELL}_range
-        [/and]
-      [/have_location]
-    [/not]
-    [then]
-      {CANT_CAST_WITH_MESSAGE _"That target is beyond your maximum range for that spell."}
-    [/then]
-  [/if]
-
-  [if]
-    [variable]
-      name={SPELL}_range
-      equals=0
-    [/variable]
-    [not]
-      [have_unit]
-        x=$x1
-        y=$y1
-        side=$side_number
-        {IS_WIZARD_LEADER}
-      [/have_unit]
-    [/not]
-    [then]
-      {CANT_CAST_WITH_MESSAGE _"That spell can only be cast on your leader."}
-    [/then]
-  [/if]
-
-  [if]
-    {CURRENT_SIDE_HAS_GOLD_OR_MANA_OF_AT_LEAST ${SPELL}_cost}
-    [or]
-      [variable]
-        name={SPELL}_cost
-	equals=0
-      [/variable]
-    [/or]
-    [else] # else
-      {IF_VAR EoHS_uses_mana_instead_of_gold boolean_equals true ([then]
-        {CANT_CAST_WITH_MESSAGE _"You don't have enough mana to cast that spell."}
-      [/then]
-      [else]
-        {CANT_CAST_WITH_MESSAGE _"You don't have enough gold to cast that spell."}
-      [/else])}
-    [/else]
-  [/if]
-
   {IF_VAR current_leader_info.attacks_left greater_than_equal_to 1 ([or]
     [variable]
       name={SPELL}_freely_castable
@@ -241,55 +86,26 @@
       [/variable]
     [/and]
   [/or]
-  [else] # else
-    {CANT_CAST_WITH_MESSAGE _"You can't cast that spell because you don't have any attacks left."}
-  [/else])}
-
-  [if]
-    [variable]
-      name={SPELL}_is_enchantment
-      boolean_equals=true
-    [/variable]
-    [not]
-      [have_unit]
-        x=$x1
-        y=$y1
-      [/have_unit]
-    [/not]
-
-    [then] # then
-      {CANT_CAST_WITH_MESSAGE _"An enchantment spell can only be cast on a unit."}
+  [then]
+    {VARIABLE {SPELL}_known true}
+    [if]
+    {CURRENT_SIDE_HAS_GOLD_OR_MANA_OF_AT_LEAST ${SPELL}_cost}
+    [or]
+      [variable]
+        name={SPELL}_cost
+	equals=0
+      [/variable]
+    [/or]
+    [then]
+      {VARIABLE {SPELL}_opt_string "&"+${SPELL}_image|+"="+{{SPELL}_OPT_STRING}+"
+"+{{SPELL}_DESCRIPTION}}
     [/then]
-  [/if]
-  
-  {{SPELL}_CHECK_TARGET}
-
-  [if]
-    [insert_tag]
-      name=then
-      variable=EoHS_auxiliary_target_limitations_{SPELL}
-    [/insert_tag]
-  [/if]
-
-  {VARIABLE current_player_can_cast_{SPELL} $can_cast}
-
-  {IF_VAR current_player_can_cast_{SPELL} boolean_equals true ([then]
-    {VARIABLE {SPELL}_opt_string "&"+${SPELL}_image|+"="+{{SPELL}_OPT_STRING}+"
+    [else]
+      {VARIABLE {SPELL}_opt_string "&"+${SPELL}_image|+"="+"<span color='#FF0000'>"+{{SPELL}_OPT_STRING}+"</span>
 "+{{SPELL}_DESCRIPTION}}
-  [/then]
-  [else]
-    {VARIABLE {SPELL}_opt_string "&"+${SPELL}_image|+"="+"<span color='#FF0000'>"+{{SPELL}_OPT_STRING}+"</span>
-"+{{SPELL}_DESCRIPTION}}
-    [set_variable]
-      name=current_player_cant_cast_message_{SPELL}
-      [join]
-        variable=cant_cast_messages
-        key=message
-        separator="
-"
-      [/join]
-    [/set_variable]
-  [/else])}
+    [/else]
+    [/if]
+  [/then])}
 [/then])}
 #enddef
 
@@ -298,30 +114,54 @@
   message=${SPELL}_opt_string
   [show_if]
     [variable]
-      name=current_player_knows_{SPELL}
+      name={SPELL}_known
       boolean_equals=true
     [/variable]
     [and]
-      [variable]
-        name=eohs_hide_disallowed_spells_$side_number
-        boolean_equals=false
-      [/variable]
-      [or]
-        [variable]
-          name=current_player_can_cast_{SPELL}
-          boolean_equals=true
-        [/variable]
-      [/or]
+      [have_location]
+        x=$x1
+	y=$y1
+        [and]
+          [filter]
+            side=$side_number
+            {IS_WIZARD_LEADER}
+          [/filter]
+          radius=${SPELL}_range
+        [/and]
+        [insert_tag]
+          name=and
+          variable=EoHS_possible_targets_for_{SPELL}
+        [/insert_tag]
+        {{SPELL}_POSSIBLE_TARGETS}
+      [/have_location]
     [/and]
   [/show_if]
   [command]
-    {IF_VAR current_player_can_cast_{SPELL} boolean_equals true ([else] # else
-      [message]
-        speaker=narrator
-        side_for=$side_number
-        message=$current_player_cant_cast_message_{SPELL}
-        image=wesnoth-icon.png
-      [/message]
+    [if]
+    {CURRENT_SIDE_HAS_GOLD_OR_MANA_OF_AT_LEAST ${SPELL}_cost}
+    [or]
+      [variable]
+        name={SPELL}_cost
+	equals=0
+      [/variable]
+    [/or]
+    [else] # else
+      {IF_VAR EoHS_uses_mana_instead_of_gold boolean_equals true ([then]
+        [message]
+          speaker=narrator
+          side_for=$side_number
+          message=_"You do not have enough mana to cast that spell!"
+          image=wesnoth-icon.png
+        [/message]
+      [/then]
+      [else]
+        [message]
+          speaker=narrator
+          side_for=$side_number
+          message=_"You do not have enough gold to cast that spell!"
+          image=wesnoth-icon.png
+        [/message]
+      [/else])}
     [/else]
 
     [then] # then
@@ -367,7 +207,8 @@
         check_fogged=true
       [/scroll_to]
       {{SPELL}_EFFECTS}
-    [/then])}
+    [/then]
+    [/if]
   [/command]
 [/option]
 #enddef
@@ -501,56 +342,17 @@ name=prestart
         {VARIABLE eohs_spell_dialog_info _"You have $current_side_info.gold gold."}
       [/else])}
 
-      {VARIABLE done_with_casting_screen false}
-      [while]
-        [variable]
-          name=done_with_casting_screen
-          boolean_equals=false
-        [/variable]
-        [do]
-          {VARIABLE done_with_casting_screen true}
-          [message]
-            speaker=narrator
-            image=attacks/staff-magic.png
-            caption=_"Cast a spell"
-            message=$eohs_spell_dialog_info
-            side_for=$side_number
-            [option]
-              message=_"Never mind."
-            [/option]
-            [option]
-              message=_"Hide disallowed spells"
-              [show_if]
-                [not]
-                  [variable]
-                    name=eohs_hide_disallowed_spells_$side_number
-                    boolean_equals=true
-                  [/variable]
-                [/not]
-              [/show_if]
-              [command]
-                {VARIABLE eohs_hide_disallowed_spells_$side_number true}
-                {VARIABLE done_with_casting_screen false}
-              [/command]
-            [/option]
-            [option]
-              message=_"Show disallowed spells"
-              [show_if]
-                [variable]
-                  name=eohs_hide_disallowed_spells_$side_number
-                  boolean_equals=true
-                [/variable]
-              [/show_if]
-              [command]
-                {VARIABLE eohs_hide_disallowed_spells_$side_number false}
-                {VARIABLE done_with_casting_screen false}
-              [/command]
-            [/option]
-            {APPLY_FOR_ALL_SPELLS SPELL_OPTION}
-            {APPLY_FOR_ALL_SUMMONS SUMMON_OPTION}
-          [/message]
-        [/do]
-      [/while]
+      [message]
+        speaker=narrator
+        message=$eohs_spell_dialog_info
+	side_for=$side_number
+        [option]
+          message=_ "Never mind."
+        [/option]
+	{APPLY_FOR_ALL_SPELLS SPELL_OPTION}
+	{APPLY_FOR_ALL_SUMMONS SUMMON_OPTION}
+          image=wesnoth-icon.png
+      [/message]
 )}
 
 [event]
