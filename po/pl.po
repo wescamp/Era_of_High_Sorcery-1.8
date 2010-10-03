@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: wescamp-i 18n\n"
 "Report-Msgid-Bugs-To: http://bugs.wesnoth.org/\n"
-"POT-Creation-Date: 2010-06-13 17:42+0200\n"
+"POT-Creation-Date: 2010-10-03 12:59+0200\n"
 "PO-Revision-Date: 2010-05-24 22:03+0200\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -13,57 +13,13 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
 
-#. [era]: id=era_of_high_sorcery
-#: Era_of_High_Sorcery/_main.cfg:30
-msgid "Era of High Sorcery"
-msgstr ""
-
-#. [multiplayer_side]: id=EoHS_Faction, type=Red Mage
-#: Era_of_High_Sorcery/_main.cfg:35 Era_of_High_Sorcery/_main.cfg:51
-msgid "Wizards"
-msgstr ""
-
-#. [era]: id=era_of_high_sorcery_rpg
-#: Era_of_High_Sorcery/_main.cfg:46
-msgid "EoHS RPG era"
-msgstr ""
-
-#. [unstore_unit]
-#: Era_of_High_Sorcery/general_utils.cfg:121
-msgid "$damage_to_hex (blocked)"
-msgstr ""
-
-#. [unstore_unit]
-#: Era_of_High_Sorcery/general_utils.cfg:238
-msgid "drowned"
-msgstr ""
-
-#. [literal]
-#: Era_of_High_Sorcery/magic_system.cfg:98
-msgid "&"
-msgstr ""
-
-#: Era_of_High_Sorcery/magic_system.cfg:118
-msgid "In this era (Era of High Sorcery "
-msgstr ""
-
-#. [dummy]: id=wizard_powers
-#: Era_of_High_Sorcery/magic_system.cfg:191
-msgid "wizard"
-msgstr ""
-
-#. [dummy]: id=wizard_powers
-#: Era_of_High_Sorcery/magic_system.cfg:192
-msgid "female^wizard"
-msgstr ""
-
 #. [message]: speaker=narrator
-#: Era_of_High_Sorcery/magic_system.cfg:242
+#: Era_of_High_Sorcery/_main.cfg:35
 msgid "You are currently using the Era of High Sorcery ("
 msgstr ""
 
 #. [message]: speaker=narrator
-#: Era_of_High_Sorcery/magic_system.cfg:244
+#: Era_of_High_Sorcery/_main.cfg:37
 msgid ""
 "), an era with a fancy spell system.\n"
 "\n"
@@ -71,443 +27,122 @@ msgid ""
 "'View game rules' to begin.</span>"
 msgstr ""
 
-#: Era_of_High_Sorcery/magic_system.cfg:310
-msgid "View game rules, spell list"
+#. [era]: id=era_of_high_sorcery
+#: Era_of_High_Sorcery/_main.cfg:45
+msgid "EoHS: Era of High Sorcery"
+msgstr ""
+
+#. [multiplayer_side]: id=EoHS_Faction, type=Red Mage
+#. [multiplayer_side]: id=EoHS_Faction, type=Red Mage with EoHS events
+#: Era_of_High_Sorcery/_main.cfg:50 Era_of_High_Sorcery/_main.cfg:80
+#: Era_of_High_Sorcery/_main.cfg:182
+msgid "Wizards"
+msgstr ""
+
+#. [multiplayer_side]: id=EoHS_Faction, type=Red Mage
+#: Era_of_High_Sorcery/_main.cfg:50
+msgid ", Default"
+msgstr ""
+
+#. [era]: id=era_of_high_sorcery_alternative_settings
+#: Era_of_High_Sorcery/_main.cfg:75
+msgid "EoHS: Alternative settings"
+msgstr ""
+
+#. [multiplayer_side]: id=EoHS_Faction, type=Red Mage
+#: Era_of_High_Sorcery/_main.cfg:80
+msgid ", Alt settings"
+msgstr ""
+
+#. [unit_type]: id={UNIT_TYPE} with EoHS events
+#: Era_of_High_Sorcery/_main.cfg:115
+msgid "Wizard"
+msgstr ""
+
+#. [era]: id=era_of_high_sorcery_campaign_compatible
+#: Era_of_High_Sorcery/_main.cfg:177
+msgid "EoHS: MP campaign version (EXPERIMENTAL)"
+msgstr ""
+
+#. [multiplayer_side]: id=EoHS_Faction, type=Red Mage with EoHS events
+#: Era_of_High_Sorcery/_main.cfg:182
+msgid ", Campaign"
+msgstr ""
+
+#. [set_menu_item]: id=debug_mode_turn_on_with_password
+#: Era_of_High_Sorcery/debug_mode.cfg:8
+msgid "Enable Debug Mode"
 msgstr ""
 
 #. [message]: speaker=narrator
-#: Era_of_High_Sorcery/magic_system.cfg:319
-msgid ""
-"The game rules, and descriptions of all spells, are listed below.\n"
-"(This is an info screen; picking an option does nothing.)"
-msgstr ""
-
-#. [option]: speaker=narrator
-#: Era_of_High_Sorcery/magic_system.cfg:334
-msgid ""
-"<span color='#00FF00'>Game rules:</span>\n"
-"Pick the 'Train your magical skills' option above to choose your powers.\n"
-"(Don't forget to move and/or recruit on the first turn as well.)\n"
-"You begin the game with 10 skill picks, and you can gain 2 each time you or "
-"your\n"
-"forces kill an enemy Wizard, and 4 each time you level up (including AMLA.)\n"
-"\n"
-"To cast a spell, right-click in the hex you want to TARGET with the spell,\n"
-"and select the spell from the list. (Your leader is the only unit that can\n"
-"cast spells, so you don't have to choose the caster.) When you summon a\n"
-"creature, the target MUST always be an empty hex ADJACENT TO the caster;\n"
-"other spells have different targets. Read the spell info for specifics.\n"
-"\n"
-"Casting a spell, including summoning, uses up your leader's attack unless "
-"the\n"
-"spell is marked "
-msgstr ""
-
-#. [option]: speaker=narrator
-#: Era_of_High_Sorcery/magic_system.cfg:360
-msgid ""
-"<span color='#00FF00'>EoHS RPG era:</span>\n"
-"This is the RPG version of the era, designed for players vs. AI scenarios, "
-"with a few rule changes.\n"
-"\n"
-"- Players start with 7 picks instead of 10.\n"
-"- Spells are cast using "
-msgstr ""
-
-#. [set_menu_item]: id=eohs_single_menu_item
-#: Era_of_High_Sorcery/magic_system.cfg:430
-msgid "Era of High Sorcery options"
+#: Era_of_High_Sorcery/debug_mode.cfg:33
+msgid "Password required"
 msgstr ""
 
 #. [message]: speaker=narrator
-#: Era_of_High_Sorcery/magic_system.cfg:442
-msgid "What do you wish to do?"
+#: Era_of_High_Sorcery/debug_mode.cfg:34
+msgid "You must enter the password to turn on debug mode."
 msgstr ""
 
-#. [option]: speaker=narrator
-#: Era_of_High_Sorcery/magic_system.cfg:444
-#: Era_of_High_Sorcery/spell_system.cfg:731
-#: Era_of_High_Sorcery/spell_system.cfg:774
-msgid "Never mind."
+#. [text_input]
+#: Era_of_High_Sorcery/debug_mode.cfg:36
+msgid "Password:"
 msgstr ""
 
-#. [set_menu_item]: id=view_spell_info
-#: Era_of_High_Sorcery/magic_system.cfg:463
-msgid "Output skill descriptions"
+#. [message]: speaker=narrator
+#. [print]
+#: Era_of_High_Sorcery/debug_mode.cfg:43 Era_of_High_Sorcery/debug_mode.cfg:46
+msgid "Debug mode has been turned on!"
 msgstr ""
 
-#. [set_menu_item]: id=view_spell_infofgfg
-#: Era_of_High_Sorcery/magic_system.cfg:473
-msgid "Output spell descriptions"
+#. [set_menu_item]: id=debug_mode_use_powers_option
+#: Era_of_High_Sorcery/debug_mode.cfg:58
+msgid "Debug Mode command"
 msgstr ""
 
-#: Era_of_High_Sorcery/picks.cfg:26
-msgid "Evocation skill"
+#. [message]: speaker=narrator
+#: Era_of_High_Sorcery/debug_mode.cfg:71
+msgid "Debug mode"
 msgstr ""
 
-#: Era_of_High_Sorcery/picks.cfg:40
+#. [message]: speaker=narrator
+#: Era_of_High_Sorcery/debug_mode.cfg:72
+msgid "Enter a command."
+msgstr ""
+
+#. [text_input]
+#: Era_of_High_Sorcery/debug_mode.cfg:74
+msgid "Command:"
+msgstr ""
+
+#. [message]: speaker=narrator
+#: Era_of_High_Sorcery/debug_mode.cfg:189
+#: Era_of_High_Sorcery/debug_mode.cfg:209
 msgid ""
-"The power to call forth the most powerful and straightforward of magics.\n"
-"Most Evocation spells are improved by additional Evocation skill.\n"
-"Level 1: Allows you to cast Energy Bolt.\n"
-"Level 2: Allows you to cast Wizard Sword. Allows you to purchase the "
-"Dwarvish Alliance option.\n"
-"Level 3: Allows you to cast Mage Shield.\n"
-"Level 4: Allows you to cast Corridor of Frost. Allows you to purchase the "
-"Archmage option.\n"
-"Level 5: Allows you to cast Dispelling Touch. Allows you to summon Drake "
-"Fighters.\n"
-"Level 6: Allows you to cast Fireball.\n"
-"Level 7: Allows you to cast Gate.\n"
-"Level 8: Allows you to cast Aberrant Growth.\n"
-"Level 9: Allows you to cast Circle of Protection.\n"
-"Level 11: Allows you to summon Fire Dragons.\n"
-"Level 13: Allows you to cast Meteor Storm."
+"Variable\n"
+"$epdbg_show_var_varname|\n"
+"has value\n"
+"$epdbg_show_var_value|"
 msgstr ""
 
-#: Era_of_High_Sorcery/picks.cfg:52
-msgid "Nature Magic skill"
+#: Era_of_High_Sorcery/lua_function_definitions/attribute_regeneration.cfg:64
+msgid "circle of protection"
 msgstr ""
 
-#: Era_of_High_Sorcery/picks.cfg:65
-msgid ""
-"The power to shape the earth and sky to do your bidding.\n"
-"Level 1: Lets you move easily in forest. Allows you to summon Wolves.\n"
-"Level 2: Allows you to cast Mud Touch. Allows you to purchase the Elvish "
-"Alliance option.\n"
-"Level 3: Allows you to cast Grow Trees.\n"
-"Level 4: Allows you to summon Woses. Allows you to purchase the Archmage "
-"option.\n"
-"Level 5: Allows you to cast Regeneration. Allows you to summon pairs of "
-"Wolves.\n"
-"Level 6: Allows you to summon Water Serpents.\n"
-"Level 7: Allows you to cast Lightning Bolt.\n"
-"Level 8: Allows you to cast Fissure. Allows you to summon Gryphons.\n"
-"Level 9: Allows you to cast Rampage.\n"
-"Level 10: Allows you to cast Blizzard.\n"
-"Level 11: Allows you to summon Yeti."
+#: Era_of_High_Sorcery/lua_function_definitions/attribute_regeneration.cfg:73
+#: Era_of_High_Sorcery/lua_function_definitions/attribute_regeneration.cfg:82
+msgid "just teleported"
 msgstr ""
 
-#: Era_of_High_Sorcery/picks.cfg:75
-msgid "You can't train in Necromancy when you are already a Leader of Men."
-msgstr ""
-
-#: Era_of_High_Sorcery/picks.cfg:76
-msgid ""
-"You can't train in Necromancy when you have already made an Elvish Alliance."
-msgstr ""
-
-#: Era_of_High_Sorcery/picks.cfg:77
-msgid ""
-"You can't train in Necromancy when you have already made a Dwarvish Alliance."
-msgstr ""
-
-#: Era_of_High_Sorcery/picks.cfg:80
-msgid "Necromancy skill"
-msgstr ""
-
-#: Era_of_High_Sorcery/picks.cfg:96
-msgid ""
-"The power to summon and bind the spirits of the dead.\n"
-"If you have any skill in necromancy, you may not select Dwarvish Alliance, "
-"Elvish Alliance, or Leader of Men.\n"
-"Level 1: Allows you to recruit Walking Corpses and Vampire Bats.\n"
-"Level 2: Allows you to recruit Skeletons and Skeleton Archers.\n"
-"Level 3: Allows you to cast Reanimating Touch. Allows you to recruit Ghouls "
-"and Ghosts.\n"
-"Level 4: Allows you to quickly summon Walking Corpses.\n"
-"   Lets you choose Lich if you level up as a Red Mage. Allows you to "
-"purchase the Archmage option.\n"
-"Level 5: Allows you to cast Poison Ground. Allows you to quickly summon and "
-"absorb Vampire Bats.\n"
-"Level 6: Allows you to cast Dark Pact.\n"
-"Level 7: Allows you to summon Chocobones.\n"
-"Level 8: Allows you to quickly summon Skeletons and Skeleton Archers.\n"
-"   Allows you to cast Wraithform. Lets you choose Ancient Lich if you level "
-"up as a Lich.\n"
-"Level 9: Allows you to cast Devour Soul.\n"
-"Level 11: Allows you to summon Skeletal Dragons.\n"
-"Level 13: Allows you to cast Curse Life Once More."
-msgstr ""
-
-#. [else]
-#: Era_of_High_Sorcery/picks.cfg:124
-msgid "You need at least four skill in any one realm to pick Archmage."
-msgstr ""
-
-#: Era_of_High_Sorcery/picks.cfg:129
-msgid "Archmage"
-msgstr ""
-
-#: Era_of_High_Sorcery/picks.cfg:133
-msgid ""
-"You are a master in your magical craft.\n"
-"Your non-summoning spells cost 4/5 the normal amount, you have +40% "
-"resistance to magical damage, and you can recruit Mages and/or Dark Adepts.\n"
-"You must learn 4 skill in any realm to be an Archmage. The realm(s) that you "
-"have 4 skill in determine(s) what you can recruit."
-msgstr ""
-
-#. [then]
-#: Era_of_High_Sorcery/picks.cfg:162
-msgid ""
-"You have no summoning spells that would benefit from the Superb Summoner "
-"ability."
-msgstr ""
-
-#: Era_of_High_Sorcery/picks.cfg:166
-msgid "Superb Summoner"
-msgstr ""
-
-#: Era_of_High_Sorcery/picks.cfg:171
-msgid ""
-"You are very proficient in calling monsters from the ether.\n"
-"Your summoning spells cost 4/5 the normal amount, and you may cast two "
-"summoning spells per turn,\n"
-"though you still may not summon and attack or summon and cast a non-"
-"summoning spell in the same turn.\n"
-"There is no prerequiste for Superb Summoner, but it is not useful unless you "
-"can cast a summoning spell."
-msgstr ""
-
-#: Era_of_High_Sorcery/picks.cfg:176
-msgid ""
-"You are very proficient in calling monsters from the ether.\n"
-"You may cast two summoning spells per turn, though you still may not summon "
-"and attack,\n"
-"or summon and cast a non-summoning spell, in the same turn.\n"
-"You must learn a non-Instant summoning spell before taking Superb Summoner."
-msgstr ""
-
-#. [then]
-#: Era_of_High_Sorcery/picks.cfg:198
-msgid ""
-"You have no enchantment spells that would benefit from the Enchanter ability."
-msgstr ""
-
-#: Era_of_High_Sorcery/picks.cfg:204
-msgid "Enchanter"
-msgstr ""
-
-#: Era_of_High_Sorcery/picks.cfg:208
-msgid ""
-"You are practiced in the art of placing enchantments.\n"
-"You may cast one additional enchantment spell each turn regardless of what "
-"else you do in the turn.\n"
-"There is no prerequiste for Enchanter, but it is not useful unless you can "
-"cast an enchantment spell."
-msgstr ""
-
-#: Era_of_High_Sorcery/picks.cfg:220
-msgid "Farseer"
-msgstr ""
-
-#: Era_of_High_Sorcery/picks.cfg:224
-msgid ""
-"You have a keen eye and a steady mind.\n"
-"The range of your spells is increased by 50%, rounded up. Even spells that "
-"target adjacent units can be cast two hexes away,\n"
-"although summoning spells can still only be cast adjacent to you."
-msgstr ""
-
-#: Era_of_High_Sorcery/picks.cfg:234
-msgid ""
-"You can't become a Leader of Men when you have already trained in Necromancy."
-msgstr ""
-
-#: Era_of_High_Sorcery/picks.cfg:235
-msgid ""
-"You can't become a Leader of Men when you are already emplying Orcish "
-"Mercenaries."
-msgstr ""
-
-#: Era_of_High_Sorcery/picks.cfg:238
-msgid "Leader of Men"
-msgstr ""
-
-#: Era_of_High_Sorcery/picks.cfg:242
-msgid ""
-"You are able to raise up and lead a human military.\n"
-"You can recruit loyalist units, except for mages, and lead adjacent units in "
-"combat.\n"
-"No one who has skill in Necromancy or hires Orcish Mercenaries may be a "
-"Leader of Men."
-msgstr ""
-
-#: Era_of_High_Sorcery/picks.cfg:264
-msgid "Prince of Thieves"
-msgstr ""
-
-#: Era_of_High_Sorcery/picks.cfg:267
-msgid ""
-"You control a secret organization of outlaws.\n"
-"You can recruit outlaw units, and you gain the Skirmisher ability."
-msgstr ""
-
-#: Era_of_High_Sorcery/picks.cfg:287
-msgid "You need at least two skill in Nature Magic to pick Elvish Alliance."
-msgstr ""
-
-#: Era_of_High_Sorcery/picks.cfg:288
-msgid ""
-"You can't make an Elvish Alliance when you have already trained in "
-"Necromancy."
-msgstr ""
-
-#: Era_of_High_Sorcery/picks.cfg:289
-msgid ""
-"You can't make an Elvish Alliance when you are already emplying Orcish "
-"Mercenaries."
-msgstr ""
-
-#: Era_of_High_Sorcery/picks.cfg:290
-msgid ""
-"You can't make an Elvish Alliance when you have already made a Dwarvish "
-"Alliance."
-msgstr ""
-
-#: Era_of_High_Sorcery/picks.cfg:293
-msgid "Elvish Alliance"
-msgstr ""
-
-#: Era_of_High_Sorcery/picks.cfg:297
-msgid ""
-"You forge an alliance with the Elves.\n"
-"You can recruit elvish units and Merman Hunters.\n"
-"You must have 2 skill in Nature Magic, no skill in Necromancy, and no Orcish "
-"Mercenaries or Dwarvish allies if the Elves are to accept you."
-msgstr ""
-
-#: Era_of_High_Sorcery/picks.cfg:311
-msgid "You need at least two skill in Evocation to pick Dwarvish Alliance."
-msgstr ""
-
-#: Era_of_High_Sorcery/picks.cfg:312
-msgid ""
-"You can't make a Dwarvish Alliance when you have already trained in "
-"Necromancy."
-msgstr ""
-
-#: Era_of_High_Sorcery/picks.cfg:313
-msgid ""
-"You can't make a Dwarvish Alliance when you are already emplying Orcish "
-"Mercenaries."
-msgstr ""
-
-#: Era_of_High_Sorcery/picks.cfg:314
-msgid ""
-"You can't make a Dwarvish Alliance when you have already made an Elvish "
-"Alliance."
-msgstr ""
-
-#: Era_of_High_Sorcery/picks.cfg:317
-msgid "Dwarvish Alliance"
-msgstr ""
-
-#: Era_of_High_Sorcery/picks.cfg:321
-msgid ""
-"You forge an alliance with the Dwarves.\n"
-"You can recruit dwarvish units.\n"
-"You must have 2 skill in Evocation, no skill in Necromancy, and no Orcish "
-"Mercenaries or Elvish allies if the Dwarves are to accept you."
-msgstr ""
-
-#: Era_of_High_Sorcery/picks.cfg:335
-msgid ""
-"You can't employ Orcish Mercenaries when you are already a Leader of Men."
-msgstr ""
-
-#: Era_of_High_Sorcery/picks.cfg:336
-msgid ""
-"You can't employ Orcish Mercenaries when you have already made an Elvish "
-"Alliance."
-msgstr ""
-
-#: Era_of_High_Sorcery/picks.cfg:337
-msgid ""
-"You can't employ Orcish Mercenaries when you have already made a Dwarvish "
-"Alliance."
-msgstr ""
-
-#: Era_of_High_Sorcery/picks.cfg:340
-msgid "Orcish Mercenaries"
-msgstr ""
-
-#: Era_of_High_Sorcery/picks.cfg:344
-msgid ""
-"You hire orcs to do your dirty work for you.\n"
-"You can recruit orcish units and nagas.\n"
-"If you take this option, you may not select Dwarvish Alliance, Elvish "
-"Alliance, or Leader of Men."
-msgstr ""
-
-#. [option]
-#: Era_of_High_Sorcery/picks_system.cfg:101
-msgid " (2 points)"
-msgstr ""
-
-#. [option]
-#: Era_of_High_Sorcery/picks_system.cfg:118
-msgid " (4 points)"
-msgstr ""
-
-#. [then]
-#: Era_of_High_Sorcery/picks_system.cfg:141
-msgid "You already have that ability."
-msgstr ""
-
-#. [then]
-#: Era_of_High_Sorcery/picks_system.cfg:148
-msgid "You do not have enough picks left to take that option."
-msgstr ""
-
-#. [then]
-#: Era_of_High_Sorcery/picks_system.cfg:158
-msgid "(1 point)"
-msgstr ""
-
-#. [else]
-#: Era_of_High_Sorcery/picks_system.cfg:161
-msgid "($pick_cost| points)"
-msgstr ""
-
-#: Era_of_High_Sorcery/picks_system.cfg:288
-msgid ""
-"Wizard:\n"
-"\n"
-"This wizard's current skills are:"
-msgstr ""
-
-#: Era_of_High_Sorcery/picks_system.cfg:292
-msgid ""
-"\n"
-"\n"
-"Any attack against this unit stops as soon as the attacker has dealt damage "
-"greater than or equal to one quarter of this unit's max hitpoints. Also, "
-"this unit can block all direct damage caused by spells, although it is still "
-"vulnerable to other effects.\n"
-"\n"
-"Also, this unit can fly (sort of); it can cross deep water and chasm at a "
-"cost of 5 moves."
-msgstr ""
-
-#. [unstore_unit]
-#: Era_of_High_Sorcery/picks_system.cfg:314
-msgid "+$picks_added_var picks"
-msgstr ""
-
-#. [leadership]: id=eohs_leadership
-#: Era_of_High_Sorcery/picks_system.cfg:408
+#: Era_of_High_Sorcery/lua_function_definitions/attribute_regeneration.cfg:174
 msgid "leadership"
 msgstr ""
 
-#. [leadership]: id=eohs_leadership
-#: Era_of_High_Sorcery/picks_system.cfg:409
+#: Era_of_High_Sorcery/lua_function_definitions/attribute_regeneration.cfg:175
 msgid "female^leadership"
 msgstr ""
 
-#. [leadership]: id=eohs_leadership
-#: Era_of_High_Sorcery/picks_system.cfg:413
+#: Era_of_High_Sorcery/lua_function_definitions/attribute_regeneration.cfg:176
 msgid ""
 "Leadership:\n"
 "This unit can lead our own units that are next to it, making them fight "
@@ -519,318 +154,1297 @@ msgid ""
 "difference in their levels."
 msgstr ""
 
-#. [message]: speaker=narrator
-#: Era_of_High_Sorcery/picks_system.cfg:440
-#: Era_of_High_Sorcery/picks_system.cfg:697
-msgid "Train your magical skills"
+#: Era_of_High_Sorcery/lua_function_definitions/casters.cfg:73
+#: Era_of_High_Sorcery/lua_function_definitions/casters.cfg:74
+#: Era_of_High_Sorcery/lua_function_definitions/spellcasting.cfg:485
+msgid " mana"
 msgstr ""
 
-#. [message]: speaker=narrator
-#: Era_of_High_Sorcery/picks_system.cfg:444
+#: Era_of_High_Sorcery/lua_function_definitions/casters.cfg:82
+#: Era_of_High_Sorcery/lua_function_definitions/casters.cfg:83
+#: Era_of_High_Sorcery/lua_function_definitions/spellcasting.cfg:492
+msgid " gold"
+msgstr ""
+
+#: Era_of_High_Sorcery/lua_function_definitions/casters.cfg:102
+msgid " picks"
+msgstr ""
+
+#: Era_of_High_Sorcery/lua_function_definitions/casters.cfg:189
+msgid "male^wizard"
+msgstr ""
+
+#: Era_of_High_Sorcery/lua_function_definitions/casters.cfg:190
+msgid "female^wizard"
+msgstr ""
+
+#: Era_of_High_Sorcery/lua_function_definitions/casters.cfg:350
+msgid "whaaat"
+msgstr ""
+
+#: Era_of_High_Sorcery/lua_function_definitions/casters.cfg:438
+msgid "This unit's skills are:"
+msgstr ""
+
+#: Era_of_High_Sorcery/lua_function_definitions/casters.cfg:441
+msgid "This unit has "
+msgstr ""
+
+#: Era_of_High_Sorcery/lua_function_definitions/casters.cfg:441
+msgid " (out of "
+msgstr ""
+
+#: Era_of_High_Sorcery/lua_function_definitions/casters.cfg:441
+msgid ") mana."
+msgstr ""
+
+#: Era_of_High_Sorcery/lua_function_definitions/casters.cfg:443
 msgid ""
+"Any attack against this unit stops as soon as the attacker has dealt damage "
+"greater than or equal to one quarter of this unit's max hitpoints. Also, "
+"this unit can block all direct damage caused by spells, although it is still "
+"vulnerable to other effects.\n"
 "\n"
-"If you're a beginner, you should probably take one ability that gives you "
-"recruits, and put most of the rest of your picks into one of the three "
-"realms of magic.\n"
-"\n"
-"<span size='larger'>You currently have:</span>"
+"Also, this unit can fly (sort of); it can cross deep water and chasm at a "
+"cost of 4 moves."
 msgstr ""
 
-#. [option]: speaker=narrator
-#: Era_of_High_Sorcery/picks_system.cfg:447
-msgid "Done training."
+#: Era_of_High_Sorcery/lua_function_definitions/casters.cfg:443
+msgid "Wizard:"
 msgstr ""
 
-#. [option]: speaker=narrator
-#: Era_of_High_Sorcery/picks_system.cfg:453
-msgid "Hide disallowed picks."
+#: Era_of_High_Sorcery/lua_function_definitions/casters.cfg:501
+msgid "fireball"
 msgstr ""
 
-#. [option]: speaker=narrator
-#: Era_of_High_Sorcery/picks_system.cfg:467
-msgid "Show disallowed picks."
+#: Era_of_High_Sorcery/lua_function_definitions/casters.cfg:512
+msgid "faerie fire"
 msgstr ""
 
-#. [option]: speaker=narrator
-#: Era_of_High_Sorcery/picks_system.cfg:479
-msgid "Spend all my picks at random"
+#: Era_of_High_Sorcery/lua_function_definitions/casters.cfg:523
+msgid "chill wave"
 msgstr ""
 
-#. [option]: speaker=narrator
-#: Era_of_High_Sorcery/picks_system.cfg:481
+#: Era_of_High_Sorcery/lua_function_definitions/casters.cfg:614
 msgid ""
-"Always gives generally reasonable builds.\n"
-"Recommended for beginners."
+"), Wizards are powerful spellcasters, far beyond the abilities of normal "
+"units.\n"
+"\n"
+"After training in a spell realm, a wizard may cast spells via an item on the "
+"right-click menu. Casting a normal spell uses up your attack for the turn, "
+"but does not use up any movement points, so it is possible (and often "
+"desirable!) to move, cast a spell, and then move again after that.\n"
+"\n"
+"You must always invoke the right-click menu at the target of your spell. For "
+"instance, to cast Energy Bolt at an enemy unit, you right-click on the enemy "
+"unit, pick the ''Cast a spell'' option, and select Energy Bolt from the "
+"list. If the spell's name appears in red, you can't cast it, but it gives "
+"details on what prevents you from casting it in that situation.\n"
+"\n"
+"Some spells are summoning spells that create other units for your army. "
+"Summoned creatures are always loyal, and half of the experience that any "
+"summoned creature earns goes to your leader instead. Your leader also earns "
+"the full experience for any units they kill directly with attack spells.\n"
+"\n"
+"You can train your skills via another item on the right-click menu. You "
+"normally begin the game with 10 skill picks, and you gain 4 more whenever "
+"you level up (including AMLA) and 2 more whenever you, or your troops, kill "
+"an enemy wizard leader."
 msgstr ""
 
-#. [then]
-#: Era_of_High_Sorcery/picks_system.cfg:653
-msgid " (1 point per level)"
+#: Era_of_High_Sorcery/lua_function_definitions/casters.cfg:614
+msgid "In this era (Era of High Sorcery "
 msgstr ""
 
-#: Era_of_High_Sorcery/picks_system.cfg:669
-msgid "$picks_left_$make_picks_desc_side|| picks remaining"
+#: Era_of_High_Sorcery/lua_function_definitions/casters.cfg:640
+msgid "diligent"
 msgstr ""
 
-#. [option]
-#: Era_of_High_Sorcery/picks_system.cfg:687
-msgid "$ally_wizard_leaders[{ALLY_INDEX}].name|'s picks:</span>"
+#: Era_of_High_Sorcery/lua_function_definitions/casters.cfg:641
+msgid ""
+"telomere has been a diligent player, playtester, and promoter of Era of High "
+"Sorcery almost since its inital update to Wesnoth 1.8."
 msgstr ""
 
-#: Era_of_High_Sorcery/picks_system.cfg:718
-msgid "View skills"
+#: Era_of_High_Sorcery/lua_function_definitions/casters.cfg:645
+msgid "annoying"
 msgstr ""
 
-#. [message]: speaker=narrator
-#: Era_of_High_Sorcery/picks_system.cfg:748
-msgid "<span color='#00FF00' size='large'>Your picks:</span>"
+#: Era_of_High_Sorcery/lua_function_definitions/casters.cfg:646
+msgid "COWA is annoying."
 msgstr ""
 
-#: Era_of_High_Sorcery/picks_system.cfg:774
-msgid "Descriptions of all skill picks are listed below."
+#: Era_of_High_Sorcery/lua_function_definitions/casters.cfg:652
+msgid "author"
 msgstr ""
 
-#. [then]
-#: Era_of_High_Sorcery/spell_system.cfg:226
-msgid "$spell_cost| mana"
+#: Era_of_High_Sorcery/lua_function_definitions/casters.cfg:653
+msgid ""
+"Elvish_Pillager is the author of Era of High Sorcery. Feel free to report "
+"bugs to them!"
 msgstr ""
 
-#. [else]
-#: Era_of_High_Sorcery/spell_system.cfg:229
-msgid "$spell_cost| gold"
+#: Era_of_High_Sorcery/lua_function_definitions/damage_and_fatalities.cfg:36
+#: Era_of_High_Sorcery/lua_function_definitions/damage_and_fatalities.cfg:42
+msgid " (blocked)"
 msgstr ""
 
-#. [else]
-#: Era_of_High_Sorcery/spell_system.cfg:233
-msgid "No cost"
+#: Era_of_High_Sorcery/lua_function_definitions/damage_and_fatalities.cfg:80
+msgid "drowned"
 msgstr ""
 
-#. [then]
-#: Era_of_High_Sorcery/spell_system.cfg:237
-msgid "15 HP"
+#. [lua]
+#: Era_of_High_Sorcery/lua_function_definitions/experience.cfg:28
+#: Era_of_High_Sorcery/lua_function_definitions/experience.cfg:29
+msgid " xp"
 msgstr ""
 
-#. [then]
-#: Era_of_High_Sorcery/summon_system.cfg:110
-#: Era_of_High_Sorcery/spell_system.cfg:241
-msgid ", Instant"
+#. [lua]
+#: Era_of_High_Sorcery/lua_function_definitions/getting_hit.cfg:29
+msgid "Reanimated!"
 msgstr ""
 
-#. [then]
-#: Era_of_High_Sorcery/summon_system.cfg:133
-#: Era_of_High_Sorcery/spell_system.cfg:256
-msgid "You can't cast spells while in wraithform."
+#. [lua]
+#: Era_of_High_Sorcery/lua_function_definitions/getting_hit.cfg:128
+msgid " blocked!"
 msgstr ""
 
-#. [then]
-#: Era_of_High_Sorcery/summon_system.cfg:143
-#: Era_of_High_Sorcery/spell_system.cfg:266
-msgid "You can't cast spells while on a rampage."
+#. [lua]
+#: Era_of_High_Sorcery/lua_function_definitions/getting_hit.cfg:204
+msgid "capped at "
 msgstr ""
 
-#. [then]
-#: Era_of_High_Sorcery/spell_system.cfg:287
-msgid "That target is beyond your maximum range for that spell."
+#: Era_of_High_Sorcery/lua_function_definitions/lua_wml_interface.cfg:62
+msgid "EoHS error: "
 msgstr ""
 
-#. [then]
-#: Era_of_High_Sorcery/spell_system.cfg:307
-msgid "That spell can only be cast at the caster's location."
+#. [lua]: {race=true, alignment=true, abilities=true, resistance=true, movement_costs=true, defense=true}), unit.race=undead
+#: Era_of_High_Sorcery/lua_function_definitions/reanimated_undead.cfg:18
+msgid "Undead "
 msgstr ""
 
-#. [then]
-#: Era_of_High_Sorcery/spell_system.cfg:321
-msgid "You don't have enough mana to cast that spell."
+#. [lua]: id=eohs_view_rules, speaker=narrator
+#: Era_of_High_Sorcery/lua_function_definitions/rules.cfg:11
+msgid "View game rules, spell list"
 msgstr ""
 
-#. [else]
-#: Era_of_High_Sorcery/spell_system.cfg:324
-msgid "You don't have enough gold to cast that spell."
+#. [lua]: id=eohs_view_rules, speaker=narrator
+#: Era_of_High_Sorcery/lua_function_definitions/rules.cfg:27
+msgid ""
+"The game rules, and descriptions of all spells, are listed below.\n"
+"(This is an info screen; picking an option does nothing.)"
 msgstr ""
 
-#. [else]
-#: Era_of_High_Sorcery/summon_system.cfg:207
-#: Era_of_High_Sorcery/spell_system.cfg:354
-msgid "You can't cast that spell because you don't have any attacks left."
+#. [lua]: id=eohs_view_rules, speaker=narrator
+#: Era_of_High_Sorcery/lua_function_definitions/rules.cfg:36
+msgid " level "
 msgstr ""
 
-#. [then]
-#: Era_of_High_Sorcery/spell_system.cfg:370
-msgid "An enchantment spell can only be cast on a unit."
+#: Era_of_High_Sorcery/lua_function_definitions/settings.cfg:30
+msgid "Settings"
 msgstr ""
 
-#. [message]: speaker=narrator
-#: Era_of_High_Sorcery/spell_system.cfg:572
-#: Era_of_High_Sorcery/spell_system.cfg:715
-#: Era_of_High_Sorcery/spell_system.cfg:726
-#: Era_of_High_Sorcery/spell_system.cfg:770
+#: Era_of_High_Sorcery/lua_function_definitions/settings.cfg:45
+msgid "What rule set would you like to use?"
+msgstr ""
+
+#: Era_of_High_Sorcery/lua_function_definitions/settings.cfg:47
+msgid "Default EoHS"
+msgstr ""
+
+#: Era_of_High_Sorcery/lua_function_definitions/settings.cfg:47
+msgid ""
+"10 starting picks\n"
+"Cast spells using gold\n"
+"Best for player-versus-player battles."
+msgstr ""
+
+#: Era_of_High_Sorcery/lua_function_definitions/settings.cfg:48
+msgid "Survival era"
+msgstr ""
+
+#: Era_of_High_Sorcery/lua_function_definitions/settings.cfg:48
+msgid ""
+"7 starting picks\n"
+"Cast spells using mana\n"
+"Best for survival scenarios."
+msgstr ""
+
+#: Era_of_High_Sorcery/lua_function_definitions/settings.cfg:49
+msgid "RPG era"
+msgstr ""
+
+#: Era_of_High_Sorcery/lua_function_definitions/settings.cfg:49
+msgid ""
+"7 starting picks\n"
+"Cast spells using mana\n"
+"No summoning\n"
+"Best for RPG scenarios that rely on one unit per player."
+msgstr ""
+
+#: Era_of_High_Sorcery/lua_function_definitions/settings.cfg:50
+msgid "Empire Builder era"
+msgstr ""
+
+#: Era_of_High_Sorcery/lua_function_definitions/settings.cfg:51
+msgid "Custom settings"
+msgstr ""
+
+#: Era_of_High_Sorcery/lua_function_definitions/settings.cfg:51
+msgid "Choose your own values for each setting."
+msgstr ""
+
+#: Era_of_High_Sorcery/lua_function_definitions/settings.cfg:72
+msgid "Done choosing settings."
+msgstr ""
+
+#: Era_of_High_Sorcery/lua_function_definitions/settings.cfg:73
+msgid "Initial picks"
+msgstr ""
+
+#: Era_of_High_Sorcery/lua_function_definitions/settings.cfg:75
+msgid "gold"
+msgstr ""
+
+#: Era_of_High_Sorcery/lua_function_definitions/settings.cfg:75
+#: Era_of_High_Sorcery/lua_function_definitions/settings.cfg:77
+msgid "Spellcasting resource"
+msgstr ""
+
+#: Era_of_High_Sorcery/lua_function_definitions/settings.cfg:77
+msgid "mana"
+msgstr ""
+
+#: Era_of_High_Sorcery/lua_function_definitions/settings.cfg:80
+#: Era_of_High_Sorcery/lua_function_definitions/settings.cfg:82
+msgid "Forbid unit creation"
+msgstr ""
+
+#: Era_of_High_Sorcery/lua_function_definitions/settings.cfg:80
+msgid "on"
+msgstr ""
+
+#: Era_of_High_Sorcery/lua_function_definitions/settings.cfg:82
+msgid "off"
+msgstr ""
+
+#: Era_of_High_Sorcery/lua_function_definitions/settings.cfg:84
+msgid "Spell price multiplier"
+msgstr ""
+
+#: Era_of_High_Sorcery/lua_function_definitions/settings.cfg:85
+msgid "Wizard XP percent"
+msgstr ""
+
+#: Era_of_High_Sorcery/lua_function_definitions/settings.cfg:94
+msgid "How many skill picks should each side start with?"
+msgstr ""
+
+#: Era_of_High_Sorcery/lua_function_definitions/settings.cfg:95
+#: Era_of_High_Sorcery/lua_function_definitions/settings.cfg:106
+#: Era_of_High_Sorcery/lua_function_definitions/training.cfg:371
+msgid "Amount:"
+msgstr ""
+
+#: Era_of_High_Sorcery/lua_function_definitions/settings.cfg:105
+msgid ""
+"Multiply the prices of all spells by what amount? (Can be a decimal value, "
+"such as 0.25.)"
+msgstr ""
+
+#: Era_of_High_Sorcery/lua_function_definitions/spellcasting.cfg:10
 msgid "Cast a spell"
 msgstr ""
 
-#. [value]
-#: Era_of_High_Sorcery/spell_system.cfg:638
-msgid "$possible_self_casters[$uss_i].name"
+#: Era_of_High_Sorcery/lua_function_definitions/spellcasting.cfg:191
+msgid ", via "
 msgstr ""
 
-#. [value]
-#: Era_of_High_Sorcery/spell_system.cfg:693
-msgid ""
-"$possible_casters_for_conduit_$uss_i|[$uss_j].name|, via "
-"$possible_spellcasting_conduits[$uss_i].name|"
-msgstr ""
-
-#. [message]: speaker=narrator
-#: Era_of_High_Sorcery/spell_system.cfg:718
-msgid "You have no units that can cast spells at that area of the map."
-msgstr ""
-
-#. [message]: speaker=narrator
-#: Era_of_High_Sorcery/spell_system.cfg:729
+#: Era_of_High_Sorcery/lua_function_definitions/spellcasting.cfg:205
 msgid "Cast from which unit?"
 msgstr ""
 
-#. [then]
-#: Era_of_High_Sorcery/spell_system.cfg:753
-msgid "You have $eohs_mana_$side_number|| mana."
+#: Era_of_High_Sorcery/lua_function_definitions/spellcasting.cfg:208
+#: Era_of_High_Sorcery/lua_function_definitions/spellcasting.cfg:245
+msgid "Never mind."
 msgstr ""
 
-#. [else]
-#: Era_of_High_Sorcery/spell_system.cfg:756
-msgid "You have $current_side_info.gold gold."
+#: Era_of_High_Sorcery/lua_function_definitions/spellcasting.cfg:219
+msgid "You have no units that can cast spells at that area of the map."
 msgstr ""
 
-#. [option]: speaker=narrator
-#: Era_of_High_Sorcery/spell_system.cfg:777
+#: Era_of_High_Sorcery/lua_function_definitions/spellcasting.cfg:251
 msgid "Hide disallowed spells"
 msgstr ""
 
-#. [option]: speaker=narrator
-#: Era_of_High_Sorcery/spell_system.cfg:792
+#: Era_of_High_Sorcery/lua_function_definitions/spellcasting.cfg:262
 msgid "Show disallowed spells"
 msgstr ""
 
-#: Era_of_High_Sorcery/spell_system.cfg:819
-msgid "($spell_realm_string| level $spell_level|)"
+#: Era_of_High_Sorcery/lua_function_definitions/spellcasting.cfg:273
+msgid "Hide spell descriptions"
 msgstr ""
 
-#. [message]: speaker=narrator
-#: Era_of_High_Sorcery/spell_system.cfg:833
+#: Era_of_High_Sorcery/lua_function_definitions/spellcasting.cfg:284
+msgid "Show spell descriptions"
+msgstr ""
+
+#: Era_of_High_Sorcery/lua_function_definitions/spellcasting.cfg:298
+msgid " mana."
+msgstr ""
+
+#: Era_of_High_Sorcery/lua_function_definitions/spellcasting.cfg:298
+#: Era_of_High_Sorcery/lua_function_definitions/spellcasting.cfg:301
+msgid "You have "
+msgstr ""
+
+#: Era_of_High_Sorcery/lua_function_definitions/spellcasting.cfg:301
+msgid " gold."
+msgstr ""
+
+#: Era_of_High_Sorcery/lua_function_definitions/spellcasting.cfg:310
+msgid "You can't cast spells while in an altered form."
+msgstr ""
+
+#: Era_of_High_Sorcery/lua_function_definitions/spellcasting.cfg:313
+msgid "You can't cast spells into an enemy side's circle of protection."
+msgstr ""
+
+#: Era_of_High_Sorcery/lua_function_definitions/spellcasting.cfg:321
+msgid "An enchantment spell can only be cast on a unit."
+msgstr ""
+
+#: Era_of_High_Sorcery/lua_function_definitions/spellcasting.cfg:326
+msgid "You can't summon a new creature where there is already a unit."
+msgstr ""
+
+#: Era_of_High_Sorcery/lua_function_definitions/spellcasting.cfg:329
+msgid "You can't summon a creature onto a hex that it can't normally enter."
+msgstr ""
+
+#: Era_of_High_Sorcery/lua_function_definitions/spellcasting.cfg:395
 msgid ""
-"Descriptions of all spells, with their base costs, are listed below.\n"
-"(Picking the options does nothing; this is merely an info screen)"
-msgstr ""
-
-#: Era_of_High_Sorcery/spell_system.cfg:849
-msgid "Descriptions of all spells, with their base costs, are listed below."
-msgstr ""
-
-#: Era_of_High_Sorcery/spells-evocation.cfg:7
-msgid "Energy Bolt"
-msgstr ""
-
-#: Era_of_High_Sorcery/spells-evocation.cfg:10
-msgid ""
-"Inflicts 5 to 9 damage plus your Evocation level\n"
-"upon one target within $energy_bolt_base_range| hexes."
-msgstr ""
-
-#: Era_of_High_Sorcery/spells-evocation.cfg:31
-msgid "Wizard Sword"
-msgstr ""
-
-#: Era_of_High_Sorcery/spells-evocation.cfg:34
-msgid ""
-"Grants a 7-3 magical sword to you or an adjacent unit.\n"
-"The sword vanishes at the beginning of your third turn hence."
-msgstr ""
-
-#. [effect]: type=blade
-#: Era_of_High_Sorcery/spells-evocation.cfg:51
-msgid "wizard sword"
-msgstr ""
-
-#. [damage]: id=$will_disappear_on|_disappears_dummy
-#: Era_of_High_Sorcery/spells-evocation.cfg:62
-msgid "vanishes turn $will_disappear_on"
-msgstr ""
-
-#: Era_of_High_Sorcery/spells-evocation.cfg:134
-msgid "Mage Shield"
-msgstr ""
-
-#: Era_of_High_Sorcery/spells-evocation.cfg:138
-msgid ""
-"Surrounds yourself or an adjacent unit with a crude magical shield that\n"
-"will block the damage of first blow that hits it, then disappear.\n"
-"(Only damage is blocked; other effects happen as normal.)"
-msgstr ""
-
-#: Era_of_High_Sorcery/spells-evocation.cfg:140
-msgid "You can't cast a Mage Shield on a unit that already has one."
-msgstr ""
-
-#: Era_of_High_Sorcery/spells-evocation.cfg:147
-msgid "male^shielded"
-msgstr ""
-
-#: Era_of_High_Sorcery/spells-evocation.cfg:147
-msgid "female^shielded"
-msgstr ""
-
-#: Era_of_High_Sorcery/spells-evocation.cfg:149
-msgid ""
-"Shielded:\n"
+"<span color='#ff3333' size='xx-large'>=====WARNING=====</span>\n"
 "\n"
-"This unit is surrounded by a magical shield that will nullify the damage of "
-"the first hit to land on it. The shield will disappear after blocking one "
-"hit."
+"Are you sure you want to cast this spell at yourself? (Remember, you must "
+"bring up the right-click menu at the <b>target</b> of the spell.)"
 msgstr ""
 
-#. [unstore_unit]
-#: Era_of_High_Sorcery/spells-evocation.cfg:195
-msgid "$amount_blocked blocked!"
+#: Era_of_High_Sorcery/lua_function_definitions/spellcasting.cfg:397
+msgid "No, let me choose something else"
 msgstr ""
 
-#: Era_of_High_Sorcery/spells-evocation.cfg:209
-msgid "Fire Ball"
+#: Era_of_High_Sorcery/lua_function_definitions/spellcasting.cfg:403
+msgid "Yes, I know what I'm doing"
 msgstr ""
 
-#: Era_of_High_Sorcery/spells-evocation.cfg:213
+#: Era_of_High_Sorcery/lua_function_definitions/spellcasting.cfg:436
+msgid "You can only cast that spell at your own location."
+msgstr ""
+
+#: Era_of_High_Sorcery/lua_function_definitions/spellcasting.cfg:441
+msgid "You can only cast that spell at an adjacent hex."
+msgstr ""
+
+#: Era_of_High_Sorcery/lua_function_definitions/spellcasting.cfg:449
+msgid "That target is beyond your maximum range for that spell."
+msgstr ""
+
+#: Era_of_High_Sorcery/lua_function_definitions/spellcasting.cfg:469
+msgid "No cost"
+msgstr ""
+
+#: Era_of_High_Sorcery/lua_function_definitions/spellcasting.cfg:488
+msgid "You don't have enough mana to cast that spell."
+msgstr ""
+
+#: Era_of_High_Sorcery/lua_function_definitions/spellcasting.cfg:495
+msgid "You don't have enough gold to cast that spell."
+msgstr ""
+
+#: Era_of_High_Sorcery/lua_function_definitions/spellcasting.cfg:501
+msgid ", Instant"
+msgstr ""
+
+#: Era_of_High_Sorcery/lua_function_definitions/spellcasting.cfg:514
+msgid "You can't cast that spell because you don't have any attacks left."
+msgstr ""
+
+#: Era_of_High_Sorcery/lua_function_definitions/spellcasting.cfg:521
+msgid ", Enchantment"
+msgstr ""
+
+#: Era_of_High_Sorcery/lua_function_definitions/spellcasting.cfg:537
+msgid "There is no viable hex to place the second unit next to the first."
+msgstr ""
+
+#. [lua]: message_tag_contents.speaker=narrator, id=eohs_view_stats
+#: Era_of_High_Sorcery/lua_function_definitions/statistics.cfg:18
+msgid "Statistics &amp; unit options"
+msgstr ""
+
+#. [lua]: message_tag_contents.speaker=narrator, id=eohs_view_stats
+#: Era_of_High_Sorcery/lua_function_definitions/statistics.cfg:38
+msgid "Statistics & unit options"
+msgstr ""
+
+#. [lua]: message_tag_contents.speaker=narrator, id=eohs_view_stats
+#: Era_of_High_Sorcery/lua_function_definitions/statistics.cfg:53
+msgid "Exit statistics screen"
+msgstr ""
+
+#. [lua]: message_tag_contents.speaker=narrator, id=eohs_view_stats
+#: Era_of_High_Sorcery/lua_function_definitions/statistics.cfg:54
+msgid "Your overall damage dealt:"
+msgstr ""
+
+#. [lua]: message_tag_contents.speaker=narrator, id=eohs_view_stats
+#: Era_of_High_Sorcery/lua_function_definitions/statistics.cfg:55
+msgid "Your overall damage taken:"
+msgstr ""
+
+#. [lua]: message_tag_contents.speaker=narrator, id=eohs_view_stats
+#: Era_of_High_Sorcery/lua_function_definitions/statistics.cfg:56
+msgid "Your overall kills:"
+msgstr ""
+
+#. [lua]: message_tag_contents.speaker=narrator, id=eohs_view_stats
+#: Era_of_High_Sorcery/lua_function_definitions/statistics.cfg:57
+msgid "Your overall losses:"
+msgstr ""
+
+#. [lua]: message_tag_contents.speaker=narrator, id=eohs_view_stats
+#: Era_of_High_Sorcery/lua_function_definitions/statistics.cfg:61
+msgid "This unit's damage dealt:"
+msgstr ""
+
+#. [lua]: message_tag_contents.speaker=narrator, id=eohs_view_stats
+#: Era_of_High_Sorcery/lua_function_definitions/statistics.cfg:62
+msgid "This unit's damage taken:"
+msgstr ""
+
+#. [lua]: message_tag_contents.speaker=narrator, id=eohs_view_stats
+#: Era_of_High_Sorcery/lua_function_definitions/statistics.cfg:63
+msgid "This unit's kills:"
+msgstr ""
+
+#. [lua]: message_tag_contents.speaker=narrator, id=eohs_view_stats
+#: Era_of_High_Sorcery/lua_function_definitions/statistics.cfg:70
+msgid "(current default)"
+msgstr ""
+
+#. [lua]: message_tag_contents.speaker=narrator, id=eohs_view_stats
+#: Era_of_High_Sorcery/lua_function_definitions/statistics.cfg:71
+msgid "Set this unit's default advancement to "
+msgstr ""
+
+#. [lua]: message_tag_contents.speaker=narrator, id=eohs_view_stats
+#: Era_of_High_Sorcery/lua_function_definitions/statistics.cfg:75
+msgid "Set this unit's hair color to black"
+msgstr ""
+
+#. [lua]: message_tag_contents.speaker=narrator, id=eohs_view_stats
+#: Era_of_High_Sorcery/lua_function_definitions/statistics.cfg:76
+msgid "Set this unit's hair color to brown"
+msgstr ""
+
+#. [lua]: message_tag_contents.speaker=narrator, id=eohs_view_stats
+#: Era_of_High_Sorcery/lua_function_definitions/statistics.cfg:77
+msgid "Set this unit's hair color to blond"
+msgstr ""
+
+#. [lua]: message_tag_contents.speaker=narrator, id=eohs_view_stats
+#: Era_of_High_Sorcery/lua_function_definitions/statistics.cfg:78
+msgid "Set this unit's hair color to hot pink"
+msgstr ""
+
+#. [lua]: message_tag_contents.speaker=narrator, id=eohs_view_stats
+#: Era_of_High_Sorcery/lua_function_definitions/statistics.cfg:79
+msgid "Set this unit's hair color to bright red"
+msgstr ""
+
+#. [lua]: message_tag_contents.speaker=narrator, id=eohs_view_stats
+#: Era_of_High_Sorcery/lua_function_definitions/statistics.cfg:80
+msgid "Set this unit's hair color to purple"
+msgstr ""
+
+#. [lua]: message_tag_contents.speaker=narrator, id=eohs_view_stats
+#: Era_of_High_Sorcery/lua_function_definitions/statistics.cfg:81
+msgid "Set this unit's hair color to turquoise"
+msgstr ""
+
+#. [lua]: message_tag_contents.speaker=narrator, id=eohs_view_stats
+#: Era_of_High_Sorcery/lua_function_definitions/statistics.cfg:82
+msgid "Set this unit's hair color by RGB input"
+msgstr ""
+
+#. [lua]: message_tag_contents.speaker=narrator, id=eohs_view_stats
+#: Era_of_High_Sorcery/lua_function_definitions/statistics.cfg:112
 msgid ""
-"Inflicts 4 to 9 fire damage plus 1.5 times your\n"
-"Evocation level upon every unit in a radius-1 area\n"
-"around one target within $fire_ball_base_range| hexes."
+"You must input three values from 0 to 255, separated by commas or spaces."
 msgstr ""
 
-#: Era_of_High_Sorcery/spells-evocation.cfg:277
+#. [lua]: message_tag_contents.speaker=narrator, id=eohs_view_stats
+#: Era_of_High_Sorcery/lua_function_definitions/statistics.cfg:115
+msgid "RGB:"
+msgstr ""
+
+#: Era_of_High_Sorcery/lua_function_definitions/training.cfg:8
+msgid "Train your magical skills"
+msgstr ""
+
+#: Era_of_High_Sorcery/lua_function_definitions/training.cfg:39
+msgid ""
+"Scroll to the right to view the abilities granted by this realm at different "
+"skill levels."
+msgstr ""
+
+#: Era_of_High_Sorcery/lua_function_definitions/training.cfg:47
+msgid "Cast "
+msgstr ""
+
+#: Era_of_High_Sorcery/lua_function_definitions/training.cfg:55
+msgid "pick Dwarvish Alliance"
+msgstr ""
+
+#: Era_of_High_Sorcery/lua_function_definitions/training.cfg:56
+#: Era_of_High_Sorcery/lua_function_definitions/training.cfg:62
+#: Era_of_High_Sorcery/lua_function_definitions/training.cfg:75
+msgid "pick Archmage"
+msgstr ""
+
+#: Era_of_High_Sorcery/lua_function_definitions/training.cfg:61
+msgid "pick Elvish Alliance"
+msgstr ""
+
+#: Era_of_High_Sorcery/lua_function_definitions/training.cfg:69
+msgid "Recruit Walking Corpse"
+msgstr ""
+
+#: Era_of_High_Sorcery/lua_function_definitions/training.cfg:70
+msgid "Recruit Vampire Bat"
+msgstr ""
+
+#: Era_of_High_Sorcery/lua_function_definitions/training.cfg:71
+msgid "Recruit Skeleton"
+msgstr ""
+
+#: Era_of_High_Sorcery/lua_function_definitions/training.cfg:72
+msgid "Recruit Skeleton Archer"
+msgstr ""
+
+#: Era_of_High_Sorcery/lua_function_definitions/training.cfg:73
+msgid "Recruit Ghoul"
+msgstr ""
+
+#: Era_of_High_Sorcery/lua_function_definitions/training.cfg:74
+msgid "advance to Lich"
+msgstr ""
+
+#: Era_of_High_Sorcery/lua_function_definitions/training.cfg:83
+msgid "Level "
+msgstr ""
+
+#: Era_of_High_Sorcery/lua_function_definitions/training.cfg:125
+msgid " picks remaining"
+msgstr ""
+
+#: Era_of_High_Sorcery/lua_function_definitions/training.cfg:132
+msgid "1 point per level"
+msgstr ""
+
+#: Era_of_High_Sorcery/lua_function_definitions/training.cfg:135
+msgid "1 point"
+msgstr ""
+
+#: Era_of_High_Sorcery/lua_function_definitions/training.cfg:137
+msgid " points"
+msgstr ""
+
+#: Era_of_High_Sorcery/lua_function_definitions/training.cfg:154
+msgid "Your old skills:"
+msgstr ""
+
+#: Era_of_High_Sorcery/lua_function_definitions/training.cfg:155
+msgid "Your new skills:"
+msgstr ""
+
+#: Era_of_High_Sorcery/lua_function_definitions/training.cfg:157
+msgid "Done training (use new skills)"
+msgstr ""
+
+#: Era_of_High_Sorcery/lua_function_definitions/training.cfg:163
+msgid "Cancel training (use old skills)"
+msgstr ""
+
+#: Era_of_High_Sorcery/lua_function_definitions/training.cfg:169
+msgid "Hide disallowed picks"
+msgstr ""
+
+#: Era_of_High_Sorcery/lua_function_definitions/training.cfg:180
+msgid "Show disallowed picks"
+msgstr ""
+
+#: Era_of_High_Sorcery/lua_function_definitions/training.cfg:191
+msgid "Hide pick descriptions"
+msgstr ""
+
+#: Era_of_High_Sorcery/lua_function_definitions/training.cfg:202
+msgid "Show pick descriptions"
+msgstr ""
+
+#: Era_of_High_Sorcery/lua_function_definitions/training.cfg:215
+msgid "Reset to old skills"
+msgstr ""
+
+#: Era_of_High_Sorcery/lua_function_definitions/training.cfg:224
+#: Era_of_High_Sorcery/lua_function_definitions/training.cfg:231
+msgid "Spend all my picks at random"
+msgstr ""
+
+#: Era_of_High_Sorcery/lua_function_definitions/training.cfg:231
+msgid "Recommended for beginners."
+msgstr ""
+
+#: Era_of_High_Sorcery/lua_function_definitions/training.cfg:231
+msgid "Always gives generally reasonable builds."
+msgstr ""
+
+#: Era_of_High_Sorcery/lua_function_definitions/training.cfg:247
+msgid "You already have this ability."
+msgstr ""
+
+#: Era_of_High_Sorcery/lua_function_definitions/training.cfg:250
+msgid "You do not have enough picks left to learn that skill."
+msgstr ""
+
+#: Era_of_High_Sorcery/lua_function_definitions/training.cfg:370
+msgid " would you like to purchase?"
+msgstr ""
+
+#: Era_of_High_Sorcery/lua_function_definitions/training.cfg:370
+msgid "<span size='larger'>Your old skills:</span>"
+msgstr ""
+
+#: Era_of_High_Sorcery/lua_function_definitions/training.cfg:370
+msgid "How much "
+msgstr ""
+
+#: Era_of_High_Sorcery/lua_function_definitions/training.cfg:370
+msgid "<span size='larger'>Your new skills:</span>"
+msgstr ""
+
+#. [lua]
+#: Era_of_High_Sorcery/lua_function_definitions/ui.cfg:81
+msgid "Increase text wrapping width"
+msgstr ""
+
+#. [lua]
+#: Era_of_High_Sorcery/lua_function_definitions/ui.cfg:88
+msgid "Decrease text wrapping width"
+msgstr ""
+
+#. [illuminates]: id=delumination
+#: Era_of_High_Sorcery/macro_value_transit.cfg:97
+#: Era_of_High_Sorcery/macro_value_transit.cfg:115
+#: Era_of_High_Sorcery/macro_value_transit.cfg:133
+msgid "deluminates"
+msgstr ""
+
+#. [illuminates]: id=delumination
+#: Era_of_High_Sorcery/macro_value_transit.cfg:98
+#: Era_of_High_Sorcery/macro_value_transit.cfg:116
+#: Era_of_High_Sorcery/macro_value_transit.cfg:134
+msgid "female^deluminates"
+msgstr ""
+
+#. [illuminates]: id=delumination
+#: Era_of_High_Sorcery/macro_value_transit.cfg:102
+#: Era_of_High_Sorcery/macro_value_transit.cfg:120
+#: Era_of_High_Sorcery/macro_value_transit.cfg:138
+msgid ""
+"Deluminates:\n"
+"This unit darkens the surrounding area, making lawful units fight worse, and "
+"chaotic units fight better.\n"
+"\n"
+"Any units adjacent to this unit will fight as if it were dusk when it is "
+"day, and as if it were night when it is dusk."
+msgstr ""
+
+#. [lua]: type=realm_skill, type=realm_skill, type=realm_skill, type=ability, type=ability, type=ability, type=ability, type=ability, type=ability, type=ability, type=ability, type=ability
+#: Era_of_High_Sorcery/picks.cfg:9
+msgid "Evocation skill"
+msgstr ""
+
+#. [lua]: type=realm_skill, type=realm_skill, type=realm_skill, type=ability, type=ability, type=ability, type=ability, type=ability, type=ability, type=ability, type=ability, type=ability
+#: Era_of_High_Sorcery/picks.cfg:10
+msgid ""
+"The power to call forth the most mighty and straightforward of magics.\n"
+"Most Evocation spells are improved by additional Evocation skill."
+msgstr ""
+
+#. [lua]: type=realm_skill, type=realm_skill, type=realm_skill, type=ability, type=ability, type=ability, type=ability, type=ability, type=ability, type=ability, type=ability, type=ability
+#: Era_of_High_Sorcery/picks.cfg:16
+msgid "Nature Magic skill"
+msgstr ""
+
+#. [lua]: type=realm_skill, type=realm_skill, type=realm_skill, type=ability, type=ability, type=ability, type=ability, type=ability, type=ability, type=ability, type=ability, type=ability
+#: Era_of_High_Sorcery/picks.cfg:17
+msgid ""
+"The power to shape the earth and sky to do your bidding.\n"
+"Most levels also give you the ability to move more easily in a terrain."
+msgstr ""
+
+#. [lua]: type=realm_skill, type=realm_skill, type=realm_skill, type=ability, type=ability, type=ability, type=ability, type=ability, type=ability, type=ability, type=ability, type=ability
+#: Era_of_High_Sorcery/picks.cfg:23
+msgid "Necromancy skill"
+msgstr ""
+
+#. [lua]: type=realm_skill, type=realm_skill, type=realm_skill, type=ability, type=ability, type=ability, type=ability, type=ability, type=ability, type=ability, type=ability, type=ability
+#: Era_of_High_Sorcery/picks.cfg:24
+msgid ""
+"The power to summon and bind the spirits of the dead.\n"
+"If you have any skill in necromancy, you may not select Dwarvish Alliance, "
+"Elvish Alliance, or Military Commander."
+msgstr ""
+
+#. [lua]: type=realm_skill, type=realm_skill, type=realm_skill, type=ability, type=ability, type=ability, type=ability, type=ability, type=ability, type=ability, type=ability, type=ability
+#: Era_of_High_Sorcery/picks.cfg:26
+msgid ""
+"You can't train in Necromancy when you are already a Military Commander."
+msgstr ""
+
+#. [lua]: type=realm_skill, type=realm_skill, type=realm_skill, type=ability, type=ability, type=ability, type=ability, type=ability, type=ability, type=ability, type=ability, type=ability
+#: Era_of_High_Sorcery/picks.cfg:27
+msgid ""
+"You can't train in Necromancy when you have already made an Elvish Alliance."
+msgstr ""
+
+#. [lua]: type=realm_skill, type=realm_skill, type=realm_skill, type=ability, type=ability, type=ability, type=ability, type=ability, type=ability, type=ability, type=ability, type=ability
+#: Era_of_High_Sorcery/picks.cfg:28
+msgid ""
+"You can't train in Necromancy when you have already made a Dwarvish Alliance."
+msgstr ""
+
+#. [lua]: type=realm_skill, type=realm_skill, type=realm_skill, type=ability, type=ability, type=ability, type=ability, type=ability, type=ability, type=ability, type=ability, type=ability
+#: Era_of_High_Sorcery/picks.cfg:36
+msgid "Archmage"
+msgstr ""
+
+#. [lua]: type=realm_skill, type=realm_skill, type=realm_skill, type=ability, type=ability, type=ability, type=ability, type=ability, type=ability, type=ability, type=ability, type=ability
+#: Era_of_High_Sorcery/picks.cfg:37
+msgid ""
+"You are a master in your magical craft.\n"
+"Your spells (other than instant summons) cost 4/5 the normal amount, you "
+"have +40% resistance to magical damage, and you can recruit Mages and/or "
+"Dark Adepts.\n"
+"You must learn 4 skill in any realm to be an Archmage. The realm(s) that you "
+"have 4 skill in determine(s) what you can recruit."
+msgstr ""
+
+#. [lua]: type=realm_skill, type=realm_skill, type=realm_skill, type=ability, type=ability, type=ability, type=ability, type=ability, type=ability, type=ability, type=ability, type=ability
+#: Era_of_High_Sorcery/picks.cfg:40
+msgid "You need at least four skill in any one realm to pick Archmage."
+msgstr ""
+
+#. [lua]: type=realm_skill, type=realm_skill, type=realm_skill, type=ability, type=ability, type=ability, type=ability, type=ability, type=ability, type=ability, type=ability, type=ability
+#: Era_of_High_Sorcery/picks.cfg:49
+msgid "Superb Summoner"
+msgstr ""
+
+#. [lua]: type=realm_skill, type=realm_skill, type=realm_skill, type=ability, type=ability, type=ability, type=ability, type=ability, type=ability, type=ability, type=ability, type=ability
+#: Era_of_High_Sorcery/picks.cfg:50
+msgid ""
+"You are very proficient in calling monsters from the ether.\n"
+"You may cast two summoning spells per turn, though you still may not summon "
+"and attack, or summon and cast a non-summoning spell, in the same turn."
+msgstr ""
+
+#. [lua]: type=realm_skill, type=realm_skill, type=realm_skill, type=ability, type=ability, type=ability, type=ability, type=ability, type=ability, type=ability, type=ability, type=ability
+#: Era_of_High_Sorcery/picks.cfg:64
+msgid ""
+"You have no non-Instant summoning spells, so Superb Summoner would be "
+"useless."
+msgstr ""
+
+#. [lua]: type=realm_skill, type=realm_skill, type=realm_skill, type=ability, type=ability, type=ability, type=ability, type=ability, type=ability, type=ability, type=ability, type=ability
+#: Era_of_High_Sorcery/picks.cfg:72
+msgid "Enchanter"
+msgstr ""
+
+#. [lua]: type=realm_skill, type=realm_skill, type=realm_skill, type=ability, type=ability, type=ability, type=ability, type=ability, type=ability, type=ability, type=ability, type=ability
+#: Era_of_High_Sorcery/picks.cfg:73
+msgid ""
+"You are practiced in the art of placing enchantments.\n"
+"You may cast one additional enchantment spell each turn, regardless of what "
+"else you do in the turn."
+msgstr ""
+
+#. [lua]: type=realm_skill, type=realm_skill, type=realm_skill, type=ability, type=ability, type=ability, type=ability, type=ability, type=ability, type=ability, type=ability, type=ability
+#: Era_of_High_Sorcery/picks.cfg:84
+msgid "You have enchantment spells, so Enchanter would be useless."
+msgstr ""
+
+#. [lua]: type=realm_skill, type=realm_skill, type=realm_skill, type=ability, type=ability, type=ability, type=ability, type=ability, type=ability, type=ability, type=ability, type=ability
+#: Era_of_High_Sorcery/picks.cfg:92
+msgid "Farseer"
+msgstr ""
+
+#. [lua]: type=realm_skill, type=realm_skill, type=realm_skill, type=ability, type=ability, type=ability, type=ability, type=ability, type=ability, type=ability, type=ability, type=ability
+#: Era_of_High_Sorcery/picks.cfg:93
+msgid ""
+"You have a keen eye and a steady mind.\n"
+"The range of your spells is increased by 50%, rounded up. Even spells that "
+"target adjacent units can be cast two hexes away, although summoning spells "
+"can still only be cast adjacent to you."
+msgstr ""
+
+#. [lua]: type=realm_skill, type=realm_skill, type=realm_skill, type=ability, type=ability, type=ability, type=ability, type=ability, type=ability, type=ability, type=ability, type=ability
+#: Era_of_High_Sorcery/picks.cfg:104
+msgid "You have no ranged spells, so Farseer would be useless."
+msgstr ""
+
+#. [lua]: type=realm_skill, type=realm_skill, type=realm_skill, type=ability, type=ability, type=ability, type=ability, type=ability, type=ability, type=ability, type=ability, type=ability
+#: Era_of_High_Sorcery/picks.cfg:112
+msgid "Military Commander"
+msgstr ""
+
+#. [lua]: type=realm_skill, type=realm_skill, type=realm_skill, type=ability, type=ability, type=ability, type=ability, type=ability, type=ability, type=ability, type=ability, type=ability
+#: Era_of_High_Sorcery/picks.cfg:113
+msgid ""
+"You are able to raise up and lead a human military.\n"
+"You can recruit loyalist units, except for mages, and lead adjacent units in "
+"combat.\n"
+"No one who has skill in Necromancy or hires Orcish Mercenaries may be a "
+"Military Commander."
+msgstr ""
+
+#. [lua]: type=realm_skill, type=realm_skill, type=realm_skill, type=ability, type=ability, type=ability, type=ability, type=ability, type=ability, type=ability, type=ability, type=ability
+#: Era_of_High_Sorcery/picks.cfg:116
+msgid ""
+"You can't become a Military Commander when you have already trained in "
+"Necromancy."
+msgstr ""
+
+#. [lua]: type=realm_skill, type=realm_skill, type=realm_skill, type=ability, type=ability, type=ability, type=ability, type=ability, type=ability, type=ability, type=ability, type=ability
+#: Era_of_High_Sorcery/picks.cfg:117
+msgid ""
+"You can't become a Military Commander when you are already emplying Orcish "
+"Mercenaries."
+msgstr ""
+
+#. [lua]: type=realm_skill, type=realm_skill, type=realm_skill, type=ability, type=ability, type=ability, type=ability, type=ability, type=ability, type=ability, type=ability, type=ability
+#: Era_of_High_Sorcery/picks.cfg:125
+msgid "Prince of Thieves"
+msgstr ""
+
+#. [lua]: type=realm_skill, type=realm_skill, type=realm_skill, type=ability, type=ability, type=ability, type=ability, type=ability, type=ability, type=ability, type=ability, type=ability
+#: Era_of_High_Sorcery/picks.cfg:126
+msgid ""
+"You control a secret organization of outlaws.\n"
+"You can recruit outlaw units, and you gain the Skirmisher ability."
+msgstr ""
+
+#. [lua]: type=realm_skill, type=realm_skill, type=realm_skill, type=ability, type=ability, type=ability, type=ability, type=ability, type=ability, type=ability, type=ability, type=ability
+#: Era_of_High_Sorcery/picks.cfg:133
+msgid "Elvish Alliance"
+msgstr ""
+
+#. [lua]: type=realm_skill, type=realm_skill, type=realm_skill, type=ability, type=ability, type=ability, type=ability, type=ability, type=ability, type=ability, type=ability, type=ability
+#: Era_of_High_Sorcery/picks.cfg:134
+msgid ""
+"You forge an alliance with the Elves.\n"
+"You can recruit elvish units and Merman Hunters.\n"
+"You must have 1 skill in Nature Magic, no skill in Necromancy, and no Orcish "
+"Mercenaries if the Elves are to accept you."
+msgstr ""
+
+#. [lua]: type=realm_skill, type=realm_skill, type=realm_skill, type=ability, type=ability, type=ability, type=ability, type=ability, type=ability, type=ability, type=ability, type=ability
+#: Era_of_High_Sorcery/picks.cfg:137
+msgid ""
+"You can't make an Elvish Alliance when you have no skill in Nature Magic."
+msgstr ""
+
+#. [lua]: type=realm_skill, type=realm_skill, type=realm_skill, type=ability, type=ability, type=ability, type=ability, type=ability, type=ability, type=ability, type=ability, type=ability
+#: Era_of_High_Sorcery/picks.cfg:138
+msgid ""
+"You can't make an Elvish Alliance when you have already trained in "
+"Necromancy."
+msgstr ""
+
+#. [lua]: type=realm_skill, type=realm_skill, type=realm_skill, type=ability, type=ability, type=ability, type=ability, type=ability, type=ability, type=ability, type=ability, type=ability
+#: Era_of_High_Sorcery/picks.cfg:139
+msgid ""
+"You can't make an Elvish Alliance when you are already emplying Orcish "
+"Mercenaries."
+msgstr ""
+
+#. [lua]: type=realm_skill, type=realm_skill, type=realm_skill, type=ability, type=ability, type=ability, type=ability, type=ability, type=ability, type=ability, type=ability, type=ability
+#: Era_of_High_Sorcery/picks.cfg:147
+msgid "Dwarvish Alliance"
+msgstr ""
+
+#. [lua]: type=realm_skill, type=realm_skill, type=realm_skill, type=ability, type=ability, type=ability, type=ability, type=ability, type=ability, type=ability, type=ability, type=ability
+#: Era_of_High_Sorcery/picks.cfg:148
+msgid ""
+"You forge an alliance with the Dwarves.\n"
+"You can recruit dwarvish units.\n"
+"You must have 2 skill in Evocation, no skill in Necromancy, and no Orcish "
+"Mercenaries if the Dwarves are to accept you."
+msgstr ""
+
+#. [lua]: type=realm_skill, type=realm_skill, type=realm_skill, type=ability, type=ability, type=ability, type=ability, type=ability, type=ability, type=ability, type=ability, type=ability
+#: Era_of_High_Sorcery/picks.cfg:151
+msgid ""
+"You can't make an Dwarvish Alliance when you have no skill in Evocation."
+msgstr ""
+
+#. [lua]: type=realm_skill, type=realm_skill, type=realm_skill, type=ability, type=ability, type=ability, type=ability, type=ability, type=ability, type=ability, type=ability, type=ability
+#: Era_of_High_Sorcery/picks.cfg:152
+msgid ""
+"You can't make an Dwarvish Alliance when you have already trained in "
+"Necromancy."
+msgstr ""
+
+#. [lua]: type=realm_skill, type=realm_skill, type=realm_skill, type=ability, type=ability, type=ability, type=ability, type=ability, type=ability, type=ability, type=ability, type=ability
+#: Era_of_High_Sorcery/picks.cfg:153
+msgid ""
+"You can't make an Dwarvish Alliance when you are already emplying Orcish "
+"Mercenaries."
+msgstr ""
+
+#. [lua]: type=realm_skill, type=realm_skill, type=realm_skill, type=ability, type=ability, type=ability, type=ability, type=ability, type=ability, type=ability, type=ability, type=ability
+#: Era_of_High_Sorcery/picks.cfg:161
+msgid "Orcish Mercenaries"
+msgstr ""
+
+#. [lua]: type=realm_skill, type=realm_skill, type=realm_skill, type=ability, type=ability, type=ability, type=ability, type=ability, type=ability, type=ability, type=ability, type=ability
+#: Era_of_High_Sorcery/picks.cfg:162
+msgid ""
+"You hire orcs to do your dirty work for you.\n"
+"You can recruit orcish units and nagas.\n"
+"If you take this option, you may not select Dwarvish Alliance, Elvish "
+"Alliance, or Military Commander."
+msgstr ""
+
+#. [lua]: type=realm_skill, type=realm_skill, type=realm_skill, type=ability, type=ability, type=ability, type=ability, type=ability, type=ability, type=ability, type=ability, type=ability
+#: Era_of_High_Sorcery/picks.cfg:165
+msgid ""
+"You can't employ Orcish Mercenaries when you are already a Military "
+"Commander."
+msgstr ""
+
+#. [lua]: type=realm_skill, type=realm_skill, type=realm_skill, type=ability, type=ability, type=ability, type=ability, type=ability, type=ability, type=ability, type=ability, type=ability
+#: Era_of_High_Sorcery/picks.cfg:166
+msgid ""
+"You can't employ Orcish Mercenaries when you have already made an Elvish "
+"Alliance."
+msgstr ""
+
+#. [lua]: type=realm_skill, type=realm_skill, type=realm_skill, type=ability, type=ability, type=ability, type=ability, type=ability, type=ability, type=ability, type=ability, type=ability
+#: Era_of_High_Sorcery/picks.cfg:167
+msgid ""
+"You can't employ Orcish Mercenaries when you have already made an Dwarvish "
+"Alliance."
+msgstr ""
+
+#. [lua]: type=Young Ogre, type=Ogre
+#: Era_of_High_Sorcery/spells/aberrant_growth.cfg:8
+msgid "Aberrant Growth"
+msgstr ""
+
+#. [lua]: type=Young Ogre, type=Ogre
+#: Era_of_High_Sorcery/spells/aberrant_growth.cfg:9
+msgid ""
+"Transforms one adjacent non-leader elf, dwarf, human, goblin, or orc into a "
+"huge ogre. The ogre retains its traits, and it will have the same fraction "
+"of its moves and hitpoints remaining after the transformation. Note that in "
+"you can replace an enemy unit with an ogre just as well as your own units, "
+"but it will remain your enemy."
+msgstr ""
+
+#. [lua]: type=Young Ogre, type=Ogre
+#: Era_of_High_Sorcery/spells/aberrant_growth.cfg:20
+msgid "Aberrant Growth can only be cast on a unit."
+msgstr ""
+
+#. [lua]: type=Young Ogre, type=Ogre
+#: Era_of_High_Sorcery/spells/aberrant_growth.cfg:23
+msgid "You can't cast Aberrant Growth on spellcasters."
+msgstr ""
+
+#. [lua]: type=Young Ogre, type=Ogre
+#: Era_of_High_Sorcery/spells/aberrant_growth.cfg:26
+msgid ""
+"Aberrant Growth can only be cast on an Elf, Dwarf, Human, Goblin, or Orc."
+msgstr ""
+
+#. [lua]: type=Young Ogre, type=Ogre
+#. [lua]: type=dummy, id=mud_touch_dummy_special, type=Mudcrawler, type=Giant Mudcrawler, type=Giant Mudcrawler, type=Giant Mudcrawler, type=Giant Mudcrawler
+#: Era_of_High_Sorcery/spells/aberrant_growth.cfg:43
+#: Era_of_High_Sorcery/spells/aberrant_growth.cfg:49
+#: Era_of_High_Sorcery/spells/mud_touch.cfg:56
+#: Era_of_High_Sorcery/spells/mud_touch.cfg:64
+#: Era_of_High_Sorcery/spells/mud_touch.cfg:72
+#: Era_of_High_Sorcery/spells/mud_touch.cfg:91
+#: Era_of_High_Sorcery/spells/mud_touch.cfg:111
+msgid "Transmogrified!"
+msgstr ""
+
+#. [lua]
+#: Era_of_High_Sorcery/spells/absorb_bat.cfg:8
+msgid "Absorb Bat"
+msgstr ""
+
+#. [lua]
+#: Era_of_High_Sorcery/spells/absorb_bat.cfg:9
+msgid ""
+"Absorbs one of your bats that is adjacent to you. You regain the resources "
+"you spent to create it. You may not absorb a bat that was just summoned, or "
+"one that has already attacked this turn. This does not use up your spell or "
+"attack for the turn."
+msgstr ""
+
+#. [lua]
+#: Era_of_High_Sorcery/spells/absorb_bat.cfg:22
+msgid "There is no unit at the target hex."
+msgstr ""
+
+#. [lua]
+#: Era_of_High_Sorcery/spells/absorb_bat.cfg:25
+msgid "The unit at the target hex is not a bat."
+msgstr ""
+
+#. [lua]
+#: Era_of_High_Sorcery/spells/absorb_bat.cfg:28
+msgid "The bat at the target hex belongs to a different wizard."
+msgstr ""
+
+#. [lua]
+#: Era_of_High_Sorcery/spells/absorb_bat.cfg:31
+msgid "The bat at the target hex has no attacks left."
+msgstr ""
+
+#. [lua]
+#: Era_of_High_Sorcery/spells/circle_of_protection.cfg:58
+msgid "Circle of Protection"
+msgstr ""
+
+#. [lua]
+#: Era_of_High_Sorcery/spells/circle_of_protection.cfg:59
+msgid ""
+"Places a circle of protection at your location or at an adjacent target hex. "
+"Units in circles of protection cannot be targetted - or affected in any way "
+"- by other players' spells, and the circles protect against the potentially "
+"harmful affects of your own spells as well. If a unit is attacked while in a "
+"circle of protection, both sides will do 0.4 times the normal damage, "
+"rounded down - and the defender's resistances/weaknesses will sometimes be "
+"rounded into nonexistence by an annoying quirk of Wesnoth's damage "
+"calculations. There is no limit to how long a circle of protection lasts, "
+"but it disappears if any unit not on the caster's side enters it."
+msgstr ""
+
+#. [lua]
+#: Era_of_High_Sorcery/spells/circle_of_protection.cfg:70
+msgid "You cannot create a Circle of Protection where there already is one."
+msgstr ""
+
+#. [lua]
+#: Era_of_High_Sorcery/spells/circle_of_protection.cfg:73
+msgid "You cannot create a Circle of Protection around an enemy unit."
+msgstr ""
+
+#. [lua]
+#: Era_of_High_Sorcery/spells/corridor_of_frost.cfg:8
+msgid "Corridor of Frost"
+msgstr ""
+
+#. [lua]
+#: Era_of_High_Sorcery/spells/corridor_of_frost.cfg:9
+msgid ""
+"You cast Corridor of Frost on a hex adjacent to you to indicate its "
+"direction. The attack continues on a straight path in that direction for "
+"(your Evocation level) hexes, slowing and inflicting 6 to 10 cold damage "
+"upon each unit in its path."
+msgstr ""
+
+#. [lua]
+#: Era_of_High_Sorcery/spells/corridor_of_frost.cfg:49
+msgid "slowed"
+msgstr ""
+
+#. [lua]
+#: Era_of_High_Sorcery/spells/curse_life_once_more.cfg:12
+msgid "Curse life once more"
+msgstr ""
+
+#. [lua]
+#: Era_of_High_Sorcery/spells/curse_life_once_more.cfg:13
+msgid ""
+"This spell can only be cast after you have used up your spell or attack. You "
+"spend 15 HP to be able to cast another spell or make another attack. You can "
+"cast Curse Life Once More more multiple times per turn, but no more times "
+"than your Necromancy skill divided by three. If you cast this spell when you "
+"have 15 or fewer hit points, it kills you."
+msgstr ""
+
+#. [lua]
+#: Era_of_High_Sorcery/spells/curse_life_once_more.cfg:25
+msgid "15 HP, "
+msgstr ""
+
+#. [lua]
+#: Era_of_High_Sorcery/spells/curse_life_once_more.cfg:25
+msgid " casts left this turn"
+msgstr ""
+
+#. [lua]
+#: Era_of_High_Sorcery/spells/curse_life_once_more.cfg:27
+msgid "15 HP, 4+ casts per turn"
+msgstr ""
+
+#. [lua]
+#: Era_of_High_Sorcery/spells/curse_life_once_more.cfg:33
+msgid ""
+"You can't cast Curse Life Once More before you have used up your attack."
+msgstr ""
+
+#. [lua]
+#: Era_of_High_Sorcery/spells/curse_life_once_more.cfg:38
+msgid ""
+"You cannot cast Curse Life Once More more times in one turn than you already "
+"have."
+msgstr ""
+
+#. [lua]: id=dark_pact_dummy_ability
+#: Era_of_High_Sorcery/spells/dark_pact.cfg:17
+msgid "Dark Pact"
+msgstr ""
+
+#. [lua]: id=dark_pact_dummy_ability
+#: Era_of_High_Sorcery/spells/dark_pact.cfg:19
+msgid ""
+"You or an adjacent target unit on your side forms a permanent dark pact. "
+"Whenever that unit is damaged, some of the damage will be restored at the "
+"expense of leeching an equal number of hitpoints from any other units on "
+"your side that are within 5 hexes. If there are no such units, the "
+"protection is void. Additional Necromancy skill improves the amount of "
+"damage restored (The formula is damage*skill/(skill+4), rounded down.)"
+msgstr ""
+
+#. [lua]: id=dark_pact_dummy_ability
+#: Era_of_High_Sorcery/spells/dark_pact.cfg:33
+msgid "You can't cast a Dark Pact on a unit that already has one."
+msgstr ""
+
+#. [lua]: id=dark_pact_dummy_ability
+#: Era_of_High_Sorcery/spells/dark_pact.cfg:36
+msgid "Dark Pact can only be cast on your own units."
+msgstr ""
+
+#. [lua]: id=dark_pact_dummy_ability
+#: Era_of_High_Sorcery/spells/dark_pact.cfg:90
+msgid "male^dark pact"
+msgstr ""
+
+#. [lua]: id=dark_pact_dummy_ability
+#: Era_of_High_Sorcery/spells/dark_pact.cfg:91
+msgid "female^dark pact"
+msgstr ""
+
+#. [lua]: id=dark_pact_dummy_ability
+#: Era_of_High_Sorcery/spells/dark_pact.cfg:92
+msgid ""
+"Dark Pact\n"
+"Whenever this unit is damaged, some of the damage will be restored at the "
+"expense of leeching an equal number of hitpoints from any other units on its "
+"side that are within 5 hexes. If there are no such units, the protection is "
+"void."
+msgstr ""
+
+#: Era_of_High_Sorcery/spells/devour_soul.cfg:8
+msgid "Devour Soul"
+msgstr ""
+
+#: Era_of_High_Sorcery/spells/devour_soul.cfg:9
+msgid ""
+"You instantly kill an adjacent unit - either one of your units, or an enemy "
+"unit with hitpoints no higher than your Necromancy skill. You are "
+"permanently gain one-fourth its max hitpoints, all its unit abilities, and "
+"any attack that is innate (i.e. not just a weapon the unit holds - "
+"admittedly, which attacks are counted is subjective..)"
+msgstr ""
+
+#: Era_of_High_Sorcery/spells/devour_soul.cfg:20
+msgid "Devour Soul can only be cast on a unit."
+msgstr ""
+
+#: Era_of_High_Sorcery/spells/devour_soul.cfg:23
+msgid "You can't devour your own soul."
+msgstr ""
+
+#: Era_of_High_Sorcery/spells/devour_soul.cfg:26
+msgid "You can't devour the soul of a non-living, non-undead unit."
+msgstr ""
+
+#: Era_of_High_Sorcery/spells/devour_soul.cfg:29
+msgid ""
+"You can't cast Devour Soul on an enemy unit with hitpoints greater than your "
+"Necromancy skill."
+msgstr ""
+
+#: Era_of_High_Sorcery/spells/devour_soul.cfg:126
+msgid "feeding"
+msgstr ""
+
+#: Era_of_High_Sorcery/spells/devour_soul.cfg:127
+msgid "female^feeding"
+msgstr ""
+
+#: Era_of_High_Sorcery/spells/devour_soul.cfg:128
+msgid ""
+"Feeding:\n"
+"This unit gains 1 hitpoint added to its maximum whenever it kills a living "
+"unit."
+msgstr ""
+
+#: Era_of_High_Sorcery/spells/devour_soul.cfg:212
+msgid "+1 max HP"
+msgstr ""
+
+#. [lua]: type=dummy, id=dispelling_touch_dummy_special
+#: Era_of_High_Sorcery/spells/dispelling_touch.cfg:8
 msgid "Dispelling Touch"
 msgstr ""
 
-#: Era_of_High_Sorcery/spells-evocation.cfg:287
+#. [lua]: type=dummy, id=dispelling_touch_dummy_special
+#: Era_of_High_Sorcery/spells/dispelling_touch.cfg:10
 msgid ""
-"Places an enchantment on you that will dispel the first enemy magic\n"
-"that it comes into contact with. This uses up the enchantment.\n"
-"The following types of enemy magic are affected when you hit a unit in "
-"melee\n"
-"(if you hit a unit with more than one of these, all are affected):\n"
-"Mud Touch, Regeneration, Dispelling Touch, Reanimating Touch, Wraithform: "
-"dispelled\n"
+"Places an enchantment on you that will dispel the first enemy magic that it "
+"comes into contact with. This uses up the enchantment. The following types "
+"of enemy magic are affected when you hit a unit in melee (if you hit a unit "
+"with more than one of these, all are affected):\n"
+"Mud Touch, Regeneration, Wizard Sword, Dispelling Touch, Reanimating Touch, "
+"Wraithform: dispelled\n"
 "Mage Shield, Dark Pact: dispelled and ignored (i.e. the shield does not "
 "block anything)\n"
-"Summoned creatures and undead: inflicts (skill*4) to (skill*6) damage\n"
+"Summoned creatures, undead, drakes: inflicts (skill*4) to (skill*6) damage\n"
 "Also, if you end a turn on a poisoned hex, the poison is dispelled and "
 "ignored, without using up the dispelling touch."
 msgstr ""
 
-#: Era_of_High_Sorcery/spells-evocation.cfg:289
+#. [lua]: type=dummy, id=dispelling_touch_dummy_special
+#: Era_of_High_Sorcery/spells/dispelling_touch.cfg:23
 msgid "You can't cast Dispelling Touch when the spell is already active."
 msgstr ""
 
-#: Era_of_High_Sorcery/spells-evocation.cfg:374
+#. [lua]: type=dummy, id=dispelling_touch_dummy_special
+#: Era_of_High_Sorcery/spells/dispelling_touch.cfg:47
 msgid "dispelling touch"
 msgstr ""
 
-#: Era_of_High_Sorcery/spells-evocation.cfg:380
+#. [lua]: type=dummy, id=dispelling_touch_dummy_special
+#: Era_of_High_Sorcery/spells/dispelling_touch.cfg:48
 msgid ""
 "Dispelling touch:\n"
 "This attack dispels the first magic it comes in contact with. This uses up "
@@ -838,202 +1452,366 @@ msgid ""
 "The following types of enemy magic are affected when you hit a unit with "
 "this attack\n"
 "(if you hit a unit with more than one of these, all are affected):\n"
-"Mud Touch, Regeneration, Dispelling Touch, Reanimating Touch, Wraithform: "
-"dispelled\n"
+"Mud Touch, Regeneration, Wizard Sword, Dispelling Touch, Reanimating Touch, "
+"Wraithform: dispelled\n"
 "Mage Shield, Dark Pact: dispelled and ignored (i.e. the shield does not "
 "block anything)\n"
-"Summoned creatures and undead: inflicts (skill*4) to (skill*6) damage"
+"Summoned creatures, undead, drakes: inflicts (skill*4) to (skill*6) damage"
 msgstr ""
 
-#: Era_of_High_Sorcery/spells-evocation.cfg:419
-msgid "Corridor of Frost"
+#. [lua]
+#: Era_of_High_Sorcery/spells/downpour.cfg:8
+msgid "Downpour"
 msgstr ""
 
-#: Era_of_High_Sorcery/spells-evocation.cfg:422
+#. [lua]
+#: Era_of_High_Sorcery/spells/downpour.cfg:9
 msgid ""
-"Continues in the given direction for (your Evocation level) hexes,\n"
-"slowing and inflicting 6 to 10 cold damage upon each unit in its path."
+"Causes torrential rain, temporarily flooding grasslands and forests. "
+"Repeated castings cause it to become deeper and last longer, eventually "
+"sinking even hills, villages, castle, and mountains. Furthermore, two "
+"additional castings on shallow water reduces the terrain to deep water, "
+"which drowns any unit that cannot normally travel in that terrain. This "
+"spell affects an area with radius equal to one-fifth your Nature Magic "
+"skill, rounded up, around any target within $spell_base_range| hexes."
 msgstr ""
 
-#: Era_of_High_Sorcery/spells-evocation.cfg:436
+#. [lua]
+#: Era_of_High_Sorcery/spells/energy_bolt.cfg:8
+msgid "Energy Bolt"
+msgstr ""
+
+#. [lua]
+#: Era_of_High_Sorcery/spells/energy_bolt.cfg:9
 msgid ""
-"To cast Corridor of Frost, you must indicate a direction by targeting a hex "
-"directly adjacent to your leader."
+"Inflicts 5 to 9 arcane damage plus your Evocation level upon one target "
+"within $spell_base_range| hexes."
 msgstr ""
 
-#: Era_of_High_Sorcery/spells-evocation.cfg:494
-msgid "slowed"
+#. [lua]
+#: Era_of_High_Sorcery/spells/fireball.cfg:8
+msgid "Fireball"
 msgstr ""
 
-#: Era_of_High_Sorcery/spells-evocation.cfg:532
+#. [lua]
+#: Era_of_High_Sorcery/spells/fireball.cfg:9
+msgid ""
+"Inflicts 6 to 13 fire damage plus your Evocation level upon every unit in a "
+"radius-1 area around one target within $spell_base_range| hexes."
+msgstr ""
+
+#: Era_of_High_Sorcery/spells/fissure.cfg:21
+msgid "Fissure"
+msgstr ""
+
+#: Era_of_High_Sorcery/spells/fissure.cfg:22
+msgid ""
+"After a delay of 1 turn, irrevocably creates chasm hex up to "
+"$spell_base_range| hexes away. Any non-flying unit remaining in the hex will "
+"fall down the chasm and die. Unlike other spells, you do not gain experience "
+"for a unit killed this way."
+msgstr ""
+
+#: Era_of_High_Sorcery/spells/fissure.cfg:35
+msgid "That tile is already a chasm."
+msgstr ""
+
+#: Era_of_High_Sorcery/spells/fissure.cfg:39
+msgid "That tile is already on its way to destruction."
+msgstr ""
+
+#. [lua]: id=just_teleported_dummy_ability
+#: Era_of_High_Sorcery/spells/gate.cfg:8
 msgid "Gate"
 msgstr ""
 
-#: Era_of_High_Sorcery/spells-evocation.cfg:539
+#. [lua]: id=just_teleported_dummy_ability
+#: Era_of_High_Sorcery/spells/gate.cfg:9
 msgid ""
 "Teleports you and all adjacent units, friendly or enemy, to a target "
-"location within $mass_teleport_base_range| hexes.\n"
-"Teleported units you control can move immediately, but can't attack.\n"
-"All teleported units land next to you on the same side of you as they were "
-"originally,\n"
-"and in order to cast the spell at a target at all, all teleported units must "
-"land at reasonable locations.\n"
-"You can't teleport any unit to the location of another unit or onto a "
-"terrain it cannot normally cross.\n"
-"Gate also cannot take you to locations that are completely inaccessible by "
-"non-magical means."
+"location within $spell_base_range| hexes. If you teleport your own units "
+"with you, they can move immediately, but units that have just teleported can "
+"neither attack or be attacked. All teleported units land next to you on the "
+"same side of you as they were originally, and in order to cast the spell at "
+"a target at all, all teleported units must land at reasonable locations - "
+"you can't teleport any unit to the location of another unit or onto a "
+"terrain it cannot normally cross. Gate also cannot take you to locations "
+"that are completely inaccessible by non-magical means."
 msgstr ""
 
-#: Era_of_High_Sorcery/spells-evocation.cfg:598
-msgid ""
-"Can't Gate: The $mttr_victim.language_name| would be teleported off the map."
+#. [lua]: id=just_teleported_dummy_ability
+#: Era_of_High_Sorcery/spells/gate.cfg:21
+msgid "You can't teleport to the same location."
 msgstr ""
 
-#: Era_of_High_Sorcery/spells-evocation.cfg:611
-msgid ""
-"Can't Gate: The $mttr_victim.language_name| would be teleported into a wall."
-msgstr ""
-
-#: Era_of_High_Sorcery/spells-evocation.cfg:614
-msgid ""
-"Can't Gate: The $mttr_victim.language_name| would be teleported into lava."
-msgstr ""
-
-#: Era_of_High_Sorcery/spells-evocation.cfg:615
-msgid ""
-"Can't Gate: The $mttr_victim.language_name| would be teleported into a chasm."
-msgstr ""
-
-#: Era_of_High_Sorcery/spells-evocation.cfg:616
-msgid ""
-"Can't Gate: The $mttr_victim.language_name| would be teleported into deep "
-"water."
-msgstr ""
-
-#: Era_of_High_Sorcery/spells-evocation.cfg:617
-msgid ""
-"Can't Gate: The $mttr_victim.language_name| would be teleported into a "
-"mountain."
-msgstr ""
-
-#: Era_of_High_Sorcery/spells-evocation.cfg:639
-msgid ""
-"Can't Gate: The $mttr_victim.language_name| would be teleported onto another "
-"unit."
-msgstr ""
-
-#: Era_of_High_Sorcery/spells-evocation.cfg:694
-msgid "You can't teleport into the same location."
-msgstr ""
-
-#: Era_of_High_Sorcery/spells-evocation.cfg:697
+#. [lua]: id=just_teleported_dummy_ability
+#: Era_of_High_Sorcery/spells/gate.cfg:23
 msgid "You can't teleport onto a unit."
 msgstr ""
 
-#: Era_of_High_Sorcery/spells-evocation.cfg:738
-msgid "teleported"
+#. [lua]: id=just_teleported_dummy_ability
+#: Era_of_High_Sorcery/spells/gate.cfg:32
+#: Era_of_High_Sorcery/spells/gate.cfg:35
+#: Era_of_High_Sorcery/spells/gate.cfg:38
+#: Era_of_High_Sorcery/spells/gate.cfg:53
+msgid "Can't Gate: The "
 msgstr ""
 
-#: Era_of_High_Sorcery/spells-evocation.cfg:774
+#. [lua]: id=just_teleported_dummy_ability
+#: Era_of_High_Sorcery/spells/gate.cfg:32
+msgid " would be teleported off the map."
+msgstr ""
+
+#. [lua]: id=just_teleported_dummy_ability
+#: Era_of_High_Sorcery/spells/gate.cfg:35
+msgid " would be teleported into a wall."
+msgstr ""
+
+#. [lua]: id=just_teleported_dummy_ability
+#: Era_of_High_Sorcery/spells/gate.cfg:38
+msgid " would be teleported into a terrain it can't normally enter."
+msgstr ""
+
+#. [lua]: id=just_teleported_dummy_ability
+#: Era_of_High_Sorcery/spells/gate.cfg:53
+msgid " would be teleported onto another unit."
+msgstr ""
+
+#. [lua]: id=just_teleported_dummy_ability
+#: Era_of_High_Sorcery/spells/gate.cfg:74
 msgid "teleport"
 msgstr ""
 
-#: Era_of_High_Sorcery/spells-evocation.cfg:802
-msgid "Aberrant Growth"
+#. [lua]: id=just_teleported_dummy_ability
+#: Era_of_High_Sorcery/spells/gate.cfg:101
+msgid "male^just teleported"
 msgstr ""
 
-#: Era_of_High_Sorcery/spells-evocation.cfg:811
+#. [lua]: id=just_teleported_dummy_ability
+#: Era_of_High_Sorcery/spells/gate.cfg:102
+msgid "female^just teleported"
+msgstr ""
+
+#. [lua]: id=just_teleported_dummy_ability
+#: Era_of_High_Sorcery/spells/gate.cfg:103
 msgid ""
-"Transforms one adjacent non-leader elf, dwarf, human, goblin,\n"
-"or orc into a huge Ogre. The ogre retains its experience and\n"
-"will have the same fraction of its hitpoints remaining as did\n"
-"the original unit, but is otherwise a completely new unit.\n"
-"If a level 0 unit is hit with this spell, it will merely become\n"
-"a Young Ogre.\n"
-"Note that in you can replace an enemy unit with an ogre just\n"
-"as well as your own units, but it will remain your enemy."
+"Just teleported:\n"
+"This unit cannot attack or be attacked until the end of this turn."
 msgstr ""
 
-#: Era_of_High_Sorcery/spells-evocation.cfg:819
-msgid "Aberrant Growth can only be cast on a unit."
+#. [lua]
+#: Era_of_High_Sorcery/spells/grow_vegetation.cfg:8
+msgid "Grow Vegetation"
 msgstr ""
 
-#: Era_of_High_Sorcery/spells-evocation.cfg:829
-msgid "You can't cast Aberrant Growth on wizard leaders."
-msgstr ""
-
-#: Era_of_High_Sorcery/spells-evocation.cfg:853
+#. [lua]
+#: Era_of_High_Sorcery/spells/grow_vegetation.cfg:9
 msgid ""
-"Aberrant Growth can only be cast on an Elf, Dwarf, Human, Goblin, or Orc."
+"Draws nutrients from the ground and shapes them into trees and grasses. The "
+"targeted hexes, however, cannot support the magically imposed vegetation, "
+"and it will eventually die, leaving the land depleted. This spell affects an "
+"area with radius equal to one-fourth your Nature Magic skill, rounded up, "
+"around any target within $spell_base_range| hexes. Repeated castings can "
+"raise forest even over water and castles."
 msgstr ""
 
-#: Era_of_High_Sorcery/spells-evocation.cfg:892
-#: Era_of_High_Sorcery/spells-evocation.cfg:902
-#: Era_of_High_Sorcery/spells-nature_magic.cfg:135
-msgid "Transmogrified!"
+#. [lua]
+#: Era_of_High_Sorcery/spells/grow_vegetation.cfg:25
+msgid "no nutrients"
 msgstr ""
 
-#: Era_of_High_Sorcery/spells-evocation.cfg:936
-msgid "Circle of Protection"
+#. [lua]: id=lightning_paralysis_dummy_ability, type=swarm, id=lightning_paralysis_attacks_are_useless_special, type=swarm, id=lightning_paralysis_cant_attack_special
+#: Era_of_High_Sorcery/spells/lightning_bolt.cfg:8
+msgid "Lightning Bolt"
 msgstr ""
 
-#: Era_of_High_Sorcery/spells-evocation.cfg:942
+#. [lua]: id=lightning_paralysis_dummy_ability, type=swarm, id=lightning_paralysis_attacks_are_useless_special, type=swarm, id=lightning_paralysis_cant_attack_special
+#: Era_of_High_Sorcery/spells/lightning_bolt.cfg:9
 msgid ""
-"Places a circle of protection at your location or at an adjacent target "
-"hex.\n"
-"Units in circles of protection cannot be targetted - or affected in any way "
-"- by enemy spells,\n"
-"and the circles protect against the potentially harmful affects of friendly "
-"spells as well.\n"
-"If a unit is attacked while in a circle of protection, both sides will do "
-"1/3 the normal damage.\n"
-"There is no limit to how long a circle of protection lasts, but it "
-"disappears if an enemy enters it."
+"Inflicts 12 to 18 damage plus your Nature Magic level upon one target within "
+"$spell_base_range| hexes, and, if it's still alive, paralyzes it so that it "
+"can't move on or attack its next turn - although paralyzed leaders can still "
+"cast spells. You can't strike a unit with lightning on two turns in a row; "
+"undead can be paralyzed, but mechanical units cannot."
 msgstr ""
 
-#: Era_of_High_Sorcery/spells-evocation.cfg:953
-msgid "You cannot create a Circle of Protection where there already is one."
+#. [lua]: id=lightning_paralysis_dummy_ability, type=swarm, id=lightning_paralysis_attacks_are_useless_special, type=swarm, id=lightning_paralysis_cant_attack_special
+#: Era_of_High_Sorcery/spells/lightning_bolt.cfg:21
+msgid "A unit can't be struck by lightning on two turns in a row."
 msgstr ""
 
-#: Era_of_High_Sorcery/spells-evocation.cfg:1124
+#. [lua]: id=lightning_paralysis_dummy_ability, type=swarm, id=lightning_paralysis_attacks_are_useless_special, type=swarm, id=lightning_paralysis_cant_attack_special
+#: Era_of_High_Sorcery/spells/lightning_bolt.cfg:46
+#: Era_of_High_Sorcery/spells/lightning_bolt.cfg:110
+msgid "paralyzed"
+msgstr ""
+
+#. [lua]: id=lightning_paralysis_dummy_ability, type=swarm, id=lightning_paralysis_attacks_are_useless_special, type=swarm, id=lightning_paralysis_cant_attack_special
+#: Era_of_High_Sorcery/spells/lightning_bolt.cfg:90
+msgid "male^paralyzed"
+msgstr ""
+
+#. [lua]: id=lightning_paralysis_dummy_ability, type=swarm, id=lightning_paralysis_attacks_are_useless_special, type=swarm, id=lightning_paralysis_cant_attack_special
+#: Era_of_High_Sorcery/spells/lightning_bolt.cfg:91
+msgid "female^paralyzed"
+msgstr ""
+
+#. [lua]: id=lightning_paralysis_dummy_ability, type=swarm, id=lightning_paralysis_attacks_are_useless_special, type=swarm, id=lightning_paralysis_cant_attack_special
+#: Era_of_High_Sorcery/spells/lightning_bolt.cfg:92
+msgid ""
+"Paralyzed:\n"
+"This unit cannot move, attack, or retaliate against attacks until its own "
+"turn ends, as with the Slow effect."
+msgstr ""
+
+#. [lua]: id=lightning_paralysis_dummy_ability, type=swarm, id=lightning_paralysis_attacks_are_useless_special, type=swarm, id=lightning_paralysis_cant_attack_special
+#: Era_of_High_Sorcery/spells/lightning_bolt.cfg:111
+msgid ""
+"Paralyzed:\n"
+"This attack cannot be used either on offense or defense until this unit's "
+"own turn ends, as with the Slow effect."
+msgstr ""
+
+#. [lua]: id=mage_shield_dummy_ability
+#: Era_of_High_Sorcery/spells/mage_shield.cfg:26
+msgid "Mage Shield"
+msgstr ""
+
+#. [lua]: id=mage_shield_dummy_ability
+#: Era_of_High_Sorcery/spells/mage_shield.cfg:27
+msgid ""
+"Surrounds yourself or an adjacent unit with a crude magical shield that will "
+"block the damage of first blow that hits it, then disappear. (Only damage is "
+"blocked; other effects happen as normal.)"
+msgstr ""
+
+#. [lua]: id=mage_shield_dummy_ability
+#: Era_of_High_Sorcery/spells/mage_shield.cfg:40
+msgid "You can't cast a Mage Shield on a unit that already has one."
+msgstr ""
+
+#. [lua]: id=mage_shield_dummy_ability
+#: Era_of_High_Sorcery/spells/mage_shield.cfg:58
+msgid "male^mage shield"
+msgstr ""
+
+#. [lua]: id=mage_shield_dummy_ability
+#: Era_of_High_Sorcery/spells/mage_shield.cfg:59
+msgid "female^mage shield"
+msgstr ""
+
+#. [lua]: id=mage_shield_dummy_ability
+#: Era_of_High_Sorcery/spells/mage_shield.cfg:60
+msgid ""
+"Mage Shield:\n"
+"This unit is surrounded by a magical shield that will nullify the damage of "
+"the first hit to land on it. The shield will disappear after blocking one "
+"hit."
+msgstr ""
+
+#. [lua]
+#: Era_of_High_Sorcery/spells/meteor_storm.cfg:8
 msgid "Meteor Storm"
 msgstr ""
 
-#: Era_of_High_Sorcery/spells-evocation.cfg:1127
+#. [lua]
+#: Era_of_High_Sorcery/spells/meteor_storm.cfg:9
 msgid ""
-"Drops 10 to 13 flaming boulders near one target within "
-"$meteor_storm_base_range| hexes.\n"
-"Units and terrain in the area will be severly damaged, including destruction "
-"of villages and keeps."
+"Drops a dozen boulders near one target within $spell_base_range| hexes.\n"
+"Units and terrain in the area will be severely damaged, including "
+"destruction of villages and keeps."
 msgstr ""
 
-#: Era_of_High_Sorcery/spells-nature_magic.cfg:8
+#. [lua]
+#: Era_of_High_Sorcery/spells/mount_dismount.cfg:8
+msgid "Mount/dismount"
+msgstr ""
+
+#. [lua]
+#: Era_of_High_Sorcery/spells/mount_dismount.cfg:9
+msgid ""
+"You mount an adjacent creature under your control, or dismount onto an "
+"adjacent empty hex. You can mount Wolves, Water Serpents, Gryphons, and Fire "
+"Dragons. You gain all the unit's attacks; your max moves, terrain movement "
+"costs, and defenses are replaced with theirs; their hitpoints are added to "
+"yours. Otherwise, you retain all your normal unit attributes. You can only "
+"mount a unit if you have one more skill (in the summon realm) than it "
+"normally takes to summon it. You lose all your moves when you mount/"
+"dismount, but you can attack/cast after dismounting."
+msgstr ""
+
+#. [lua]
+#: Era_of_High_Sorcery/spells/mount_dismount.cfg:24
+msgid "You must cast Mount/dismount at the location you wish to dismount onto."
+msgstr ""
+
+#. [lua]
+#: Era_of_High_Sorcery/spells/mount_dismount.cfg:26
+msgid "You can only dismount onto an empty hex."
+msgstr ""
+
+#. [lua]
+#: Era_of_High_Sorcery/spells/mount_dismount.cfg:31
+msgid "There is nothing there to mount."
+msgstr ""
+
+#. [lua]
+#: Era_of_High_Sorcery/spells/mount_dismount.cfg:34
+msgid "You cannot mount a unit that you do not control."
+msgstr ""
+
+#. [lua]
+#: Era_of_High_Sorcery/spells/mount_dismount.cfg:38
+msgid "You refuse to climb on top of something so disgusting."
+msgstr ""
+
+#. [lua]
+#: Era_of_High_Sorcery/spells/mount_dismount.cfg:40
+msgid "You must cast Mount/dismount at the unit you wish to mount."
+msgstr ""
+
+#. [lua]
+#: Era_of_High_Sorcery/spells/mount_dismount.cfg:42
+msgid "You can only mount Wolves, Water Serpents, Gryphons, and Fire Dragons."
+msgstr ""
+
+#. [lua]
+#: Era_of_High_Sorcery/spells/mount_dismount.cfg:58
+msgid "You don't have enough "
+msgstr ""
+
+#. [lua]
+#: Era_of_High_Sorcery/spells/mount_dismount.cfg:58
+msgid " to ride that creature."
+msgstr ""
+
+#. [lua]: type=dummy, id=mud_touch_dummy_special, type=Mudcrawler, type=Giant Mudcrawler, type=Giant Mudcrawler, type=Giant Mudcrawler, type=Giant Mudcrawler
+#: Era_of_High_Sorcery/spells/mud_touch.cfg:8
 msgid "Mud Touch"
 msgstr ""
 
-#: Era_of_High_Sorcery/spells-nature_magic.cfg:15
+#. [lua]: type=dummy, id=mud_touch_dummy_special, type=Mudcrawler, type=Giant Mudcrawler, type=Giant Mudcrawler, type=Giant Mudcrawler, type=Giant Mudcrawler
+#: Era_of_High_Sorcery/spells/mud_touch.cfg:9
 msgid ""
 "Enchants you so that the next time you hit a living or undead unit in melee, "
-"that unit\n"
-"is immediately turned into a ghastly mudcrawler, ending the fight "
-"immediately.\n"
-"The mudcrawler retains the hitpoints, max hitpoints, and experience of the\n"
-"original unit, but otherwise is a completely new unit. Level 0 units are "
-"changed\n"
-"into level 0 Mudcrawlers; everything else becomes a level 1 Giant "
-"Mudcrawler.\n"
-"(Has no effect on enemy leaders or units that are already mudcrawlers.)"
+"that unit is immediately turned into a ghastly mudcrawler, ending the fight "
+"immediately. Level 0 units are changed into level 0 Mudcrawlers; everything "
+"else becomes a level 1 Giant Mudcrawler. (Has no effect on spellcasters or "
+"units that are already mudcrawlers.)"
 msgstr ""
 
-#: Era_of_High_Sorcery/spells-nature_magic.cfg:17
+#. [lua]: type=dummy, id=mud_touch_dummy_special, type=Mudcrawler, type=Giant Mudcrawler, type=Giant Mudcrawler, type=Giant Mudcrawler, type=Giant Mudcrawler
+#: Era_of_High_Sorcery/spells/mud_touch.cfg:22
 msgid "You can't cast Mud Touch when the spell is already active."
 msgstr ""
 
-#: Era_of_High_Sorcery/spells-nature_magic.cfg:151
+#. [lua]: type=dummy, id=mud_touch_dummy_special, type=Mudcrawler, type=Giant Mudcrawler, type=Giant Mudcrawler, type=Giant Mudcrawler, type=Giant Mudcrawler
+#: Era_of_High_Sorcery/spells/mud_touch.cfg:46
 msgid "mud touch"
 msgstr ""
 
-#: Era_of_High_Sorcery/spells-nature_magic.cfg:152
+#. [lua]: type=dummy, id=mud_touch_dummy_special, type=Mudcrawler, type=Giant Mudcrawler, type=Giant Mudcrawler, type=Giant Mudcrawler, type=Giant Mudcrawler
+#: Era_of_High_Sorcery/spells/mud_touch.cfg:47
 msgid ""
 "Mud touch:\n"
 "When a unit is hit with this attack, that unit is turned into a mudcrawler, "
@@ -1042,204 +1820,83 @@ msgid ""
 "transformed."
 msgstr ""
 
-#: Era_of_High_Sorcery/spells-nature_magic.cfg:159
-msgid "Grow Trees"
+#. [lua]
+#: Era_of_High_Sorcery/spells/poison_ground.cfg:8
+msgid "Poison Ground"
 msgstr ""
 
-#: Era_of_High_Sorcery/spells-nature_magic.cfg:164
+#. [lua]
+#: Era_of_High_Sorcery/spells/poison_ground.cfg:9
 msgid ""
-"Grows trees on all hexes within a (your Nature Magic skill / 4)-radius area "
-"of\n"
-"any target within $grow_trees_base_range| hexes. Some terrains are "
-"unaffected.\n"
-"The radius isn't rounded down - rather, hexes on the edge of the radius have "
-"a\n"
-"random chance of being affected."
+"Permanently corrupts most of a radius-2 area around one target up to "
+"$spell_base_range| hexes away. Any living unit on the corrupted area when "
+"the spell is cast is poisoned, and any living unit standing on the corrupted "
+"area and the end of any future turn is poisoned. Greater necromancy skill "
+"increases the likelihood of poisoning each hex."
 msgstr ""
 
-#: Era_of_High_Sorcery/spells-nature_magic.cfg:315
-msgid "Regeneration"
-msgstr ""
-
-#: Era_of_High_Sorcery/spells-nature_magic.cfg:319
-msgid ""
-"Immediately heals an adjacent unit for 2 to 4 hitpoints plus your\n"
-"Nature Magic skill, and grants it the ability to regenerate by\n"
-"(Nature Magic skill * 2) hitpoints per turn for six turns."
-msgstr ""
-
-#: Era_of_High_Sorcery/spells-nature_magic.cfg:427
-#: Era_of_High_Sorcery/spells-nature_magic.cfg:459
-msgid "regenerates +$regeneration_amount"
-msgstr ""
-
-#: Era_of_High_Sorcery/spells-nature_magic.cfg:460
-msgid "female^regenerates +$regeneration_amount"
-msgstr ""
-
-#: Era_of_High_Sorcery/spells-nature_magic.cfg:465
-msgid ""
-"Regenerates +$regeneration_amount:\n"
-"\n"
-"The unit will heal itself $regeneration_amount HP per turn. If it is "
-"poisoned, it will remove the poison instead of healing.\n"
-"\n"
-"This ability was granted by a spell, and is temporary. It will disappear on "
-"turn $regeneratee.variables.loses_eohs_regen_on|."
-msgstr ""
-
-#: Era_of_High_Sorcery/spells-nature_magic.cfg:484
-msgid "Tailwind"
-msgstr ""
-
-#: Era_of_High_Sorcery/spells-nature_magic.cfg:489
-msgid ""
-"Enchants you or an adjacent unit, increasing their moves by two for\n"
-"both the current turn and the following turn. This effect is cumulative.\n"
-"Units that have already used all their moves for the turn don't get\n"
-"extra moves on the same turn, but still do on the following turn."
-msgstr ""
-
-#: Era_of_High_Sorcery/spells-nature_magic.cfg:544
-msgid "Lightning Bolt"
-msgstr ""
-
-#: Era_of_High_Sorcery/spells-nature_magic.cfg:549
-msgid ""
-"Inflicts 12 to 18 damage plus your Nature Magic level upon one target within "
-"$lightning_bolt_base_range| hexes,\n"
-"and, if it's still alive, paralyzes it so that it can't move on its next "
-"turn.\n"
-"Paralyzed units normally cannot attack either, but paralyzed leaders can.\n"
-"Undead can be paralyzed, but mechanical units cannot."
-msgstr ""
-
-#: Era_of_High_Sorcery/spells-nature_magic.cfg:643
-msgid "paralyzed"
-msgstr ""
-
-#: Era_of_High_Sorcery/spells-nature_magic.cfg:661
-msgid "Fissure"
-msgstr ""
-
-#: Era_of_High_Sorcery/spells-nature_magic.cfg:665
-msgid ""
-"Irrevocably opens up a chasm hex up to $fissure_base_range| hexes away.\n"
-"Any unit in the hex that is unable to fly will be instantly killed.\n"
-"Unlike other spells, you do not gain experience for a unit killed this way."
-msgstr ""
-
-#: Era_of_High_Sorcery/spells-nature_magic.cfg:689
+#: Era_of_High_Sorcery/spells/rampage.cfg:8
 msgid "Rampage"
 msgstr ""
 
-#: Era_of_High_Sorcery/spells-nature_magic.cfg:694
+#: Era_of_High_Sorcery/spells/rampage.cfg:9
 msgid ""
-"Until the end of your turn, empowers you and all adjacent units on your "
-"team\n"
-"with primal energy, granting +3 damage and +1 swings on on their melee "
-"attacks\n"
-"and making them take 50% less damage in combat. You can personally attack "
-"after\n"
-"casting this spell, but you cannot cast additional spells."
+"Until the end of your turn, empowers all adjacent units on your side with "
+"primal energy, granting +3 damage and +1 swings on on their melee attacks "
+"and making them take half damage, rounded down, in combat."
 msgstr ""
 
-#: Era_of_High_Sorcery/spells-nature_magic.cfg:780
+#: Era_of_High_Sorcery/spells/rampage.cfg:23
+msgid "There are no adjacent units to empower."
+msgstr ""
+
+#: Era_of_High_Sorcery/spells/rampage.cfg:32
 msgid "rampage!"
 msgstr ""
 
-#: Era_of_High_Sorcery/spells-nature_magic.cfg:805
-msgid "rampage"
+#: Era_of_High_Sorcery/spells/rampage.cfg:53
+msgid "male^rampage"
 msgstr ""
 
-#: Era_of_High_Sorcery/spells-nature_magic.cfg:821
-msgid "Blizzard"
+#: Era_of_High_Sorcery/spells/rampage.cfg:54
+msgid "female^rampage"
 msgstr ""
 
-#: Era_of_High_Sorcery/spells-nature_magic.cfg:824
+#: Era_of_High_Sorcery/spells/rampage.cfg:55
 msgid ""
-"Snows on a large area, centered up to $blizzard_base_range| hexes away.\n"
-"Snow created this way melts after 4 to 8 turns; ice melts after 1 to 3 turns."
+"Rampage:\n"
+"This unit has +3 damage and +1 swings on its melee attack, and takes half "
+"damage from all types. These effects end at beginning of its next turn."
 msgstr ""
 
-#: Era_of_High_Sorcery/spells-nature_magic.cfg:1035
-#: Era_of_High_Sorcery/spells-nature_magic.cfg:1094
-msgid "Vines"
-msgstr ""
-
-#: Era_of_High_Sorcery/spells-nature_magic.cfg:1041
-msgid ""
-"Immediately fills all empty hexes within a radius-3 area, up to "
-"$vines_spell_range| hexes away,\n"
-"with obstructing vines. The vines are units on your team that cannot move.\n"
-"The vines have no attacks, but they have 15 HP, they exert Zone of Control,\n"
-"and they give a 50% attack damage penalty to all adjacent units.\n"
-"They have the same defenses and resistances as a Wose."
-msgstr ""
-
-#: Era_of_High_Sorcery/spells-nature_magic.cfg:1102
-msgid ""
-"Vines have no attacks, but are useful for obstructing the enemy's progress."
-msgstr ""
-
-#: Era_of_High_Sorcery/spells-nature_magic.cfg:1115
-msgid "slows adjacent"
-msgstr ""
-
-#: Era_of_High_Sorcery/spells-nature_magic.cfg:1117
-msgid ""
-"Slows adjacent:\n"
-"This unit gives all adjacent units, friendly or enemy, a non-cumulative 50% "
-"attack penalty in combat."
-msgstr ""
-
-#: Era_of_High_Sorcery/spells-necromancy.cfg:9
+#. [lua]: type=dummy, id=reanimating_touch_dummy_special
+#: Era_of_High_Sorcery/spells/reanimating_touch.cfg:8
 msgid "Reanimating Touch"
 msgstr ""
 
-#: Era_of_High_Sorcery/spells-necromancy.cfg:14
+#. [lua]: type=dummy, id=reanimating_touch_dummy_special
+#: Era_of_High_Sorcery/spells/reanimating_touch.cfg:9
 msgid ""
 "Enchants you so that the next time you kill a living unit with your melee "
-"attack,\n"
-"that unit is reanimated into an undead version with full hitpoints on your "
-"side.\n"
-"The unit becomes non-living, chaotic, and loyal, has altered resistances,\n"
-"gains Submerge, can move in deep water, and counts as a summoned unit."
+"attack, that unit is reanimated into an undead version with full hitpoints "
+"on your side. The unit becomes non-living, chaotic, and loyal, has altered "
+"resistances, gains Submerge, can move in deep water, and counts as a "
+"summoned unit. If you reanimate an enemy leader, it retains its full powers, "
+"including recruiting."
 msgstr ""
 
-#: Era_of_High_Sorcery/spells-necromancy.cfg:16
+#. [lua]: type=dummy, id=reanimating_touch_dummy_special
+#: Era_of_High_Sorcery/spells/reanimating_touch.cfg:23
 msgid "You can't cast Reanimating Touch when the spell is already active."
 msgstr ""
 
-#: Era_of_High_Sorcery/spells-necromancy.cfg:51
-msgid "Reanimated "
-msgstr ""
-
-#: Era_of_High_Sorcery/spells-necromancy.cfg:157
-msgid "Undead "
-msgstr ""
-
-#: Era_of_High_Sorcery/spells-necromancy.cfg:179
-msgid "undead"
-msgstr ""
-
-#: Era_of_High_Sorcery/spells-necromancy.cfg:180
-msgid "female^undead"
-msgstr ""
-
-#: Era_of_High_Sorcery/spells-necromancy.cfg:181
-msgid "Immune to drain, poison and plague"
-msgstr ""
-
-#: Era_of_High_Sorcery/spells-necromancy.cfg:194
-msgid "Reanimated!"
-msgstr ""
-
-#: Era_of_High_Sorcery/spells-necromancy.cfg:212
+#. [lua]: type=dummy, id=reanimating_touch_dummy_special
+#: Era_of_High_Sorcery/spells/reanimating_touch.cfg:47
 msgid "reanimating touch"
 msgstr ""
 
-#: Era_of_High_Sorcery/spells-necromancy.cfg:213
+#. [lua]: type=dummy, id=reanimating_touch_dummy_special
+#: Era_of_High_Sorcery/spells/reanimating_touch.cfg:48
 msgid ""
 "Reanimating touch:\n"
 "When a unit is killed by this attack, that unit is reanimated into an undead "
@@ -1248,300 +1905,195 @@ msgid ""
 "a unit."
 msgstr ""
 
-#: Era_of_High_Sorcery/spells-necromancy.cfg:246
-msgid "Absorb bat"
+#: Era_of_High_Sorcery/spells/regeneration.cfg:8
+msgid "Regeneration"
 msgstr ""
 
-#: Era_of_High_Sorcery/spells-necromancy.cfg:250
+#: Era_of_High_Sorcery/spells/regeneration.cfg:9
 msgid ""
-"Absorbs one of your bats that is adjacent to you. You regain the gold you "
-"spent to create it.\n"
-"You may not absorb a bat that was just summoned, or one that has already "
-"attacked this turn.\n"
-"This does not use up your spell or attack for the turn."
+"Increases the max hitpoints of you or an adjacent unit by your Nature Magic "
+"skill, immediately heals it for 2 to 4 hitpoints plus your Nature Magic "
+"skill, and grants it the ability to regenerate by (Nature Magic skill * 2) "
+"hitpoints per turn for six turns."
 msgstr ""
 
-#: Era_of_High_Sorcery/spells-necromancy.cfg:262
-msgid "You can't absorb a bat where there is no unit."
+#: Era_of_High_Sorcery/spells/regeneration.cfg:35
+msgid "regenerates +"
 msgstr ""
 
-#: Era_of_High_Sorcery/spells-necromancy.cfg:274
-msgid "You can only absorb Vampire Bats, Blood Bats, and Dread Bats."
+#: Era_of_High_Sorcery/spells/regeneration.cfg:78
+msgid "male^regenerates +"
 msgstr ""
 
-#: Era_of_High_Sorcery/spells-necromancy.cfg:287
-msgid "You can only absorb your own bats."
+#: Era_of_High_Sorcery/spells/regeneration.cfg:79
+msgid "female^regenerates +"
 msgstr ""
 
-#: Era_of_High_Sorcery/spells-necromancy.cfg:300
-msgid "You can't absorb bats with no attacks left."
+#: Era_of_High_Sorcery/spells/regeneration.cfg:80
+msgid "Regenerates +"
 msgstr ""
 
-#: Era_of_High_Sorcery/spells-necromancy.cfg:337
-msgid "+$gold_regained gold"
-msgstr ""
-
-#: Era_of_High_Sorcery/spells-necromancy.cfg:345
-msgid "+$gold_regained mana"
-msgstr ""
-
-#: Era_of_High_Sorcery/spells-necromancy.cfg:363
-msgid "Poison Ground"
-msgstr ""
-
-#: Era_of_High_Sorcery/spells-necromancy.cfg:369
+#: Era_of_High_Sorcery/spells/regeneration.cfg:80
 msgid ""
-"Permanently corrupts most of a radius-2 area around\n"
-"one target up to $poison_ground_base_range| hexes away.\n"
-"Any living unit on the corrupted area when the spell is cast is poisoned.\n"
-"Any living unit standing on the corrupted area and the end of a turn is "
-"poisoned.\n"
-"Greater necromancy skill increases the likelihood of poisoning each hex."
-msgstr ""
-
-#: Era_of_High_Sorcery/spells-necromancy.cfg:537
-msgid "Dark Pact"
-msgstr ""
-
-#: Era_of_High_Sorcery/spells-necromancy.cfg:544
-msgid ""
-"You or an adjacent target unit on your side forms a permanent dark pact.\n"
-"Whenever that unit is damaged, half the damage will be restored at the "
-"expense\n"
-"of leeching an equal number of hitpoints from any other units on your side\n"
-"that are within 5 hexes. If there are no such units, the protection is "
-"void.\n"
-"Additional Necromancy skill improves the amount of damage deflected."
-msgstr ""
-
-#: Era_of_High_Sorcery/spells-necromancy.cfg:546
-msgid "You can't cast a Dark Pact on a unit that already has one."
-msgstr ""
-
-#: Era_of_High_Sorcery/spells-necromancy.cfg:556
-msgid "Dark Pact can only be cast on your own units."
-msgstr ""
-
-#: Era_of_High_Sorcery/spells-necromancy.cfg:585
-msgid "female^dark pact"
-msgstr ""
-
-#: Era_of_High_Sorcery/spells-necromancy.cfg:585
-msgid "male^dark pact"
-msgstr ""
-
-#: Era_of_High_Sorcery/spells-necromancy.cfg:589
-msgid ""
-"Dark Pact:\n"
+":\n"
 "\n"
-"Whenever this unit is damaged, half the damage will be restored at the "
-"expense\n"
-"of leeching an equal number of hitpoints from any other units on its side\n"
-"that are within 5 hexes. If there are no such units, the protection is void."
+"The unit will heal itself "
 msgstr ""
 
-#: Era_of_High_Sorcery/spells-necromancy.cfg:695
-msgid "Wraithform"
+#: Era_of_High_Sorcery/spells/regeneration.cfg:80
+msgid "eohs_regenerates_desc^."
 msgstr ""
 
-#: Era_of_High_Sorcery/spells-necromancy.cfg:705
+#. [lua]: type=Drake Fighter, id=blue_drake_range, type=Sea Serpent, type=Fire Dragon, type=Wolf, type=Wolf, type=Wose, type=Water Serpent, type=Gryphon, type=Yeti, type=Ghost, type=Walking Corpse, type=Vampire Bat, type=Chocobone, type=Skeleton, type=Skeleton Archer, type=Skeletal Dragon
+#: Era_of_High_Sorcery/spells/summons.cfg:9
+msgid "Summon Arctic Drake"
+msgstr ""
+
+#. [lua]: type=Drake Fighter, id=blue_drake_range, type=Sea Serpent, type=Fire Dragon, type=Wolf, type=Wolf, type=Wose, type=Water Serpent, type=Gryphon, type=Yeti, type=Ghost, type=Walking Corpse, type=Vampire Bat, type=Chocobone, type=Skeleton, type=Skeleton Archer, type=Skeletal Dragon
+#: Era_of_High_Sorcery/spells/summons.cfg:10
 msgid ""
-"You transform into a Wraith, or Spectre, depending on your level.\n"
-"The effect lasts as long as you wish, and you can end it at any time\n"
-"via a drop-down menu option. However, you can't cast spells or train\n"
-"in magic when you are a Wraith, and if you die as a Wraith, you're dead.\n"
-"Transforming - in either direction - preserves your current hitpoints\n"
-"and approximately preserves the fraction of your moves that you have left.\n"
-"You can immediately attack after becoming a Wraith, but you can't\n"
-"attack or cast spells on the turn you return to wizard form.\n"
-"The Wraith cannot level up, but you keep all experience it gains."
+"Arctic Drakes are functionally identical to Drake Fighters except that they "
+"resist cold and arcane damage, and have normal movement/defense on snow and "
+"ice."
 msgstr ""
 
-#: Era_of_High_Sorcery/spells-necromancy.cfg:724
-msgid "End Wraithform"
-msgstr ""
-
-#: Era_of_High_Sorcery/spells-necromancy.cfg:805
-msgid "wraithform"
-msgstr ""
-
-#: Era_of_High_Sorcery/spells-necromancy.cfg:814
-msgid "Devour Soul"
-msgstr ""
-
-#: Era_of_High_Sorcery/spells-necromancy.cfg:821
-msgid ""
-"You instantly kill an adjacent unit - either one of your units,\n"
-"or an enemy unit with hitpoints no higher than your Necromancy skill.\n"
-"You are permanently gain half its max hitpoints (and you're healed\n"
-"for that amount), all its unit abilities, and any attack that is\n"
-"innate (i.e. not just a weapon the unit holds - admittedly, which\n"
-"attacks are counted is subjective..)"
-msgstr ""
-
-#: Era_of_High_Sorcery/spells-necromancy.cfg:835
-msgid "You can't devour your own soul."
-msgstr ""
-
-#: Era_of_High_Sorcery/spells-necromancy.cfg:853
-msgid "You can't devour the soul of a non-living, non-undead unit."
-msgstr ""
-
-#: Era_of_High_Sorcery/spells-necromancy.cfg:863
-msgid "Devour Soul can only be cast on a unit."
-msgstr ""
-
-#: Era_of_High_Sorcery/spells-necromancy.cfg:875
-msgid ""
-"You can't cast Devour Soul on an enemy unit with hitpoints greater than your "
-"Necromancy skill."
-msgstr ""
-
-#: Era_of_High_Sorcery/spells-necromancy.cfg:1046
-msgid "Curse life once more"
-msgstr ""
-
-#: Era_of_High_Sorcery/spells-necromancy.cfg:1050
-msgid ""
-"This spell can only be cast after you have used up your spell or attack.\n"
-"You spend 15 HP to be able to cast another spell or make another attack.\n"
-"If you cast this spell when you have 15 or fewer hit points, it kills you."
-msgstr ""
-
-#: Era_of_High_Sorcery/spells-necromancy.cfg:1064
-msgid ""
-"You can't cast Curse Life Once More before you have used up your attack."
-msgstr ""
-
-#. [then]
-#: Era_of_High_Sorcery/summon_system.cfg:104
-msgid "$summon_cost| mana"
-msgstr ""
-
-#. [else]
-#: Era_of_High_Sorcery/summon_system.cfg:107
-msgid "$summon_cost| gold"
-msgstr ""
-
-#. [else]
-#: Era_of_High_Sorcery/summon_system.cfg:158
-msgid "You can only summon units next to your leader."
-msgstr ""
-
-#. [then]
-#: Era_of_High_Sorcery/summon_system.cfg:168
-msgid "You can't summon where there is already a unit."
-msgstr ""
-
-#. [then]
-#: Era_of_High_Sorcery/summon_system.cfg:182
-msgid "You don't have enough mana to summon that creature."
-msgstr ""
-
-#. [else]
-#: Era_of_High_Sorcery/summon_system.cfg:185
-msgid "You don't have enough gold to summon that creature."
-msgstr ""
-
-#. [then]
-#: Era_of_High_Sorcery/summon_system.cfg:210
-msgid "You can't summon that creature into lava."
-msgstr ""
-
-#. [then]
-#: Era_of_High_Sorcery/summon_system.cfg:211
-msgid "You can't summon that creature over a chasm."
-msgstr ""
-
-#. [then]
-#: Era_of_High_Sorcery/summon_system.cfg:212
-msgid "You can't summon that creature over deep water."
-msgstr ""
-
-#. [then]
-#: Era_of_High_Sorcery/summon_system.cfg:213
-msgid "You can't summon that creature into mountains."
-msgstr ""
-
-#. [then]
-#: Era_of_High_Sorcery/summon_system.cfg:239
-msgid "There is no viable hex to place the second unit next to the first."
-msgstr ""
-
-#. [then]
-#: Era_of_High_Sorcery/summon_system.cfg:246
-msgid ""
-"This scenario has a cap on the number of levels of summoned creatures you "
-"control;\n"
-"   casting this summoning spell would exceed the cap."
-msgstr ""
-
-#. [set_menu_item]: id=eohs_unsummon
-#: Era_of_High_Sorcery/summon_system.cfg:531
-msgid "Unsummon this creature"
-msgstr ""
-
-#: Era_of_High_Sorcery/summon_system.cfg:740
-#: Era_of_High_Sorcery/summon_system.cfg:747
-msgid "halberd"
-msgstr ""
-
-#: Era_of_High_Sorcery/summons.cfg:24
-msgid "Summon Drake Fighter"
-msgstr ""
-
-#: Era_of_High_Sorcery/summons.cfg:28
+#. [lua]: type=Drake Fighter, id=blue_drake_range, type=Sea Serpent, type=Fire Dragon, type=Wolf, type=Wolf, type=Wose, type=Water Serpent, type=Gryphon, type=Yeti, type=Ghost, type=Walking Corpse, type=Vampire Bat, type=Chocobone, type=Skeleton, type=Skeleton Archer, type=Skeletal Dragon
+#: Era_of_High_Sorcery/spells/summons.cfg:52
 msgid "Summon Sea Serpent"
 msgstr ""
 
-#: Era_of_High_Sorcery/summons.cfg:32
+#. [lua]: type=Drake Fighter, id=blue_drake_range, type=Sea Serpent, type=Fire Dragon, type=Wolf, type=Wolf, type=Wose, type=Water Serpent, type=Gryphon, type=Yeti, type=Ghost, type=Walking Corpse, type=Vampire Bat, type=Chocobone, type=Skeleton, type=Skeleton Archer, type=Skeletal Dragon
+#: Era_of_High_Sorcery/spells/summons.cfg:53
+msgid ""
+"Sea Serpents have their level artificially reduced to 2 because they don't "
+"really have the power of a level 3 unit."
+msgstr ""
+
+#. [lua]: type=Drake Fighter, id=blue_drake_range, type=Sea Serpent, type=Fire Dragon, type=Wolf, type=Wolf, type=Wose, type=Water Serpent, type=Gryphon, type=Yeti, type=Ghost, type=Walking Corpse, type=Vampire Bat, type=Chocobone, type=Skeleton, type=Skeleton Archer, type=Skeletal Dragon
+#: Era_of_High_Sorcery/spells/summons.cfg:77
 msgid "Summon Fire Dragon"
 msgstr ""
 
-#: Era_of_High_Sorcery/summons.cfg:36
+#. [lua]: type=Drake Fighter, id=blue_drake_range, type=Sea Serpent, type=Fire Dragon, type=Wolf, type=Wolf, type=Wose, type=Water Serpent, type=Gryphon, type=Yeti, type=Ghost, type=Walking Corpse, type=Vampire Bat, type=Chocobone, type=Skeleton, type=Skeleton Archer, type=Skeletal Dragon
+#: Era_of_High_Sorcery/spells/summons.cfg:94
 msgid "Summon Wolf"
 msgstr ""
 
-#: Era_of_High_Sorcery/summons.cfg:40
+#. [lua]: type=Drake Fighter, id=blue_drake_range, type=Sea Serpent, type=Fire Dragon, type=Wolf, type=Wolf, type=Wose, type=Water Serpent, type=Gryphon, type=Yeti, type=Ghost, type=Walking Corpse, type=Vampire Bat, type=Chocobone, type=Skeleton, type=Skeleton Archer, type=Skeletal Dragon
+#: Era_of_High_Sorcery/spells/summons.cfg:109
 msgid "Summon two Wolves"
 msgstr ""
 
-#: Era_of_High_Sorcery/summons.cfg:45
+#. [lua]: type=Drake Fighter, id=blue_drake_range, type=Sea Serpent, type=Fire Dragon, type=Wolf, type=Wolf, type=Wose, type=Water Serpent, type=Gryphon, type=Yeti, type=Ghost, type=Walking Corpse, type=Vampire Bat, type=Chocobone, type=Skeleton, type=Skeleton Archer, type=Skeletal Dragon
+#: Era_of_High_Sorcery/spells/summons.cfg:126
 msgid "Summon Wose"
 msgstr ""
 
-#: Era_of_High_Sorcery/summons.cfg:49
+#. [lua]: type=Drake Fighter, id=blue_drake_range, type=Sea Serpent, type=Fire Dragon, type=Wolf, type=Wolf, type=Wose, type=Water Serpent, type=Gryphon, type=Yeti, type=Ghost, type=Walking Corpse, type=Vampire Bat, type=Chocobone, type=Skeleton, type=Skeleton Archer, type=Skeletal Dragon
+#: Era_of_High_Sorcery/spells/summons.cfg:141
 msgid "Summon Water Serpent"
 msgstr ""
 
-#: Era_of_High_Sorcery/summons.cfg:53
+#. [lua]: type=Drake Fighter, id=blue_drake_range, type=Sea Serpent, type=Fire Dragon, type=Wolf, type=Wolf, type=Wose, type=Water Serpent, type=Gryphon, type=Yeti, type=Ghost, type=Walking Corpse, type=Vampire Bat, type=Chocobone, type=Skeleton, type=Skeleton Archer, type=Skeletal Dragon
+#: Era_of_High_Sorcery/spells/summons.cfg:156
 msgid "Summon Gryphon"
 msgstr ""
 
-#: Era_of_High_Sorcery/summons.cfg:57
+#. [lua]: type=Drake Fighter, id=blue_drake_range, type=Sea Serpent, type=Fire Dragon, type=Wolf, type=Wolf, type=Wose, type=Water Serpent, type=Gryphon, type=Yeti, type=Ghost, type=Walking Corpse, type=Vampire Bat, type=Chocobone, type=Skeleton, type=Skeleton Archer, type=Skeletal Dragon
+#: Era_of_High_Sorcery/spells/summons.cfg:171
 msgid "Summon Yeti"
 msgstr ""
 
-#: Era_of_High_Sorcery/summons.cfg:61
+#. [lua]: type=Drake Fighter, id=blue_drake_range, type=Sea Serpent, type=Fire Dragon, type=Wolf, type=Wolf, type=Wose, type=Water Serpent, type=Gryphon, type=Yeti, type=Ghost, type=Walking Corpse, type=Vampire Bat, type=Chocobone, type=Skeleton, type=Skeleton Archer, type=Skeletal Dragon
+#: Era_of_High_Sorcery/spells/summons.cfg:188
+msgid "Summon Ghost"
+msgstr ""
+
+#. [lua]: type=Drake Fighter, id=blue_drake_range, type=Sea Serpent, type=Fire Dragon, type=Wolf, type=Wolf, type=Wose, type=Water Serpent, type=Gryphon, type=Yeti, type=Ghost, type=Walking Corpse, type=Vampire Bat, type=Chocobone, type=Skeleton, type=Skeleton Archer, type=Skeletal Dragon
+#: Era_of_High_Sorcery/spells/summons.cfg:203
 msgid "Summon Walking Corpse"
 msgstr ""
 
-#: Era_of_High_Sorcery/summons.cfg:66
+#. [lua]: type=Drake Fighter, id=blue_drake_range, type=Sea Serpent, type=Fire Dragon, type=Wolf, type=Wolf, type=Wose, type=Water Serpent, type=Gryphon, type=Yeti, type=Ghost, type=Walking Corpse, type=Vampire Bat, type=Chocobone, type=Skeleton, type=Skeleton Archer, type=Skeletal Dragon
+#: Era_of_High_Sorcery/spells/summons.cfg:220
 msgid "Summon Vampire Bat"
 msgstr ""
 
-#: Era_of_High_Sorcery/summons.cfg:71
+#. [lua]: type=Drake Fighter, id=blue_drake_range, type=Sea Serpent, type=Fire Dragon, type=Wolf, type=Wolf, type=Wose, type=Water Serpent, type=Gryphon, type=Yeti, type=Ghost, type=Walking Corpse, type=Vampire Bat, type=Chocobone, type=Skeleton, type=Skeleton Archer, type=Skeletal Dragon
+#: Era_of_High_Sorcery/spells/summons.cfg:237
 msgid "Summon Chocobone"
 msgstr ""
 
-#: Era_of_High_Sorcery/summons.cfg:75
+#. [lua]: type=Drake Fighter, id=blue_drake_range, type=Sea Serpent, type=Fire Dragon, type=Wolf, type=Wolf, type=Wose, type=Water Serpent, type=Gryphon, type=Yeti, type=Ghost, type=Walking Corpse, type=Vampire Bat, type=Chocobone, type=Skeleton, type=Skeleton Archer, type=Skeletal Dragon
+#: Era_of_High_Sorcery/spells/summons.cfg:252
 msgid "Summon Skeleton"
 msgstr ""
 
-#: Era_of_High_Sorcery/summons.cfg:80
+#. [lua]: type=Drake Fighter, id=blue_drake_range, type=Sea Serpent, type=Fire Dragon, type=Wolf, type=Wolf, type=Wose, type=Water Serpent, type=Gryphon, type=Yeti, type=Ghost, type=Walking Corpse, type=Vampire Bat, type=Chocobone, type=Skeleton, type=Skeleton Archer, type=Skeletal Dragon
+#: Era_of_High_Sorcery/spells/summons.cfg:269
 msgid "Summon Skeleton Archer"
 msgstr ""
 
-#: Era_of_High_Sorcery/summons.cfg:85
+#. [lua]: type=Drake Fighter, id=blue_drake_range, type=Sea Serpent, type=Fire Dragon, type=Wolf, type=Wolf, type=Wose, type=Water Serpent, type=Gryphon, type=Yeti, type=Ghost, type=Walking Corpse, type=Vampire Bat, type=Chocobone, type=Skeleton, type=Skeleton Archer, type=Skeletal Dragon
+#: Era_of_High_Sorcery/spells/summons.cfg:286
 msgid "Summon Skeletal Dragon"
+msgstr ""
+
+#: Era_of_High_Sorcery/spells/wizard_sword.cfg:8
+msgid "Wizard Sword"
+msgstr ""
+
+#: Era_of_High_Sorcery/spells/wizard_sword.cfg:9
+msgid ""
+"Grants a magical sword to you or an adjacent unit. The sword vanishes at the "
+"beginning of your third turn hence. The sword's base damage is four plus "
+"twice the unit's level, and it has three swings - or, if a unit has two "
+"wizard swords at once, it has a four-swing 'dual wizard sword' attack."
+msgstr ""
+
+#: Era_of_High_Sorcery/spells/wizard_sword.cfg:79
+#: Era_of_High_Sorcery/spells/wizard_sword.cfg:104
+msgid "vanishes turn "
+msgstr ""
+
+#: Era_of_High_Sorcery/spells/wizard_sword.cfg:93
+msgid "dual wizard swords"
+msgstr ""
+
+#: Era_of_High_Sorcery/spells/wizard_sword.cfg:123
+msgid "wizard sword"
+msgstr ""
+
+#. [lua]: id=eohs_a_end_wraithform, type=Wraith, type=Spectre
+#: Era_of_High_Sorcery/spells/wraithform.cfg:8
+msgid "Wraithform"
+msgstr ""
+
+#. [lua]: id=eohs_a_end_wraithform, type=Wraith, type=Spectre
+#: Era_of_High_Sorcery/spells/wraithform.cfg:9
+msgid ""
+"You transform into a Wraith - or Spectre, depending on your level - with the "
+"same current and maximum hitpoints as yourself. The effect lasts as long as "
+"you wish, and you can end it at any time via a drop-down menu option. "
+"However, you can't cast spells while you are a Wraith, and if you die as a "
+"Wraith, you're dead. Transforming - in either direction - approximately "
+"preserves the fraction of your moves that you have left, and you can "
+"immediately attack after becoming a Wraith. The Wraith form cannot level up, "
+"but you keep all experience it gains."
+msgstr ""
+
+#. [lua]: id=eohs_a_end_wraithform, type=Wraith, type=Spectre
+#: Era_of_High_Sorcery/spells/wraithform.cfg:20
+msgid "You can't cast Wraithform while mounted."
+msgstr ""
+
+#. [lua]: id=eohs_a_end_wraithform, type=Wraith, type=Spectre
+#: Era_of_High_Sorcery/spells/wraithform.cfg:44
+msgid "End Wraithform"
+msgstr ""
+
+#. [lua]: id=eohs_a_end_wraithform, type=Wraith, type=Spectre
+#: Era_of_High_Sorcery/spells/wraithform.cfg:81
+#: Era_of_High_Sorcery/spells/wraithform.cfg:89
+msgid "wraithform"
 msgstr ""
